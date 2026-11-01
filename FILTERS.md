@@ -28,7 +28,7 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 
 - **R-EXCL-HOSTEL** — Hostel units (cămin / gostinka / shared kitchen or bath).
 - **R-EXCL-BASEMENT** — Soclu, demisol, semi-basement, "pe sol", single-storey houses, mansards.
-- **R-EXCL-UNFINISHED** — White or grey variant.
+- **R-EXCL-UNFINISHED** (updated 2026-11-01) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED**: it is easier to renovate to one's own taste. For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
 - **R-EXCL-NEWBUILD** — New builds not yet commissioned.
 - **R-EXCL-SUBURB** — Suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.).
 - **R-EXCL-PROMO** — Promoted/boosted ads on 999.md are ignored (not counted in results).
@@ -126,7 +126,7 @@ link · price · m² · €/m² · street + number · floor/total · lift yes/no
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - Этажи 2–8; первый и выше 8-го — нет; последний этаж — флаг (крыша).
 - Лифт: Ботаника/Буюканы/Телецентр без лифта — только 2–3 этаж; лифт неизвестен в ≤5-этажке = нет лифта. Центр и Рышкановка — без лифта можно.
-- Исключены: общежития/гостинки, цоколь/демисол/pe sol, мансарды, частные одноэтажные дома, белый/серый вариант, несданные новостройки, пригороды.
+- Исключены: общежития/гостинки, цоколь/демисол/pe sol, мансарды, частные одноэтажные дома, серый вариант (белый вариант разрешён с 01.11.2026, с оценкой бюджета ремонта), несданные новостройки, пригороды.
 - Районы: приоритет Рышкановка и Центр; допустимо Ботаника, Буюканы, Телецентр. Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
 - 5–10 минут пешком до магистрали, парка или университета.
 - Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului).

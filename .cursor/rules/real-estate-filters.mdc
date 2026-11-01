@@ -11,7 +11,7 @@ Hard filters (condensed — FILTERS.md wins on conflict):
 - R-TYPE/R-AREA/R-LAYOUT: studio or 1-room ≈30 m²+ (28–30 flag); compact 2-room only if clearly better value; own kitchen, bath, hallway, no walk-through rooms.
 - R-FLOOR: floors 2–8 only. R-TOPFLOOR: top floor flagged.
 - R-LIFT: Botanica/Buiucani/Telecentru without lift → floors 2–3 only; unknown lift in ≤5 floors = no lift. Centru/Rîșcani: no lift OK.
-- R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, mansard, single-storey house, white/grey variant, uncommissioned new build, suburbs; ignore promoted 999.md ads.
+- R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, mansard, single-storey house, grey variant (white variant allowed, add renovation estimate), uncommissioned new build, suburbs; ignore promoted 999.md ads.
 - R-LOC: priority Rîșcani, Centru; OK Botanica, Buiucani, Telecentru; no Poșta Veche; no Ciocana (except near Rîșcani/Port Mall).
 - R-MICRO: ≤5–10 min walk to main road, park or university.
 - R-BLACKLIST: east Rîșcani — Florării, str-la Florării, Pajurii, Forăriei, Zimbrului and inner streets.
