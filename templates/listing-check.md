@@ -3,8 +3,9 @@
 Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown · Building type/series/year: · Condition:
 
 ## Hard filters (see FILTERS.md)
-- [ ] R-BUDGET — €50k–70k
-- [ ] R-TYPE — studio / 1-room (2-room only if clearly better value)
+- [ ] R-BUDGET — €40k–140k (above €140k = excluded)
+- [ ] R-BANDS — block: ☐ €40–60k ☐ €60–75k ☐ €75–105k ☐ €105–140k
+- [ ] R-TYPE — any number of rooms; rooms: ___
 - [ ] R-AREA — ≈30 m²+ (28–30 flag)
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-FLOOR — floors 2–8
