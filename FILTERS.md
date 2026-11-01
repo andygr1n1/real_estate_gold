@@ -51,6 +51,7 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
   - a university (USM, UTM, ASEM, USMF, Pedagogical University).
   - Remote inner-block / outskirt streets are excluded.
 - **R-BLACKLIST** (2026-11-01) — East Rîșcani pocket east of str. Tudor Vladimirescu toward the Vadul lui Vodă greenbelt / CET-1: str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului and inner streets between them.
+- **R-BLACKLIST-CET1** (2026-11-02) — Whole CET-1 (Termoelectrica Sursa 1, str. Tudor Vladimirescu 6) zone in Rîșcani: the entire str. Tudor Vladimirescu (all house numbers) and any building within ~800 m of the CET-1 site (≈47.0331, 28.8635). Reasons: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity. Tudor Vladimirescu 3 (4 duplicate ads) rejected.
 
 ## 5. Rejected listings (mirror of `listings/rejected.md`)
 
@@ -65,6 +66,7 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 | Pandurilor 14 | https://999.md/ro/105776688 | R-LIFT 5/5 no lift |
 | Ginta Latină 12/5 | https://999.md/ro/105418586 | R-LOC Ciocana (€119.9k) |
 | Colina Pușkin 8A | https://999.md/ro/105722767 | R-FLOOR floor 1 (€112k) |
+| Tudor Vladimirescu 3 (3 rooms, 73 m², 3/3, €84.9k; dupes 105104604, 105287773, 105736654) | https://999.md/ro/105513974 | R-BLACKLIST-CET1 (2026-11-02) |
 
 ## 6. Benchmark
 

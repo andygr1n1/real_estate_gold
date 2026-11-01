@@ -1,5 +1,8 @@
 # Changelog — filter rules
 
+## 2026-11-02
+- CET-1 zone blacklisted (R-BLACKLIST-CET1): whole str. Tudor Vladimirescu + ~800 m around Termoelectrica Sursa 1. Tudor Vladimirescu 3 rejected (4 duplicate ads).
+
 ## 2026-11-01
 - Price range widened to €40–140k (R-BUDGET); above €140k excluded. Reports split into 4 blocks: €40–60k, €60–75k, €75–105k, €105–140k (R-BANDS). Any number of rooms in all blocks (R-TYPE).
 - Budget changed to €50–70k (R-BUDGET).
