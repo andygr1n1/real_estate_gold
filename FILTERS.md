@@ -20,7 +20,7 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
 - **R-AREA** (updated 2026-11-02) — Total area **≥ 40 m²** for every listing, any room count. Anything below 40 m² (or with unknown area) is excluded immediately, including listings already in the Telegram buffer.
-- **R-PRICE-M2** (2026-11-02) — Asking price per m² **≤ €1,800/m²** (price ÷ total area). Anything above €1,800/m² is excluded immediately, including listings already in the Telegram buffer.
+- **R-PRICE-M2** (2026-11-02) — Asking price per m² **≤ €1,900/m²** (price ÷ total area). Anything above €1,900/m² is excluded immediately, including listings already in the Telegram buffer.
 
 ## 2. Floors & elevator
 
@@ -133,7 +133,7 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 - Цена €40–140k; всё дороже €140k — сразу исключаем.
 - Отчёт всегда из 4 блоков: €40–60k, €60–75k, €75–105k, €105–140k.
 - Любое число комнат во всех блоках; площадь — от 40 м² (меньше 40 м² — исключаем, с 02.11.2026).
-- Цена за м² — не дороже €1 800/м² (дороже — исключаем, с 02.11.2026).
+- Цена за м² — не дороже €1 900/м² (дороже — исключаем, с 02.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - Этажи 2–8; первый и выше 8-го — нет; последний этаж — флаг (крыша).
 - Лифт: Ботаника/Буюканы/Телецентр без лифта — только 2–3 этаж; лифт неизвестен в ≤5-этажке = нет лифта. Центр и Рышкановка — без лифта можно.
