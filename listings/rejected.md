@@ -11,5 +11,6 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 | Mihail Lomonosov soclu flat (Acces Imobil 491356) | | Semi-basement (R-EXCL-BASEMENT) | |
 | Zelinski 20 | https://999.md/ro/105772089 | Botanica 5/5 no lift (R-LIFT) | 2026-11-01 |
 | Pandurilor 14 | https://999.md/ro/105776688 | 5/5 no lift (R-LIFT) | 2026-11-01 |
-| Ginta Latină 12/5 | https://999.md/ro/105418586 | Ciocana (R-LOC), €119.9k (R-BUDGET) | |
-| Colina Pușkin 8A | https://999.md/ro/105722767 | Floor 1 (R-FLOOR), over budget (R-BUDGET) | |
+| Ginta Latină 12/5 | https://999.md/ro/105418586 | Ciocana (R-LOC), €119.9k | |
+| Colina Pușkin 8A | https://999.md/ro/105722767 | Floor 1 (R-FLOOR), €112k | |
+| Tudor Vladimirescu 3 (3 rooms, 73 m², 3/3, €84.9k) | https://999.md/ro/105513974 (dupes: 105104604, 105287773, 105736654) | CET-1 zone (R-BLACKLIST-CET1); on sale since 2026-08-13 | 2026-11-02 |

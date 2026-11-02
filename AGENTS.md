@@ -24,5 +24,9 @@ Reply to Andrew in **Russian**. Repo files are in English.
 - Add a dated entry to `CHANGELOG.md`.
 - Keep `listings/shortlist.md` in sync (move rejected items out, update statuses).
 
-## Reporting format (per listing)
+## Reporting format
+
+Always group the report into the 4 price blocks from R-BANDS (€40–60k, €60–75k, €75–105k, €105–140k), each with a one-line summary (scanned / passed / MAYBE). Nothing above €140k.
+
+### Per listing
 link · price · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark (Matei Basarab 7/5) · verdict with rule IDs.
