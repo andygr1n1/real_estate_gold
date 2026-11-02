@@ -10,7 +10,8 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-PRICE-M2 — ≤€1,900/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-FLOOR — floors 2–8
-- [ ] R-LIFT — Botanica/Buiucani/Telecentru: no lift → floors 2–3 only; unknown lift in ≤5 floors = no lift
+- [ ] R-EXCL-BOTANICA — not in Botanica sector
+- [ ] R-LIFT — Buiucani/Telecentru: no lift → floors 2–3 only; unknown lift in ≤5 floors = no lift
 - [ ] R-TOPFLOOR — top floor? (flag)
 - [ ] R-EXCL-HOSTEL · R-EXCL-BASEMENT · R-EXCL-UNFINISHED · R-EXCL-NEWBUILD · R-EXCL-SUBURB · R-EXCL-PROMO
 - [ ] R-LOC — sector OK; real address verified from text

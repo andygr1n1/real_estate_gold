@@ -26,7 +26,7 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 
 - **R-FLOOR** — Floors **2–8 only**. Never ground floor, never above the 8th.
 - **R-LIFT** (2026-11-01):
-  - In **Botanica, Buiucani, Telecentru**: building without a lift is acceptable only on floors 2–3. Floors 4–8 only with a **confirmed** lift.
+  - In **Buiucani, Telecentru**: building without a lift is acceptable only on floors 2–3. Floors 4–8 only with a **confirmed** lift.
   - Unknown lift in a building of ≤5 floors = **no lift**.
   - In **Centru and Rîșcani** a missing lift is forgiven (floors 2–8 OK).
 - **R-TOPFLOOR** — Top floor is always flagged (roof risk).
@@ -42,7 +42,8 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 
 ## 4. Location
 
-- **R-LOC** — Priority: **Rîșcani, Centru**. Acceptable: **Botanica, Buiucani, Telecentru**.
+- **R-LOC** (updated 2026-11-02) — Priority: **Rîșcani, Centru**. Acceptable: **Buiucani, Telecentru**.
+- **R-EXCL-BOTANICA** (2026-11-02) — The whole **Botanica** sector is excluded (all streets, all micro-districts), including listings already in the Telegram buffer.
   - **Poșta Veche** excluded.
   - **Ciocana** excluded, except the part bordering Rîșcani / near Port Mall.
   - Verify the real address from the listing text, not just the sector field.
@@ -137,9 +138,9 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 - Цена за м² — не дороже €1 900/м² (дороже — исключаем, с 02.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - Этажи 2–8; первый и выше 8-го — нет; последний этаж — флаг (крыша).
-- Лифт: Ботаника/Буюканы/Телецентр без лифта — только 2–3 этаж; лифт неизвестен в ≤5-этажке = нет лифта. Центр и Рышкановка — без лифта можно.
+- Лифт: Буюканы/Телецентр без лифта — только 2–3 этаж; лифт неизвестен в ≤5-этажке = нет лифта. Центр и Рышкановка — без лифта можно.
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, мансарды, частные одноэтажные дома, серый вариант (белый вариант разрешён с 01.11.2026, с оценкой бюджета ремонта), несданные новостройки, пригороды.
-- Районы: приоритет Рышкановка и Центр; допустимо Ботаника, Буюканы, Телецентр. Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
+- Районы: приоритет Рышкановка и Центр; допустимо Буюканы, Телецентр. Ботаника — нет (весь сектор, с 02.11.2026). Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
 - 5–10 минут пешком до магистрали, парка или университета.
 - Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 (вся ул. Тудор Владимиреску, вся ул. Николае Димо и ~800 м вокруг станции).
 - Рекламные (поднятые) объявления 999.md игнорируются.

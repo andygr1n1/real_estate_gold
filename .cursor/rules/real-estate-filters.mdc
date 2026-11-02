@@ -11,9 +11,9 @@ Hard filters (condensed — FILTERS.md wins on conflict):
 - R-BANDS: every report split into 4 blocks: €40–60k, €60–75k, €75–105k, €105–140k (boundary → lower block).
 - R-TYPE/R-AREA/R-LAYOUT: any number of rooms; total area ≥40 m² (R-AREA); R-PRICE-M2: ≤€1,900/m²; own kitchen, bath, hallway, no walk-through rooms.
 - R-FLOOR: floors 2–8 only. R-TOPFLOOR: top floor flagged.
-- R-LIFT: Botanica/Buiucani/Telecentru without lift → floors 2–3 only; unknown lift in ≤5 floors = no lift. Centru/Rîșcani: no lift OK.
+- R-LIFT: Buiucani/Telecentru without lift → floors 2–3 only; unknown lift in ≤5 floors = no lift. Centru/Rîșcani: no lift OK.
 - R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, mansard, single-storey house, grey variant (white variant allowed, add renovation estimate), uncommissioned new build, suburbs; ignore promoted 999.md ads.
-- R-LOC: priority Rîșcani, Centru; OK Botanica, Buiucani, Telecentru; no Poșta Veche; no Ciocana (except near Rîșcani/Port Mall).
+- R-LOC: priority Rîșcani, Centru; OK Buiucani, Telecentru; no Botanica at all (R-EXCL-BOTANICA); no Poșta Veche; no Ciocana (except near Rîșcani/Port Mall).
 - R-MICRO: ≤5–10 min walk to main road, park or university.
 - R-BLACKLIST: east Rîșcani — Florării, str-la Florării, Pajurii, Forăriei, Zimbrului and inner streets.
 - R-BLACKLIST-CET1: whole CET-1 zone: all of str. Tudor Vladimirescu, all of str. Nicolae Dimo, and anything within ~800 m of CET-1 (≈47.0331, 28.8635).
