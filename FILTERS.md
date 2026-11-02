@@ -53,6 +53,7 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
   - Remote inner-block / outskirt streets are excluded.
 - **R-BLACKLIST** (2026-11-01) — East Rîșcani pocket east of str. Tudor Vladimirescu toward the Vadul lui Vodă greenbelt / CET-1: str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului and inner streets between them.
 - **R-BLACKLIST-CET1** (2026-11-02) — Whole CET-1 (Termoelectrica Sursa 1, str. Tudor Vladimirescu 6) zone in Rîșcani: the entire str. Tudor Vladimirescu (all house numbers) and any building within ~800 m of the CET-1 site (≈47.0331, 28.8635). Reasons: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity. Tudor Vladimirescu 3 (4 duplicate ads) rejected.
+  - Extended 2026-11-02: the entire **str. Nicolae Dimo** (all house numbers, incl. 1/3, 23 etc.) is also excluded as part of the CET-1 zone, regardless of distance.
 
 ## 5. Rejected listings (mirror of `listings/rejected.md`)
 
@@ -140,7 +141,7 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, мансарды, частные одноэтажные дома, серый вариант (белый вариант разрешён с 01.11.2026, с оценкой бюджета ремонта), несданные новостройки, пригороды.
 - Районы: приоритет Рышкановка и Центр; допустимо Ботаника, Буюканы, Телецентр. Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
 - 5–10 минут пешком до магистрали, парка или университета.
-- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 (вся ул. Тудор Владимиреску и ~800 м вокруг станции).
+- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 (вся ул. Тудор Владимиреску, вся ул. Николае Димо и ~800 м вокруг станции).
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k.
 - Никаких выдуманных цифр; оценки помечаются как оценки.

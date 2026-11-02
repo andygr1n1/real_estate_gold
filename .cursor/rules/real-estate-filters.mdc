@@ -16,5 +16,6 @@ Hard filters (condensed — FILTERS.md wins on conflict):
 - R-LOC: priority Rîșcani, Centru; OK Botanica, Buiucani, Telecentru; no Poșta Veche; no Ciocana (except near Rîșcani/Port Mall).
 - R-MICRO: ≤5–10 min walk to main road, park or university.
 - R-BLACKLIST: east Rîșcani — Florării, str-la Florării, Pajurii, Forăriei, Zimbrului and inner streets.
+- R-BLACKLIST-CET1: whole CET-1 zone: all of str. Tudor Vladimirescu, all of str. Nicolae Dimo, and anything within ~800 m of CET-1 (≈47.0331, 28.8635).
 
 Output: PASS/MAYBE/FAIL with rule IDs. Never invent numbers. Reply to Andrew in Russian. Update FILTERS.md + listings + CHANGELOG.md when rules change.

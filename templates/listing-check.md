@@ -16,6 +16,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-LOC — sector OK; real address verified from text
 - [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min)
 - [ ] R-BLACKLIST — not in east Rîșcani pocket
+- [ ] R-BLACKLIST-CET1 — not on str. Tudor Vladimirescu / str. Nicolae Dimo, not within ~800 m of CET-1
 - [ ] Not in listings/rejected.md
 
 ## Red flags (R-REDFLAG)
