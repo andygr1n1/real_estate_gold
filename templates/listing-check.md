@@ -6,7 +6,8 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-BUDGET — €40k–140k (above €140k = excluded)
 - [ ] R-BANDS — block: ☐ €40–60k ☐ €60–75k ☐ €75–105k ☐ €105–140k
 - [ ] R-TYPE — any number of rooms; rooms: ___
-- [ ] R-AREA — ≈30 m²+ (28–30 flag)
+- [ ] R-AREA — ≥40 m² total area
+- [ ] R-PRICE-M2 — ≤€1,800/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-FLOOR — floors 2–8
 - [ ] R-LIFT — Botanica/Buiucani/Telecentru: no lift → floors 2–3 only; unknown lift in ≤5 floors = no lift

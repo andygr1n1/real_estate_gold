@@ -9,7 +9,7 @@ Source of truth: `FILTERS.md`. Agent workflow: `AGENTS.md`. Read both before eva
 Hard filters (condensed — FILTERS.md wins on conflict):
 - R-BUDGET: asking €40k–140k; above €140k excluded immediately.
 - R-BANDS: every report split into 4 blocks: €40–60k, €60–75k, €75–105k, €105–140k (boundary → lower block).
-- R-TYPE/R-AREA/R-LAYOUT: any number of rooms; studio/1-room ≈30 m²+ (28–30 flag); own kitchen, bath, hallway, no walk-through rooms.
+- R-TYPE/R-AREA/R-LAYOUT: any number of rooms; total area ≥40 m² (R-AREA); R-PRICE-M2: ≤€1,800/m²; own kitchen, bath, hallway, no walk-through rooms.
 - R-FLOOR: floors 2–8 only. R-TOPFLOOR: top floor flagged.
 - R-LIFT: Botanica/Buiucani/Telecentru without lift → floors 2–3 only; unknown lift in ≤5 floors = no lift. Centru/Rîșcani: no lift OK.
 - R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, mansard, single-storey house, grey variant (white variant allowed, add renovation estimate), uncommissioned new build, suburbs; ignore promoted 999.md ads.

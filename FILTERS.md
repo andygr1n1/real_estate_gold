@@ -19,7 +19,8 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
   - Financing context: Prima Casă mortgage ≈ €40k over 15 years.
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
-- **R-AREA** — ≈30 m²+ for a 1-room / studio. 28–30 m² is borderline → flag.
+- **R-AREA** (updated 2026-11-02) — Total area **≥ 40 m²** for every listing, any room count. Anything below 40 m² (or with unknown area) is excluded immediately, including listings already in the Telegram buffer.
+- **R-PRICE-M2** (2026-11-02) — Asking price per m² **≤ €1,800/m²** (price ÷ total area). Anything above €1,800/m² is excluded immediately, including listings already in the Telegram buffer.
 
 ## 2. Floors & elevator
 
@@ -131,14 +132,15 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 
 - Цена €40–140k; всё дороже €140k — сразу исключаем.
 - Отчёт всегда из 4 блоков: €40–60k, €60–75k, €75–105k, €105–140k.
-- Любое число комнат во всех блоках; студия/1-комнатная — от ~30 м².
+- Любое число комнат во всех блоках; площадь — от 40 м² (меньше 40 м² — исключаем, с 02.11.2026).
+- Цена за м² — не дороже €1 800/м² (дороже — исключаем, с 02.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - Этажи 2–8; первый и выше 8-го — нет; последний этаж — флаг (крыша).
 - Лифт: Ботаника/Буюканы/Телецентр без лифта — только 2–3 этаж; лифт неизвестен в ≤5-этажке = нет лифта. Центр и Рышкановка — без лифта можно.
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, мансарды, частные одноэтажные дома, серый вариант (белый вариант разрешён с 01.11.2026, с оценкой бюджета ремонта), несданные новостройки, пригороды.
 - Районы: приоритет Рышкановка и Центр; допустимо Ботаника, Буюканы, Телецентр. Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
 - 5–10 минут пешком до магистрали, парка или университета.
-- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului).
+- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 (вся ул. Тудор Владимиреску и ~800 м вокруг станции).
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k.
 - Никаких выдуманных цифр; оценки помечаются как оценки.
