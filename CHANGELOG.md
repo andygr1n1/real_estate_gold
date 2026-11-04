@@ -1,5 +1,9 @@
 # Changelog — filter rules
 
+## 2026-11-04
+
+- Blacklist matching now covers Cyrillic / no-diacritic spellings (missed case: ул. Николай Димо 31/1, 999.md/ro/104146622).
+
 ## 2026-11-02
 - Whole Botanica sector excluded (R-EXCL-BOTANICA); R-LOC/R-LIFT updated; Botanica listings removed from the Telegram buffer.
 - CET-1 blacklist extended to the whole str. Nicolae Dimo (R-BLACKLIST-CET1); removed from the Telegram buffer.
