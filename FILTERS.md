@@ -129,15 +129,22 @@ Reference asking medians (2026-11-01, asking prices, not deals):
 - No-debt certificates: Termoelectrica, Apă-Canal, gas, electricity, owners' association.
 - Roof type & last repair; heating; lift; bathroom & risers; how long listed.
 
-## 10. 999.md search method (for agents)
+## 10. Search sources and method (for agents)
 
+**Always read `SOURCES.md` for the prioritized source registry.** Process enabled sources in priority order; log which sources were checked/skipped with reasons.
+
+### 999.md (primary source)
 - Ignore promoted ads at the top (R-EXCL-PROMO).
 - List pages render client-side; organic results can be fetched via `https://999.md/graphql` with the site's filters:
   - sale `o_16_1=776` (apartments) — **also search house sale categories** since single-storey houses are now allowed (R-HOUSE)
   - sectors `o_32_9=15665,15666,15664,15667,15668,15669` — ensure **Durlești** (R-EXCL-SUBURB exception) is not silently omitted by sector queries; add sector code if needed
   - price filter id `9441`, unit `eur`
-- Deduplicate.
+
+### All sources
+- Deduplicate cross-site listings (same address, agency, phone, description patterns).
 - **New parameters to flag** (2026-11-07): construction year (must be ≥2000), mansard status, house type, roof condition, legal/cadastral registration status.
+- Continue on transient errors; log checked/failed sources.
+- Never weaken filters to increase results — all R-* rules apply equally to all sources.
 
 ## 11. Reporting format
 

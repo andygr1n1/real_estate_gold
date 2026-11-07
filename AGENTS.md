@@ -1,14 +1,15 @@
 # AGENTS.md — instructions for AI agents (Cursor, Codex, Claude, Grok Bot)
 
 ## Purpose
-This repo holds Andrew Grini's apartment-search rules for Chișinău, Moldova, plus the shortlist and rejected listings. `FILTERS.md` is the **single source of truth**.
+This repo holds Andrew Grini's apartment-search rules for Chișinău, Moldova, plus the shortlist and rejected listings. `FILTERS.md` is the **single source of truth** for filter rules. `SOURCES.md` is the **prioritized source registry** for listing sources.
 
 ## Mandatory workflow
 1. **Always read `FILTERS.md` before evaluating any listing.** Never rely on memory of the rules.
-2. Evaluate every listing against **every** rule (use `templates/listing-check.md`).
-3. Output a verdict **PASS / MAYBE / FAIL** and cite the specific rule IDs (e.g. `FAIL: R-FLOOR, R-BLACKLIST`).
-4. Check `listings/rejected.md` first — never re-propose a rejected listing.
-5. Ignore promoted/boosted 999.md ads (R-EXCL-PROMO). Deduplicate the same flat across agencies.
+2. **Always read `SOURCES.md` before searching.** Process enabled sources in priority order; log checked/skipped sources with reasons.
+3. Evaluate every listing against **every** rule (use `templates/listing-check.md`).
+4. Output a verdict **PASS / MAYBE / FAIL** and cite the specific rule IDs (e.g. `FAIL: R-FLOOR, R-BLACKLIST`).
+5. Check `listings/rejected.md` first — never re-propose a rejected listing.
+6. Ignore promoted/boosted 999.md ads (R-EXCL-PROMO). Deduplicate the same flat across agencies and across sources.
 
 ## Data honesty
 - Never invent numbers. Every figure must come from a listing or comparable you actually opened.

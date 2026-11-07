@@ -1,5 +1,13 @@
 # Changelog — filter rules
 
+## 2026-11-07 (source registry added)
+
+- **SOURCES.md created**: Prioritized, owner-editable registry of real estate listing sources. Six sources listed with verified URLs (2026-11-07): 999.md (primary), Acces Imobil, Pro Imobil, Realist.md, Romanescu, All Invest Realty (AIR). Coverage details to be verified. Capital Imobil not added (domain unreachable).
+- Search agent instructions: read SOURCES.md before each run, process enabled sources in priority order, log checked/skipped sources with reasons, deduplicate cross-site listings, continue on transient errors, never weaken filters.
+- README.md, AGENTS.md, FILTERS.md updated to reference SOURCES.md.
+- Owner can manually add/edit sources by updating SOURCES.md table.
+- No filter rule changes; all criteria remain same (2 price blocks, white variant €110k cap, construction ≥2000, elevator informational, etc.).
+
 ## 2026-11-07 (evening update)
 
 - **R-BANDS**: Changed from 4 price blocks to **2 price blocks**: €40,000–110,000 inclusive (first block), >€110,000–140,000 inclusive (second block). Exactly €110,000 belongs to the first block. Up to 10 listings per block. Reporting format updated in FILTERS.md and AGENTS.md.
