@@ -10,12 +10,10 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 ## 1. Budget & type
 
 - **R-BUDGET** (updated 2026-11-01) — Asking price **€40,000–140,000**. Anything above €140k (or below €40k) is excluded immediately.
-- **R-BANDS** (2026-11-01) — Every report is split into 4 price blocks, in this order:
-  1. **€40–60k**
-  2. **€60–75k**
-  3. **€75–105k**
-  4. **€105–140k**
-  Boundary prices go to the lower block (e.g. €60,000 → block 1, €75,000 → block 2, €105,000 → block 3). Each block starts with a one-line summary: listings scanned, passed, MAYBE; then the passed listings ranked best first. Empty block → say "нет подходящих".
+- **R-BANDS** (updated 2026-11-07) — Every report is split into 2 price blocks, in this order:
+  1. **€40,000–110,000 inclusive**
+  2. **>€110,000–140,000 inclusive**
+  Boundary: exactly €110,000 belongs to block 1. Each block starts with a one-line summary: listings scanned, passed, MAYBE; then the passed listings ranked best first. Empty block → say "нет подходящих". Up to 10 listings per block.
   - Financing context: Prima Casă mortgage ≈ €40k over 15 years.
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
@@ -141,8 +139,11 @@ Reference asking medians (2026-11-01, asking prices, not deals):
 - Deduplicate.
 - **New parameters to flag** (2026-11-07): construction year (must be ≥2000), mansard status, house type, roof condition, legal/cadastral registration status.
 
-## 11. Reporting format per listing
+## 11. Reporting format
 
+Always group into the 2 price blocks from R-BANDS (€40k–110k inclusive, >€110k–140k inclusive), each with a one-line summary (scanned / passed / MAYBE). Up to 10 listings per block.
+
+### Per listing
 price block (R-BANDS) · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark · **verdict PASS/MAYBE/FAIL with rule IDs**.
 
 ---
@@ -150,7 +151,7 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 ## Кратко по-русски (жёсткие правила)
 
 - Цена €40–140k; всё дороже €140k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €110k** (дороже €110k — исключаем, даже если меньше €140k, с 07.11.2026).
-- Отчёт всегда из 4 блоков: €40–60k, €60–75k, €75–105k, €105–140k.
+- Отчёт всегда из 2 блоков: €40k–110k включительно (€110 000 точно в первом блоке), >€110k–140k включительно (с 07.11.2026). До 10 объявлений в каждом блоке.
 - Любое число комнат во всех блоках; площадь — от 40 м² (меньше 40 м² — исключаем, с 02.11.2026).
 - Цена за м² — не дороже €1 900/м² (дороже — исключаем, с 02.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
