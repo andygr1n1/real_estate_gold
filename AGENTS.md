@@ -21,6 +21,7 @@ Reply to Andrew in **Russian**. Repo files are in English.
 ## When Andrew gives a new rule or rejects a listing — same change:
 - Update the rule in `FILTERS.md` (with a stable rule ID and the date).
 - Add rejected listings to both `FILTERS.md` §5 and `listings/rejected.md` (address, link, reason with rule ID, date).
+- User-designated MAYBE listings go to `FILTERS.md` §5a and `listings/shortlist.md` with clear verification requirements.
 - Add a dated entry to `CHANGELOG.md`.
 - Keep `listings/shortlist.md` in sync (move rejected items out, update statuses).
 

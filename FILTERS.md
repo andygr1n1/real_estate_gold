@@ -1,6 +1,6 @@
 # FILTERS.md — Chișinău apartment search rules (single source of truth)
 
-Owner: Andrew Grini · Last updated: 2026-11-01
+Owner: Andrew Grini · Last updated: 2026-11-07
 
 Every listing must be checked against **every** rule below. Verdicts cite rule IDs.
 Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, flagged) · **FAIL** (any hard rule violated).
@@ -24,25 +24,33 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 
 ## 2. Floors & elevator
 
-- **R-FLOOR** — Floors **2–8 only**. Never ground floor, never above the 8th.
-- **R-LIFT** (2026-11-01):
-  - In **Buiucani, Telecentru**: building without a lift is acceptable only on floors 2–3. Floors 4–8 only with a **confirmed** lift.
-  - Unknown lift in a building of ≤5 floors = **no lift**.
-  - In **Centru and Rîșcani** a missing lift is forgiven (floors 2–8 OK).
+- **R-FLOOR** (updated 2026-11-07) — For **apartments**: floors **2–8 only**. Never ground floor, never above the 8th. For **single-storey houses**: explicit exception to the 2–8 rule.
+- **R-LIFT** (updated 2026-11-07):
+  - Lift presence (yes/no/unknown) is **informational only**.
+  - High floor (≥4) without a lift is **flagged** as a practical concern, but **NEVER a hard exclusion**.
+  - Unknown lift in a building of ≤5 floors = **no lift** (for flagging purposes).
 - **R-TOPFLOOR** — Top floor is always flagged (roof risk).
 
 ## 3. Always excluded
 
 - **R-EXCL-HOSTEL** — Hostel units (cămin / gostinka / shared kitchen or bath).
-- **R-EXCL-BASEMENT** — Soclu, demisol, semi-basement, "pe sol", single-storey houses, mansards.
-- **R-EXCL-UNFINISHED** (updated 2026-11-01) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED**: it is easier to renovate to one's own taste. For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
+- **R-EXCL-BASEMENT** — Soclu, demisol, semi-basement, "pe sol".
+- **R-EXCL-UNFINISHED** (updated 2026-11-07) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED** with a **mandatory price cap**: asking price must be **≤€110,000 inclusive**. White variant asking >€110,000 is **FAIL**, even though the general budget cap is €140,000. This applies to apartments and houses, all locations, and uses the asking price (not hypothetical discounted offers). For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
+  - Boundary test cases: white variant €110,000 asking = PASS (at cap); white variant €110,001 asking = FAIL (over cap).
 - **R-EXCL-NEWBUILD** — New builds not yet commissioned.
-- **R-EXCL-SUBURB** — Suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.).
+- **R-EXCL-SUBURB** (updated 2026-11-07) — Suburbs (Codru, Stăuceni, Ialoveni, Sîngera, etc.) are excluded. **Durlești is explicitly allowed** as an exception.
 - **R-EXCL-PROMO** — Promoted/boosted ads on 999.md are ignored (not counted in results).
+
+## 3a. Building age & special property types
+
+- **R-YEAR** (added 2026-11-07) — Buildings constructed **before 2000 are excluded**. Only construction year **≥2000 (inclusive)** is allowed for both apartments and houses. Renovation in an old building does NOT count. Unverified construction year → verdict **MAYBE**, not PASS. Never invent or guess a construction year. Commissioned status still required (R-EXCL-NEWBUILD).
+- **R-MANSARD** (added 2026-11-07) — **Mansards are now ALLOWED**. Flag for verification: roof condition, legal registration, cadastral compliance.
+- **R-HOUSE** (added 2026-11-07) — **Single-storey private houses are now ALLOWED**. Explicit exception to R-FLOOR (2–8 requirement) and R-LIFT. Flag for verification: legal status, cadastral registration, land ownership/rights.
 
 ## 4. Location
 
-- **R-LOC** (updated 2026-11-02) — Priority: **Rîșcani, Centru**. Acceptable: **Buiucani, Telecentru**.
+- **R-LOC** (updated 2026-11-07) — Priority: **Centru, Rîșcani**, and **Buiucani within approximately 0–20 minute WALK of Komsomol lake / Valea Morilor** (R-LAKE). Other parts of **Buiucani** and **Telecentru** are acceptable. **Durlești** is acceptable.
+- **R-LAKE** (added 2026-11-07) — Buiucani within ≈0–20 minute walk of Komsomol lake / Valea Morilor has **priority** status. Walking time is measured by actual routes, not straight-line distance. This explicit 20-minute lake priority overrides the generic 5–10 minute R-MICRO rule for these areas.
 - **R-EXCL-BOTANICA** (2026-11-02) — The whole **Botanica** sector is excluded (all streets, all micro-districts), including listings already in the Telegram buffer.
   - **Poșta Veche** excluded.
   - **Ciocana** excluded, except the part bordering Rîșcani / near Port Mall.
@@ -52,6 +60,7 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
   - a park (Valea Morilor, Râșcani / La Izvor, Central Park, Valea Trandafirilor, Dendrarium, Lacul Dimo), or
   - a university (USM, UTM, ASEM, USMF, Pedagogical University).
   - Remote inner-block / outskirt streets are excluded.
+  - Note: The explicit R-LAKE 20-minute priority for Buiucani near Valea Morilor / Komsomol lake takes precedence over this generic 5–10 minute rule.
 - **R-BLACKLIST** (2026-11-01) — East Rîșcani pocket east of str. Tudor Vladimirescu toward the Vadul lui Vodă greenbelt / CET-1: str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului and inner streets between them.
 - **R-BLACKLIST-CET1** (2026-11-02) — Whole CET-1 (Termoelectrica Sursa 1, str. Tudor Vladimirescu 6) zone in Rîșcani: the entire str. Tudor Vladimirescu (all house numbers) and any building within ~800 m of the CET-1 site (≈47.0331, 28.8635). Reasons: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity. Tudor Vladimirescu 3 (4 duplicate ads) rejected.
   - Extended 2026-11-02: the entire **str. Nicolae Dimo** (all house numbers, incl. 1/3, 23 etc.) is also excluded as part of the CET-1 zone, regardless of distance.
@@ -66,16 +75,22 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 | Podul Înalt 20 | — | R-LOC Ciocana |
 | Piața Unirii Principatelor 3 | — | R-FLOOR floor 15 |
 | Mihail Lomonosov soclu flat (Acces Imobil 491356) | — | R-EXCL-BASEMENT semi-basement |
-| Zelinski 20 | https://999.md/ro/105772089 | R-LIFT Botanica 5/5 no lift |
-| Pandurilor 14 | https://999.md/ro/105776688 | R-LIFT 5/5 no lift |
+| Zelinski 20 | https://999.md/ro/105772089 | R-EXCL-BOTANICA (formerly R-LIFT) |
+| Pandurilor 14 | https://999.md/ro/105776688 | Location unclear; previously flagged 5/5 no lift (lift no longer exclusion as of 2026-11-07) |
 | Ginta Latină 12/5 | https://999.md/ro/105418586 | R-LOC Ciocana (€119.9k) |
 | Colina Pușkin 8A | https://999.md/ro/105722767 | R-FLOOR floor 1 (€112k) |
 | Tudor Vladimirescu 3 (3 rooms, 73 m², 3/3, €84.9k; dupes 105104604, 105287773, 105736654) | https://999.md/ro/105513974 | R-BLACKLIST-CET1 (2026-11-02) |
 
+## 5a. User-designated MAYBE listings under review
+
+| Listing | Link | Notes |
+|---|---|---|
+| Cornului 9/3, Buiucani (Gonvaro-Con) | https://999.md/ro/105823314 | User-designated MAYBE (2026-11-07): 2+living, cadastral 93 m², 6/6, €135k (€1,452/m²) or €128k scenario (€1,376/m²). Lift status: prior source Ascensor=false NOT confirmed on site. **Construction year and mansard status UNVERIFIED** → verdict MAYBE pending R-YEAR (≥2000), R-MANSARD verification (roof/legal/cadastral), and on-site lift confirmation. Do NOT fabricate year or clear risks. |
+
 ## 6. Benchmark
 
 **Matei Basarab 7/5, Rîșcani** — https://999.md/ro/105332474 — €66,900, 35 m², floor 3/5, ≈€1,911/m². Suggested offer €60–63k.
-Every candidate is compared against this benchmark.
+**Note (2026-11-07)**: This benchmark is **historical reference only**. At 35 m² it is below the current R-AREA minimum (≥40 m²), and if the building was constructed before 2000 it would not meet R-YEAR. Use for pricing comparison context, not as a target for new searches.
 
 ## 7. Pricing method (R-PRICE)
 
@@ -120,10 +135,11 @@ Reference asking medians (2026-11-01, asking prices, not deals):
 
 - Ignore promoted ads at the top (R-EXCL-PROMO).
 - List pages render client-side; organic results can be fetched via `https://999.md/graphql` with the site's filters:
-  - sale `o_16_1=776`
-  - sectors `o_32_9=15665,15666,15664,15667,15668,15669`
+  - sale `o_16_1=776` (apartments) — **also search house sale categories** since single-storey houses are now allowed (R-HOUSE)
+  - sectors `o_32_9=15665,15666,15664,15667,15668,15669` — ensure **Durlești** (R-EXCL-SUBURB exception) is not silently omitted by sector queries; add sector code if needed
   - price filter id `9441`, unit `eur`
 - Deduplicate.
+- **New parameters to flag** (2026-11-07): construction year (must be ≥2000), mansard status, house type, roof condition, legal/cadastral registration status.
 
 ## 11. Reporting format per listing
 
@@ -133,17 +149,20 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 
 ## Кратко по-русски (жёсткие правила)
 
-- Цена €40–140k; всё дороже €140k — сразу исключаем.
+- Цена €40–140k; всё дороже €140k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €110k** (дороже €110k — исключаем, даже если меньше €140k, с 07.11.2026).
 - Отчёт всегда из 4 блоков: €40–60k, €60–75k, €75–105k, €105–140k.
 - Любое число комнат во всех блоках; площадь — от 40 м² (меньше 40 м² — исключаем, с 02.11.2026).
 - Цена за м² — не дороже €1 900/м² (дороже — исключаем, с 02.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
-- Этажи 2–8; первый и выше 8-го — нет; последний этаж — флаг (крыша).
-- Лифт: Буюканы/Телецентр без лифта — только 2–3 этаж; лифт неизвестен в ≤5-этажке = нет лифта. Центр и Рышкановка — без лифта можно.
-- Исключены: общежития/гостинки, цоколь/демисол/pe sol, мансарды, частные одноэтажные дома, серый вариант (белый вариант разрешён с 01.11.2026, с оценкой бюджета ремонта), несданные новостройки, пригороды.
-- Районы: приоритет Рышкановка и Центр; допустимо Буюканы, Телецентр. Ботаника — нет (весь сектор, с 02.11.2026). Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
-- 5–10 минут пешком до магистрали, парка или университета.
+- **Год постройки ≥2000** — здания построенные до 2000 исключены; ремонт не считается; непроверенный год = MAYBE (с 07.11.2026). Новостройки — только сданные.
+- Этажи 2–8 для квартир; первый и выше 8-го — нет; последний этаж — флаг (крыша). **Частные одноэтажные дома — исключение** из правила 2–8 этажей (с 07.11.2026).
+- **Лифт — только информация**, не жёсткое исключение (с 07.11.2026). Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
+- **Мансарды разрешены** с 07.11.2026 (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
+- Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
+- Районы: приоритет **Центр, Рышкановка**, и **Буюканы в пределах ≈0–20 минут пешком** от озера Комсомольское / Валя Морилор (с 07.11.2026). Остальные Буюканы и Телецентр — допустимо. **Дурлешты — допустимо** (исключение из пригородов, с 07.11.2026). Ботаника — нет (весь сектор). Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
+- 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
 - Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 (вся ул. Тудор Владимиреску, вся ул. Николае Димо и ~800 м вокруг станции).
 - Рекламные (поднятые) объявления 999.md игнорируются.
-- Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k.
+- Поиск включает **категорию продажи домов**, так как частные дома разрешены; Дурлешты не упускается запросами по секторам (с 07.11.2026).
+- Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k. **Это исторический эталон** (меньше 40 м² и возможно построен до 2000 года, с 07.11.2026).
 - Никаких выдуманных цифр; оценки помечаются как оценки.

@@ -19,3 +19,4 @@ Blank = unknown (not verified). Do not fill with guesses.
 | Grigore Vieru 21/2 | https://999.md/ro/105504305 | €62,000 | | | | | to check |
 | Belgrad 21 | https://999.md/ro/105338663 | €64,900 | | | | | to check |
 | Dimo 31/1 | https://999.md/ro/105092757 | €65,000 | 60 | | 5/5 | | **MAYBE** — 2-room, top floor, needs full renovation (estimate €15–20k); check whether area includes an unregistered attic; fair €62–68k, opening offer €58–60k (estimates) |
+| **Cornului 9/3, Buiucani (Gonvaro-Con)** | https://999.md/ro/105823314 | €135,000 (€128k scenario) | 93 (cadastral) | €1,452 (€1,376 @ €128k) | 6/6 | unknown (prior source: no; NOT confirmed on site) | **User-designated MAYBE** (2026-11-07) — 2+living; lift unknown, prior source Ascensor=false not confirmed; **UNVERIFIED**: construction year (must be ≥2000), mansard status, roof/legal/cadastral. Pending verification before PASS. Do NOT fabricate year or clear risks. |
