@@ -1,5 +1,9 @@
 # Changelog — filter rules
 
+## 2026-11-07 (evening update)
+
+- **R-BANDS**: Changed from 4 price blocks to **2 price blocks**: €40,000–110,000 inclusive (first block), >€110,000–140,000 inclusive (second block). Exactly €110,000 belongs to the first block. Up to 10 listings per block. Reporting format updated in FILTERS.md and AGENTS.md.
+
 ## 2026-11-07
 
 - **White variant price cap** (R-EXCL-UNFINISHED): asking price ≤€110,000 inclusive for white variant (variantă albă); white variant >€110k is FAIL even though general cap is €140k. Applies to apartments and houses, all locations. Uses asking price, not discounted offers.

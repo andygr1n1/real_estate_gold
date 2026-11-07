@@ -27,7 +27,7 @@ Reply to Andrew in **Russian**. Repo files are in English.
 
 ## Reporting format
 
-Always group the report into the 4 price blocks from R-BANDS (€40–60k, €60–75k, €75–105k, €105–140k), each with a one-line summary (scanned / passed / MAYBE). Nothing above €140k.
+Always group the report into the 2 price blocks from R-BANDS (€40k–110k inclusive, >€110k–140k inclusive), each with a one-line summary (scanned / passed / MAYBE). Up to 10 listings per block. Nothing above €140k.
 
 ### Per listing
 link · price · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark (Matei Basarab 7/5) · verdict with rule IDs.
