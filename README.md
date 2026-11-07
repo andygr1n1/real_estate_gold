@@ -5,6 +5,7 @@ Apartment search rules for Chișinău (Andrew Grini), structured for AI agents (
 | File | Purpose |
 |---|---|
 | `FILTERS.md` | Single source of truth: all filter rules with stable IDs |
+| `SOURCES.md` | Prioritized real estate source registry (owner-editable) |
 | `AGENTS.md` | Workflow for any AI agent |
 | `CLAUDE.md` | Claude Code entry point (imports AGENTS.md + FILTERS.md) |
 | `.cursor/rules/real-estate-filters.mdc` | Cursor always-on rule |
