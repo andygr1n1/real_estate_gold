@@ -45,5 +45,16 @@ Median €/m²: · IQR: · Compared with benchmark (Matei Basarab 7/5, ≈€1,9
 - [ ] Roof, heating, lift, bathroom & risers, days listed
 
 ## Verdict
-PASS / MAYBE / FAIL — rules: 
+**Status:** PASS / MAYBE / FAIL — **rules cited:** 
+
+**If MAYBE:** Specific reasons why MAYBE (list all material unknowns/conflicts):
+- [ ] Construction year unverified (must confirm ≥2000)
+- [ ] Cadastral area conflicts with listing (must verify actual area)
+- [ ] Locality ambiguous (must resolve Chișinău Rîșcani vs Durlești)
+- [ ] Other (specify): ___
+
+**Required verification for MAYBE:** (list all steps needed before upgrade to PASS)
+
+**Note:** MAYBE candidates are PUBLISHED (2026-11-08). PASS = fully verified; MAYBE = unknown/contradictory but no confirmed violation; FAIL = confirmed violation, excluded.
+
 Fair price (estimate): · Opening offer:

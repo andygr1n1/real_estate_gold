@@ -1,19 +1,29 @@
 # FILTERS.md — Chișinău apartment search rules (single source of truth)
 
-Owner: Andrew Grini · Last updated: 2026-11-07
+Owner: Andrew Grini · Last updated: 2026-11-08
 
 Every listing must be checked against **every** rule below. Verdicts cite rule IDs.
-Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, flagged) · **FAIL** (any hard rule violated).
+Verdict scale:
+- **PASS** (all hard rules met, fully verified)
+- **MAYBE** (unknown/contradictory criterion but no confirmed mandatory violation; published with specific reasons why uncertain)
+- **FAIL** (any hard rule confirmed violated; excluded from publication)
 
 ---
 
 ## 1. Budget & type
 
 - **R-BUDGET** (updated 2026-11-01) — Asking price **€40,000–140,000**. Anything above €140k (or below €40k) is excluded immediately.
-- **R-BANDS** (updated 2026-11-07) — Every report is split into 2 price blocks, in this order:
+- **R-BANDS** (updated 2026-11-08) — Every report uses 2 price blocks for organizing listings:
   1. **€40,000–110,000 inclusive**
   2. **>€110,000–140,000 inclusive**
-  Boundary: exactly €110,000 belongs to block 1. Each block starts with a one-line summary: listings scanned, passed, MAYBE; then the passed listings ranked best first. Empty block → say "нет подходящих". Up to 10 listings per block.
+  Boundary: exactly €110,000 belongs to block 1.
+  
+  **Quotas per batch** (updated 2026-11-08):
+  - **PASS €40k–110k**: up to 10 listings
+  - **PASS >€110k–140k**: up to 10 listings
+  - **MAYBE (separate status group)**: up to 10 listings TOTAL across both price bands (shown with price band subdivisions as needed)
+  
+  MAYBE has its own independent ≤10 quota; MAYBE does NOT consume PASS quota. Leftovers buffered and published in chunks ≤10 at noon/evening. Each block/section starts with a one-line summary: listings scanned, PASS count, MAYBE count. Rank PASS first (best first), then MAYBE (best potential first). Empty → say "нет подходящих".
   - Financing context: Prima Casă mortgage ≈ €40k over 15 years.
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
@@ -85,11 +95,13 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
 | Colina Pușkin 8A | https://999.md/ro/105722767 | R-FLOOR floor 1 (€112k) |
 | Tudor Vladimirescu 3 (3 rooms, 73 m², 3/3, €84.9k; dupes 105104604, 105287773, 105736654) | https://999.md/ro/105513974 | R-BLACKLIST-CET1 (2026-11-02) |
 
-## 5a. User-designated MAYBE listings under review
+## 5a. MAYBE listings (published per 2026-11-08 rules)
 
-| Listing | Link | Notes |
+MAYBE candidates are now published with specific reasons. See FILTERS.md §11 for MAYBE publication rules.
+
+| Listing | Link | Status & Required Verification |
 |---|---|---|
-| Cornului 9/3, Buiucani (Gonvaro-Con) | https://999.md/ro/105823314 | User-designated MAYBE (2026-11-07): 2+living, cadastral 93 m², 6/6, €135k (€1,452/m²) or €128k scenario (€1,376/m²). Lift status: prior source Ascensor=false NOT confirmed on site. **Construction year and mansard status UNVERIFIED** → verdict MAYBE pending R-YEAR (≥2000), R-MANSARD verification (roof/legal/cadastral), and on-site lift confirmation. Do NOT fabricate year or clear risks. |
+| Cornului 9/3, Buiucani (Gonvaro-Con) | https://999.md/ro/105823314 | **MAYBE** (2026-11-07, updated 2026-11-08): 2+living, cadastral 93 m², 6/6, €135k (€1,452/m²) or €128k scenario (€1,376/m²). Lift status: prior source Ascensor=false NOT confirmed on site. **Material unknowns:** Construction year UNVERIFIED (must confirm ≥2000 for R-YEAR); mansard status UNVERIFIED (must verify roof/legal/cadastral for R-MANSARD); lift presence NOT confirmed on site. **Required verification:** year ≥2000, roof/legal/cadastral compliance, on-site lift confirmation. Do NOT fabricate year or clear risks; do NOT upgrade to PASS without verification. |
 
 ## 6. Benchmark
 
@@ -152,19 +164,49 @@ Reference asking medians (2026-11-01, asking prices, not deals):
 - Continue on transient errors; log checked/failed sources.
 - Never weaken filters to increase results — all R-* rules apply equally to all sources.
 
-## 11. Reporting format
+## 11. MAYBE publication rules (added 2026-11-08)
 
-Always group into the 2 price blocks from R-BANDS (€40k–110k inclusive, >€110k–140k inclusive), each with a one-line summary (scanned / passed / MAYBE). Up to 10 listings per block.
+**MAYBE candidates are PUBLISHED** with literal tag **MAYBE** and specific reasons why uncertain.
+
+- **PASS** = all hard rules met, fully verified
+- **MAYBE** = unknown/contradictory criterion but no confirmed mandatory violation; published with material unknowns/conflicts and required verification
+- **FAIL** = any hard rule confirmed violated; excluded from publication
+
+### MAYBE examples
+- ✅ **MAYBE** — construction year not confirmed (must verify ≥2000); other criteria met
+- ✅ **MAYBE** — cadastral area conflicts with listing (must verify); price/location/year OK
+- ✅ **MAYBE** — locality ambiguous between Chișinău Rîșcani (excluded) and Durlești (allowed); must resolve
+- ❌ **FAIL** — construction year confirmed <2000 (R-YEAR violation)
+
+### For each published MAYBE
+- Include all material unknowns/conflicts
+- Include required verification steps
+- Never fabricate facts or upgrade to PASS without verification
+
+### Previous blanket exclusion removed
+MAYBE candidates are now published (previously excluded from buffer/reports). Unknown year may now publish clearly as MAYBE; known pre-2000 remains FAIL.
+
+## 12. Reporting format
+
+Always organize into the 2 price blocks from R-BANDS (€40k–110k inclusive, >€110k–140k inclusive). Present in this order:
+1. **PASS €40k–110k** (up to 10) — ranked best first
+2. **PASS >€110k–140k** (up to 10) — ranked best first
+3. **MAYBE across both bands** (up to 10 TOTAL) — shown with price band subdivisions as needed; ranked best potential first
+
+Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Empty section → say "нет подходящих".
 
 ### Per listing
-price block (R-BANDS) · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark · **verdict PASS/MAYBE/FAIL with rule IDs**.
+**Status PASS/MAYBE** · price block (R-BANDS) · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark · **verdict with rule IDs**.
+
+**For MAYBE listings, add:** specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification steps, material unknowns/conflicts.
 
 ---
 
 ## Кратко по-русски (жёсткие правила)
 
 - Цена €40–140k; всё дороже €140k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €110k** (дороже €110k — исключаем, даже если меньше €140k, с 07.11.2026).
-- Отчёт всегда из 2 блоков: €40k–110k включительно (€110 000 точно в первом блоке), >€110k–140k включительно (с 07.11.2026). До 10 объявлений в каждом блоке.
+- Отчёт всегда из 2 блоков: €40k–110k включительно (€110 000 точно в первом блоке), >€110k–140k включительно (с 07.11.2026).
+- **Квоты на публикацию (с 08.11.2026):** PASS €40k–110k до 10 объявлений, PASS >€110k–140k до 10 объявлений, **MAYBE отдельная группа до 10 ВСЕГО** (независимая квота, не потребляет квоту PASS; показывается с подразделениями по ценовым блокам по необходимости). Остатки в буфер, публикуются порциями ≤10 в полдень/вечером.
 - Любое число комнат во всех блоках; площадь — от 40 м² (меньше 40 м² — исключаем, с 02.11.2026).
 - Цена за м² — не дороже €1 900/м² (дороже — исключаем, с 02.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
@@ -177,6 +219,7 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
 - Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Тудор Владимиреску в Кишинёве Рышкановка, вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции). **С 08.11.2026: одноимённые улицы в Дурлештах РАЗРЕШЕНЫ** (Тудор Владимиреску в Дурлештах, Николае Димо в Дурлештах — допустимо при соблюдении всех остальных фильтров). Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения.
 - Рекламные (поднятые) объявления 999.md игнорируются.
+- **MAYBE теперь публикуются** (с 08.11.2026) с буквальной меткой MAYBE и конкретными причинами неопределённости (например, год постройки не подтверждён — требуется проверка ≥2000). PASS = полностью проверено; MAYBE = неизвестный/противоречивый критерий, но нет подтверждённого нарушения обязательного правила; FAIL = подтверждённое нарушение, исключено. Для каждого MAYBE: все существенные неизвестные/конфликты, требуемая проверка, никогда не выдумывать факты. Неизвестный год может публиковаться как MAYBE; подтверждённый <2000 остаётся FAIL.
 - Поиск включает **категорию продажи домов**, так как частные дома разрешены; Дурлешты не упускается запросами по секторам (с 07.11.2026).
 - Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k. **Это исторический эталон** (меньше 40 м² и возможно построен до 2000 года, с 07.11.2026).
 - Никаких выдуманных цифр; оценки помечаются как оценки.

@@ -29,7 +29,22 @@ Reply to Andrew in **Russian**. Repo files are in English.
 
 ## Reporting format
 
-Always group the report into the 2 price blocks from R-BANDS (€40k–110k inclusive, >€110k–140k inclusive), each with a one-line summary (scanned / passed / MAYBE). Up to 10 listings per block. Nothing above €140k.
+Always organize into the 2 price blocks from R-BANDS (€40k–110k inclusive, >€110k–140k inclusive). Present in this order:
+1. **PASS €40k–110k** (up to 10) — ranked best first
+2. **PASS >€110k–140k** (up to 10) — ranked best first
+3. **MAYBE across both bands** (up to 10 TOTAL) — shown with price band subdivisions as needed; ranked best potential first
+
+MAYBE has its own independent ≤10 quota; does NOT consume PASS quota. Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €140k.
+
+### MAYBE publication (added 2026-11-08)
+**MAYBE candidates are PUBLISHED** with literal tag **MAYBE** and specific reasons:
+- PASS = fully verified
+- MAYBE = unknown/contradictory criterion but no confirmed violation; published with reasons
+- FAIL = confirmed violation; excluded
+
+For each MAYBE: include all material unknowns/conflicts, required verification, never fabricate facts. Unknown year may publish as MAYBE; known pre-2000 remains FAIL.
 
 ### Per listing
-link · price · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark (Matei Basarab 7/5) · verdict with rule IDs.
+**Status PASS/MAYBE** · price block · link · price · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark (Matei Basarab 7/5) · verdict with rule IDs.
+
+**For MAYBE:** add specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification, material unknowns.
