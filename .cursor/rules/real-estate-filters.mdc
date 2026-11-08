@@ -7,10 +7,10 @@ alwaysApply: true
 Source of truth: `FILTERS.md`. Agent workflow: `AGENTS.md`. Read both before evaluating any listing. Check `listings/rejected.md` first.
 
 Hard filters (condensed — FILTERS.md wins on conflict):
-- R-BUDGET: asking €40k–140k; above €140k excluded immediately. WHITE VARIANT: asking ≤€110k (>€110k FAIL even if <€140k).
+- R-BUDGET: asking €40k–140k; above €140k excluded immediately. WHITE VARIANT: asking ≤€90k (>€90k FAIL even if <€140k; 2026-11-08 18:32).
 - R-BANDS: 2 price blocks: €40k–110k inclusive (€110k in first block), >€110k–140k inclusive. QUOTAS: PASS €40k–110k ≤10, PASS >€110k–140k ≤10, MAYBE separate status ≤10 TOTAL (own quota, does NOT consume PASS quota; shown with price band subdivisions).
 - MAYBE PUBLICATION (2026-11-08): MAYBE now PUBLISHED with literal tag and specific reasons (e.g. year unverified — must confirm ≥2000). PASS = fully verified; MAYBE = unknown/contradictory but no confirmed violation; FAIL = confirmed violation, excluded. Include all material unknowns, required verification, never fabricate. Unknown year may publish as MAYBE; known <2000 FAIL.
-- R-TYPE/R-AREA/R-LAYOUT: any number of rooms; total area ≥40 m² (R-AREA); R-PRICE-M2: ≤€1,900/m²; own kitchen, bath, hallway, no walk-through rooms.
+- R-TYPE/R-AREA/R-LAYOUT: any number of rooms; total area ≥45 m² (R-AREA; 2026-11-08 18:32); R-PRICE-M2: ≤€1,900/m²; own kitchen, bath, hallway, no walk-through rooms.
 - R-YEAR: construction year ≥2000 (buildings before 2000 excluded; renovation doesn't count; unverified year = MAYBE).
 - R-FLOOR: apartments floors 2–8 only; single-storey houses exception. R-TOPFLOOR: top floor flagged.
 - R-LIFT: informational only; high floor without lift flagged but NEVER excluded (all districts including Durlești).
