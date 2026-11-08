@@ -1,5 +1,13 @@
 # Changelog — filter rules
 
+## 2026-11-08
+
+- **R-BLACKLIST-CET1 locality clarification**: str. Tudor Vladimirescu and str. Nicolae Dimo exist in BOTH Chișinău Rîșcani (EXCLUDED as part of CET-1 zone) and Durlești (ALLOWED subject to all other filters). Must verify locality/address from listing, not match bare street name. Ambiguous locality → MAYBE until resolved; never guess exemption.
+- Boundary examples added (2026-11-08): Chișinău Rîșcani Tudor Vladimirescu/Nicolae Dimo EXCLUDED (CET-1 zone); Durlești Tudor Vladimirescu/Nicolae Dimo ALLOWED (e.g. Tudor Vladimirescu 91/6 https://999.md/ro/105401431 — not excluded by street name alone, must satisfy all other filters).
+- Russian summary updated to reflect locality distinction.
+- Fix corrects issue where scan wrongly held 29 Durlești ads due to bare street name matching without locality verification.
+- All other Nov 7 rules unchanged (2 price blocks, white variant €110k cap, elevator informational, construction year ≥2000, sources registry, etc.).
+
 ## 2026-11-07 (source registry added)
 
 - **SOURCES.md created**: Prioritized, owner-editable registry of real estate listing sources. Six sources listed with verified URLs (2026-11-07): 999.md (primary), Acces Imobil, Pro Imobil, Realist.md, Romanescu, All Invest Realty (AIR). Coverage details to be verified. Capital Imobil not added (domain unreachable).

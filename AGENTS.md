@@ -15,6 +15,7 @@ This repo holds Andrew Grini's apartment-search rules for Chișinău, Moldova, p
 - Never invent numbers. Every figure must come from a listing or comparable you actually opened.
 - Label estimates explicitly (e.g. "estimate: deals close 5–10% below asking").
 - Unknown fields stay unknown/blank — do not guess (except R-LIFT: unknown lift in ≤5 floors = no lift).
+- **Verify locality/address from listing text**, not just street name. Same street names exist in multiple localities (e.g. Tudor Vladimirescu in both Chișinău Rîșcani and Durlești). Ambiguous locality → MAYBE until resolved; never guess exemption.
 
 ## Language
 Reply to Andrew in **Russian**. Repo files are in English.

@@ -60,9 +60,15 @@ Verdict scale: **PASS** (all hard rules met) · **MAYBE** (borderline/unknown, f
   - Remote inner-block / outskirt streets are excluded.
   - Note: The explicit R-LAKE 20-minute priority for Buiucani near Valea Morilor / Komsomol lake takes precedence over this generic 5–10 minute rule.
 - **R-BLACKLIST** (2026-11-01) — East Rîșcani pocket east of str. Tudor Vladimirescu toward the Vadul lui Vodă greenbelt / CET-1: str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului and inner streets between them.
-- **R-BLACKLIST-CET1** (2026-11-02) — Whole CET-1 (Termoelectrica Sursa 1, str. Tudor Vladimirescu 6) zone in Rîșcani: the entire str. Tudor Vladimirescu (all house numbers) and any building within ~800 m of the CET-1 site (≈47.0331, 28.8635). Reasons: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity. Tudor Vladimirescu 3 (4 duplicate ads) rejected.
-  - Extended 2026-11-02: the entire **str. Nicolae Dimo** (all house numbers, incl. 1/3, 23 etc.) is also excluded as part of the CET-1 zone, regardless of distance.
-  - Matching note (2026-11-04): normalise addresses before checking any blacklist — lowercase, strip diacritics, transliterate Cyrillic (e.g. Николай/Николае Димо = Nicolae Dimo, Тудор Владимиреску = Tudor Vladimirescu; same for Florării/Флорилор, Pajurii/Пажурий, Forăriei/Форэрией, Zimbrului/Зимбрулуй, Poșta Veche/Пошта Веке). Use map coordinates vs the CET-1 radius when available.
+- **R-BLACKLIST-CET1** (updated 2026-11-08) — Whole CET-1 (Termoelectrica Sursa 1, str. Tudor Vladimirescu 6) zone **in Chișinău Rîșcani**: the entire **str. Tudor Vladimirescu in Chișinău Rîșcani** (all house numbers) and any building within ~800 m of the CET-1 site (≈47.0331, 28.8635). Reasons: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity. Tudor Vladimirescu 3 in Chișinău (4 duplicate ads) rejected.
+  - Extended 2026-11-02: the entire **str. Nicolae Dimo in Chișinău Rîșcani** (all house numbers, incl. 1/3, 23 etc.) is also excluded as part of the CET-1 zone, regardless of distance.
+  - **Locality clarification (2026-11-08)**: str. Tudor Vladimirescu and str. Nicolae Dimo exist in BOTH Chișinău Rîșcani (EXCLUDED) and Durlești (ALLOWED subject to all other filters). **Must verify locality/address from listing, not match bare street name.** Ambiguous locality → verdict MAYBE until resolved; never guess exemption.
+  - **Boundary examples (2026-11-08)**:
+    - ❌ EXCLUDED: str. Tudor Vladimirescu, Chișinău mun., Rîșcani sector (CET-1 zone)
+    - ❌ EXCLUDED: str. Nicolae Dimo, Chișinău mun., Rîșcani sector (CET-1 zone)
+    - ✅ ALLOWED: str. Tudor Vladimirescu, Durlești (e.g. Tudor Vladimirescu 91/6, https://999.md/ro/105401431 — not excluded by street name alone; must satisfy all other filters independently)
+    - ✅ ALLOWED: str. Nicolae Dimo, Durlești (subject to all other filters)
+  - Matching note (2026-11-04): normalise addresses before checking any blacklist — lowercase, strip diacritics, transliterate Cyrillic (e.g. Николай/Николае Димо = Nicolae Dimo, Тудор Владимиреску = Tudor Vladimirescu; same for Florării/Флорилор, Pajurii/Пажурий, Forăriei/Форэрией, Zimbrului/Зимбрулуй, Poșta Veche/Пошта Веке). Use map coordinates vs the CET-1 radius when available. **Always verify locality: Chișinău Rîșcani vs Durlești.**
 
 ## 5. Rejected listings (mirror of `listings/rejected.md`)
 
@@ -169,7 +175,7 @@ price block (R-BANDS) · link · price · rooms · m² · €/m² · street + nu
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
 - Районы: приоритет **Центр, Рышкановка**, и **Буюканы в пределах ≈0–20 минут пешком** от озера Комсомольское / Валя Морилор (с 07.11.2026). Остальные Буюканы и Телецентр — допустимо. **Дурлешты — допустимо** (исключение из пригородов, с 07.11.2026). Ботаника — нет (весь сектор). Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
-- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 (вся ул. Тудор Владимиреску, вся ул. Николае Димо и ~800 м вокруг станции).
+- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Тудор Владимиреску в Кишинёве Рышкановка, вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции). **С 08.11.2026: одноимённые улицы в Дурлештах РАЗРЕШЕНЫ** (Тудор Владимиреску в Дурлештах, Николае Димо в Дурлештах — допустимо при соблюдении всех остальных фильтров). Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения.
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - Поиск включает **категорию продажи домов**, так как частные дома разрешены; Дурлешты не упускается запросами по секторам (с 07.11.2026).
 - Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k. **Это исторический эталон** (меньше 40 м² и возможно построен до 2000 года, с 07.11.2026).
