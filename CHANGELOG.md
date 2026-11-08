@@ -1,5 +1,19 @@
 # Changelog — filter rules
 
+## 2026-11-08 (evening - Durlești removed)
+
+**Supersedes earlier 2026-11-08 changes.** Durlești removed from search entirely (all property types, all statuses PASS/MAYBE/buffer).
+
+- **R-EXCL-SUBURB**: Durlești now EXCLUDED (no exceptions). Revokes Nov 7 2026 suburb exception and Nov 8 morning homonymous street permission. Durlești was temporarily allowed 2026-11-07 to 2026-11-08 18:28; revoked 2026-11-08 18:28 Europe/Chisinau.
+- **R-LOC**: Removed Durlești from acceptable locations. Priority: Centru, Rîșcani, Buiucani within 0–20 min walk of Valea Morilor/Komsomol lake. Acceptable: other Buiucani, Telecentru, Ciocana near Port Mall/Rîșcani edge.
+- **R-BLACKLIST-CET1 boundary examples updated**: str. Tudor Vladimirescu and str. Nicolae Dimo in Durlești now EXCLUDED (R-EXCL-SUBURB suburb exclusion). Chișinău Rîșcani same streets remain EXCLUDED (R-BLACKLIST-CET1 CET-1 zone). Unclear locality → MAYBE until resolved; do NOT assume Chișinău.
+- **Locality verification unchanged**: must verify locality/address from listing, not bare street name matching.
+- **999.md search method updated**: sectors note changed from "ensure Durlești not omitted" to "Chișinău sectors only; suburbs excluded."
+- Updated FILTERS.md R-EXCL-SUBURB, R-LOC, R-BLACKLIST-CET1 boundary examples, search method, Russian summary (districts, blacklist, search scope).
+- **Historical note preserved**: Durlești temporary allowance 2026-11-07 to 2026-11-08 18:28 documented in changelog and rules (not erased).
+
+All other filters unchanged: 2 price blocks, white €110k cap, elevator informational, year ≥2000, mansards/houses allowed, MAYBE publication with ≤10 separate quota, sources registry, Rîșcani CET-1 zone blacklist, etc.
+
 ## 2026-11-08
 
 ### MAYBE publication rules (major change)
