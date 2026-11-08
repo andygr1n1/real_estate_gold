@@ -3,10 +3,10 @@
 Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown · Building type/series/year: · Condition:
 
 ## Hard filters (see FILTERS.md)
-- [ ] R-BUDGET — €40k–140k (above €140k = excluded); white variant ≤€110k (>€110k = excluded even if <€140k)
+- [ ] R-BUDGET — €40k–140k (above €140k = excluded); white variant ≤€90k (>€90k = excluded even if <€140k)
 - [ ] R-BANDS — block: ☐ €40k–110k inclusive ☐ >€110k–140k inclusive
 - [ ] R-TYPE — any number of rooms; rooms: ___
-- [ ] R-AREA — ≥40 m² total area
+- [ ] R-AREA — ≥45 m² total area
 - [ ] R-PRICE-M2 — ≤€1,900/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; unverified year = MAYBE)
@@ -35,7 +35,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 
 ## Pricing (R-PRICE)
 Comps used (links, deduplicated): 
-Median €/m²: · IQR: · Compared with benchmark (Matei Basarab 7/5, ≈€1,911/m²):
+Median €/m²: · IQR: · Fair price estimate based on comps:
 
 ## Due diligence (R-DD)
 - [ ] Register extract (owners, shares, liens, area)

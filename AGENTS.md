@@ -45,6 +45,6 @@ MAYBE has its own independent ≤10 quota; does NOT consume PASS quota. Each sec
 For each MAYBE: include all material unknowns/conflicts, required verification, never fabricate facts. Unknown year may publish as MAYBE; known pre-2000 remains FAIL.
 
 ### Per listing
-**Status PASS/MAYBE** · price block · link · price · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark (Matei Basarab 7/5) · verdict with rule IDs.
+**Status PASS/MAYBE** · price block · link · price · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer (based on real comparables per R-PRICE) · verdict with rule IDs.
 
 **For MAYBE:** add specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification, material unknowns.

@@ -4,7 +4,7 @@ Blank = unknown (not verified). Do not fill with guesses.
 
 | Address | Link | Price | m² | €/m² | Floor | Lift | Status / notes |
 |---|---|---|---|---|---|---|---|
-| **Matei Basarab 7/5 (Rîșcani)** | https://999.md/ro/105332474 | €66,900 | 35 | ≈1,911 | 3/5 | | **BENCHMARK** — suggested offer €60–63k |
+| **Matei Basarab 7/5 (Rîșcani)** | https://999.md/ro/105332474 | €66,900 | 35 | ≈1,911 | 3/5 | | **REMOVED 2026-11-08 18:33** — below current R-AREA minimum (≥45 m²); no longer used for valuation or comparison |
 | Socoleni 17 | https://999.md/ro/105587363 | €60,000 | 39 | | 3/10 | yes | to check |
 | Studenților 12/1 | https://999.md/ro/105636444 | €57,000 | | | | | to check — private seller |
 | Grigore Vieru 21/2 | https://999.md/ro/103062127 | €52,900 | | | | | to check |

@@ -27,7 +27,7 @@ Verdict scale:
   - Financing context: Prima Casă mortgage ≈ €40k over 15 years.
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
-- **R-AREA** (updated 2026-11-02) — Total area **≥ 40 m²** for every listing, any room count. Anything below 40 m² (or with unknown area) is excluded immediately, including listings already in the Telegram buffer.
+- **R-AREA** (updated 2026-11-08) — Total area **≥ 45 m²** for every listing, any room count. Anything below 45 m² (or with unknown area) is excluded immediately, including listings already in the Telegram buffer. (Note: was ≥40 m² until 2026-11-08 18:32; superseded by ≥45 m².)
 - **R-PRICE-M2** (2026-11-02) — Asking price per m² **≤ €1,900/m²** (price ÷ total area). Anything above €1,900/m² is excluded immediately, including listings already in the Telegram buffer.
 
 ## 2. Floors & elevator
@@ -43,8 +43,9 @@ Verdict scale:
 
 - **R-EXCL-HOSTEL** — Hostel units (cămin / gostinka / shared kitchen or bath).
 - **R-EXCL-BASEMENT** — Soclu, demisol, semi-basement, "pe sol".
-- **R-EXCL-UNFINISHED** (updated 2026-11-07) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED** with a **mandatory price cap**: asking price must be **≤€110,000 inclusive**. White variant asking >€110,000 is **FAIL**, even though the general budget cap is €140,000. This applies to apartments and houses, all locations, and uses the asking price (not hypothetical discounted offers). For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
-  - Boundary test cases: white variant €110,000 asking = PASS (at cap); white variant €110,001 asking = FAIL (over cap).
+- **R-EXCL-UNFINISHED** (updated 2026-11-08) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED** with a **mandatory price cap**: asking price must be **≤€90,000 inclusive**. White variant asking >€90,000 is **FAIL**, even though the general budget cap is €140,000. This applies to apartments and houses, all locations, all statuses (PASS/MAYBE/buffer), and uses the asking price (not hypothetical discounted offers). For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
+  - Boundary test cases: white variant €90,000 asking = PASS (at cap); white variant €90,001 asking = FAIL (over cap).
+  - Historical note: cap was €110,000 from 2026-11-07 to 2026-11-08 18:32; superseded by €90,000 cap 2026-11-08 18:32.
 - **R-EXCL-NEWBUILD** — New builds not yet commissioned.
 - **R-EXCL-SUBURB** (updated 2026-11-08) — Suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.) are excluded. **No exceptions.** (Note: Durlești was temporarily allowed 2026-11-07 to 2026-11-08; revoked 2026-11-08 18:28.)
 - **R-EXCL-PROMO** — Promoted/boosted ads on 999.md are ignored (not counted in results).
@@ -106,8 +107,9 @@ MAYBE candidates are now published with specific reasons. See FILTERS.md §11 fo
 
 ## 6. Benchmark
 
-**Matei Basarab 7/5, Rîșcani** — https://999.md/ro/105332474 — €66,900, 35 m², floor 3/5, ≈€1,911/m². Suggested offer €60–63k.
-**Note (2026-11-07)**: This benchmark is **historical reference only**. At 35 m² it is below the current R-AREA minimum (≥40 m²), and if the building was constructed before 2000 it would not meet R-YEAR. Use for pricing comparison context, not as a target for new searches.
+**Removed 2026-11-08 18:33.** No benchmark designated. Price each listing using real comparables per R-PRICE (§7).
+
+**Historical note:** Matei Basarab 7/5, Rîșcani (https://999.md/ro/105332474, €66,900, 35 m², 3/5, ≈€1,911/m²) was used as benchmark until 2026-11-08 18:33; removed (below current R-AREA ≥45 m², likely pre-2000 construction). Not used for valuation or comparison.
 
 ## 7. Pricing method (R-PRICE)
 
@@ -197,7 +199,7 @@ Always organize into the 2 price blocks from R-BANDS (€40k–110k inclusive, >
 Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Empty section → say "нет подходящих".
 
 ### Per listing
-**Status PASS/MAYBE** · price block (R-BANDS) · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer · comparison with benchmark · **verdict with rule IDs**.
+**Status PASS/MAYBE** · price block (R-BANDS) · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer (based on real comparables per R-PRICE) · **verdict with rule IDs**.
 
 **For MAYBE listings, add:** specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification steps, material unknowns/conflicts.
 
@@ -205,10 +207,10 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 
 ## Кратко по-русски (жёсткие правила)
 
-- Цена €40–140k; всё дороже €140k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €110k** (дороже €110k — исключаем, даже если меньше €140k, с 07.11.2026).
+- Цена €40–140k; всё дороже €140k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €140k; с 08.11.2026 18:32; было €110k до 18:32).
 - Отчёт всегда из 2 блоков: €40k–110k включительно (€110 000 точно в первом блоке), >€110k–140k включительно (с 07.11.2026).
 - **Квоты на публикацию (с 08.11.2026):** PASS €40k–110k до 10 объявлений, PASS >€110k–140k до 10 объявлений, **MAYBE отдельная группа до 10 ВСЕГО** (независимая квота, не потребляет квоту PASS; показывается с подразделениями по ценовым блокам по необходимости). Остатки в буфер, публикуются порциями ≤10 в полдень/вечером.
-- Любое число комнат во всех блоках; площадь — от 40 м² (меньше 40 м² — исключаем, с 02.11.2026).
+- Любое число комнат во всех блоках; площадь — от 45 м² (меньше 45 м² — исключаем, с 08.11.2026 18:32; было ≥40 м² до 18:32).
 - Цена за м² — не дороже €1 900/м² (дороже — исключаем, с 02.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - **Год постройки ≥2000** — здания построенные до 2000 исключены; ремонт не считается; непроверенный год = MAYBE (с 07.11.2026). Новостройки — только сданные.
@@ -222,5 +224,5 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - **MAYBE теперь публикуются** (с 08.11.2026) с буквальной меткой MAYBE и конкретными причинами неопределённости (например, год постройки не подтверждён — требуется проверка ≥2000). PASS = полностью проверено; MAYBE = неизвестный/противоречивый критерий, но нет подтверждённого нарушения обязательного правила; FAIL = подтверждённое нарушение, исключено. Для каждого MAYBE: все существенные неизвестные/конфликты, требуемая проверка, никогда не выдумывать факты. Неизвестный год может публиковаться как MAYBE; подтверждённый <2000 остаётся FAIL.
 - Поиск включает **категорию продажи домов**, так как частные дома разрешены. Только сектора Кишинёва; пригороды исключены (с 08.11.2026 18:28).
-- Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k. **Это исторический эталон** (меньше 40 м² и возможно построен до 2000 года, с 07.11.2026).
+- **Эталон удалён** (с 08.11.2026 18:33). Оценка по реальным аналогам (R-PRICE §7). Матей Басараб 7/5 больше не используется (меньше 45 м², вероятно <2000 года).
 - Никаких выдуманных цифр; оценки помечаются как оценки.

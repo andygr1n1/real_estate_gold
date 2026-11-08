@@ -1,18 +1,40 @@
 # Changelog — filter rules
 
-## 2026-11-08 (evening - Durlești removed)
+## 2026-11-08 (evening - Durlești removed + white €90k + area ≥45m² + benchmark removed)
 
-**Supersedes earlier 2026-11-08 changes.** Durlești removed from search entirely (all property types, all statuses PASS/MAYBE/buffer).
+**Supersedes earlier 2026-11-08 changes.** Four mandatory changes:
+
+### 1. Durlești removed (18:28)
+Durlești removed from search entirely (all property types, all statuses PASS/MAYBE/buffer).
 
 - **R-EXCL-SUBURB**: Durlești now EXCLUDED (no exceptions). Revokes Nov 7 2026 suburb exception and Nov 8 morning homonymous street permission. Durlești was temporarily allowed 2026-11-07 to 2026-11-08 18:28; revoked 2026-11-08 18:28 Europe/Chisinau.
 - **R-LOC**: Removed Durlești from acceptable locations. Priority: Centru, Rîșcani, Buiucani within 0–20 min walk of Valea Morilor/Komsomol lake. Acceptable: other Buiucani, Telecentru, Ciocana near Port Mall/Rîșcani edge.
 - **R-BLACKLIST-CET1 boundary examples updated**: str. Tudor Vladimirescu and str. Nicolae Dimo in Durlești now EXCLUDED (R-EXCL-SUBURB suburb exclusion). Chișinău Rîșcani same streets remain EXCLUDED (R-BLACKLIST-CET1 CET-1 zone). Unclear locality → MAYBE until resolved; do NOT assume Chișinău.
 - **Locality verification unchanged**: must verify locality/address from listing, not bare street name matching.
 - **999.md search method updated**: sectors note changed from "ensure Durlești not omitted" to "Chișinău sectors only; suburbs excluded."
-- Updated FILTERS.md R-EXCL-SUBURB, R-LOC, R-BLACKLIST-CET1 boundary examples, search method, Russian summary (districts, blacklist, search scope).
 - **Historical note preserved**: Durlești temporary allowance 2026-11-07 to 2026-11-08 18:28 documented in changelog and rules (not erased).
 
-All other filters unchanged: 2 price blocks, white €110k cap, elevator informational, year ≥2000, mansards/houses allowed, MAYBE publication with ≤10 separate quota, sources registry, Rîșcani CET-1 zone blacklist, etc.
+### 2. White variant cap lowered to €90k (18:32)
+- **R-EXCL-UNFINISHED**: White variant (variantă albă) asking price cap **≤€90,000 inclusive** (supersedes €110,000 cap from 2026-11-07). White variant asking >€90,000 is FAIL. Applies to apartments and houses, all locations, all statuses (PASS/MAYBE/buffer). Uses asking price, not hypothetical discounted offers. Boundary: €90,000 = PASS, €90,001 = FAIL.
+- **Historical note preserved**: cap was €110,000 from 2026-11-07 to 2026-11-08 18:32; superseded by €90,000 cap 2026-11-08 18:32.
+
+### 3. Minimum area increased to 45m² (18:32)
+- **R-AREA**: Total area **≥45 m²** (supersedes ≥40 m² from 2026-11-02). Anything below 45 m² is FAIL. Applies to all listings, any room count, all statuses (PASS/MAYBE/buffer).
+- **Historical note preserved**: was ≥40 m² from 2026-11-02 to 2026-11-08 18:32; superseded by ≥45 m² 2026-11-08 18:32.
+
+### 4. Benchmark removed entirely (18:33)
+- **Matei Basarab 7/5 removed as benchmark.** Not used for valuation or comparison. Price each listing using real comparables per R-PRICE (§7).
+- **Historical note preserved**: Matei Basarab 7/5, Rîșcani (https://999.md/ro/105332474, €66,900, 35 m², 3/5, ≈€1,911/m²) was used as benchmark until 2026-11-08 18:33; removed (below current R-AREA ≥45 m², likely pre-2000 construction).
+- Updated FILTERS.md §6 (benchmark section), §12 reporting format (removed "comparison with benchmark"), AGENTS.md reporting format, templates/listing-check.md pricing section, listings/shortlist.md (Matei Basarab entry marked as removed), Russian summary.
+
+### Files updated
+- FILTERS.md: R-EXCL-SUBURB, R-LOC, R-BLACKLIST-CET1, R-EXCL-UNFINISHED (white €90k), R-AREA (≥45m²), §6 benchmark removed, §12 reporting format, Russian summary (white cap, area, districts, blacklist, benchmark removed)
+- AGENTS.md: reporting format (removed benchmark comparison)
+- .cursor/rules/real-estate-filters.mdc: white €90k, area ≥45m²
+- templates/listing-check.md: R-BUDGET white €90k, R-AREA ≥45m², pricing section (removed benchmark)
+- listings/shortlist.md: Matei Basarab marked as removed 2026-11-08 18:33
+
+All other filters unchanged: 2 price blocks (€40k-110k, >€110k-140k), elevator informational, year ≥2000, mansards/houses allowed, MAYBE publication with ≤10 separate quota, sources registry, Rîșcani CET-1 zone blacklist, etc.
 
 ## 2026-11-08
 
