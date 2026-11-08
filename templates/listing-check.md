@@ -3,21 +3,24 @@
 Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown · Building type/series/year: · Condition:
 
 ## Hard filters (see FILTERS.md)
-- [ ] R-BUDGET — €40k–140k (above €140k = excluded)
-- [ ] R-BANDS — block: ☐ €40–60k ☐ €60–75k ☐ €75–105k ☐ €105–140k
+- [ ] R-BUDGET — €40k–140k (above €140k = excluded); white variant ≤€110k (>€110k = excluded even if <€140k)
+- [ ] R-BANDS — block: ☐ €40k–110k inclusive ☐ >€110k–140k inclusive
 - [ ] R-TYPE — any number of rooms; rooms: ___
 - [ ] R-AREA — ≥40 m² total area
 - [ ] R-PRICE-M2 — ≤€1,900/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
-- [ ] R-FLOOR — floors 2–8
+- [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; unverified year = MAYBE)
+- [ ] R-FLOOR — apartments floors 2–8; single-storey houses exception
 - [ ] R-EXCL-BOTANICA — not in Botanica sector
-- [ ] R-LIFT — Buiucani/Telecentru: no lift → floors 2–3 only; unknown lift in ≤5 floors = no lift
+- [ ] R-LIFT — informational only (high floor without lift flagged but NOT excluded)
 - [ ] R-TOPFLOOR — top floor? (flag)
-- [ ] R-EXCL-HOSTEL · R-EXCL-BASEMENT · R-EXCL-UNFINISHED · R-EXCL-NEWBUILD · R-EXCL-SUBURB · R-EXCL-PROMO
-- [ ] R-LOC — sector OK; real address verified from text
-- [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min)
-- [ ] R-BLACKLIST — not in east Rîșcani pocket
-- [ ] R-BLACKLIST-CET1 — not on str. Tudor Vladimirescu / str. Nicolae Dimo, not within ~800 m of CET-1
+- [ ] R-MANSARD / R-HOUSE — mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land)
+- [ ] R-EXCL-HOSTEL · R-EXCL-BASEMENT · R-EXCL-UNFINISHED · R-EXCL-NEWBUILD · R-EXCL-PROMO
+- [ ] R-EXCL-SUBURB — Durlești ALLOWED (exception); other suburbs excluded
+- [ ] R-LOC — sector OK; real address verified from text; Centru/Rîșcani/Buiucani (≤20 min walk to lake) priority; other Buiucani/Telecentru/Durlești acceptable
+- [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min; R-LAKE 20-min priority overrides)
+- [ ] R-BLACKLIST — not in east Rîșcani pocket (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului)
+- [ ] R-BLACKLIST-CET1 — **verify locality**: str. Tudor Vladimirescu / Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); SAME STREETS IN DURLEȘTI ALLOWED; ambiguous locality = MAYBE; not within ~800 m of CET-1 (≈47.0331, 28.8635)
 - [ ] Not in listings/rejected.md
 
 ## Red flags (R-REDFLAG)
@@ -42,5 +45,16 @@ Median €/m²: · IQR: · Compared with benchmark (Matei Basarab 7/5, ≈€1,9
 - [ ] Roof, heating, lift, bathroom & risers, days listed
 
 ## Verdict
-PASS / MAYBE / FAIL — rules: 
+**Status:** PASS / MAYBE / FAIL — **rules cited:** 
+
+**If MAYBE:** Specific reasons why MAYBE (list all material unknowns/conflicts):
+- [ ] Construction year unverified (must confirm ≥2000)
+- [ ] Cadastral area conflicts with listing (must verify actual area)
+- [ ] Locality ambiguous (must resolve Chișinău Rîșcani vs Durlești)
+- [ ] Other (specify): ___
+
+**Required verification for MAYBE:** (list all steps needed before upgrade to PASS)
+
+**Note:** MAYBE candidates are PUBLISHED (2026-11-08). PASS = fully verified; MAYBE = unknown/contradictory but no confirmed violation; FAIL = confirmed violation, excluded.
+
 Fair price (estimate): · Opening offer:

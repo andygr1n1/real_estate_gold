@@ -1,5 +1,26 @@
 # Changelog — filter rules
 
+## 2026-11-08
+
+### MAYBE publication rules (major change)
+- **MAYBE candidates now PUBLISHED** with literal tag MAYBE and specific reasons why uncertain (e.g. construction year ≥2000 not confirmed). Previous blanket "MAYBE not published/not buffer" removed consistently.
+- **Verdict definitions**: PASS = fully verified; MAYBE = unknown/contradictory criterion but no confirmed mandatory violation; FAIL = confirmed violation, excluded.
+- **For each published MAYBE**: include all material unknowns/conflicts, required verification steps; never fabricate facts or upgrade to PASS without verification.
+- **R-BANDS quotas clarified**: PASS €40k–110k up to 10; PASS >€110k–140k up to 10; **MAYBE separate status group with own ≤10 quota TOTAL** across both price bands (shown with price band subdivisions as needed). MAYBE does NOT consume PASS quota. Leftovers buffered and published in chunks ≤10 at noon/evening.
+- **Examples**: unknown year may now publish as MAYBE with clear note; known pre-2000 remains FAIL (R-YEAR).
+- Reporting format updated: present PASS €40k–110k (≤10), PASS >€110k–140k (≤10), then MAYBE (≤10 total) with reasons/verification requirements.
+- Updated FILTERS.md §11-12, AGENTS.md reporting format, Russian summary with MAYBE publication rules.
+
+### Locality clarification (R-BLACKLIST-CET1)
+- **str. Tudor Vladimirescu and str. Nicolae Dimo locality distinction**: these streets exist in BOTH Chișinău Rîșcani (EXCLUDED as part of CET-1 zone) and Durlești (ALLOWED subject to all other filters).
+- Must verify locality/address from listing, not match bare street name. Ambiguous locality → MAYBE until resolved; never guess exemption.
+- Boundary examples added: Chișinău Rîșcani Tudor Vladimirescu/Nicolae Dimo EXCLUDED (CET-1 zone); Durlești Tudor Vladimirescu/Nicolae Dimo ALLOWED (e.g. Tudor Vladimirescu 91/6 https://999.md/ro/105401431 — not excluded by street name alone, must satisfy all other filters).
+- Fix corrects issue where scan wrongly held 29 Durlești ads due to bare street name matching without locality verification.
+- Updated FILTERS.md R-BLACKLIST-CET1, Russian summary, .cursor/rules/real-estate-filters.mdc, templates/listing-check.md, listings/rejected.md (clarified Tudor Vladimirescu 3 is in Chișinău Rîșcani), AGENTS.md (added locality verification to Data honesty).
+
+### Unchanged
+All other Nov 7 rules intact: 2 price blocks with exact €110k boundary, white variant €110k cap, elevator informational, construction year ≥2000, mansards/houses allowed with verification, Durlești allowed, sources registry, etc.
+
 ## 2026-11-07 (source registry added)
 
 - **SOURCES.md created**: Prioritized, owner-editable registry of real estate listing sources. Six sources listed with verified URLs (2026-11-07): 999.md (primary), Acces Imobil, Pro Imobil, Realist.md, Romanescu, All Invest Realty (AIR). Coverage details to be verified. Capital Imobil not added (domain unreachable).

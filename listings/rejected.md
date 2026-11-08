@@ -13,4 +13,4 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 | Pandurilor 14 | https://999.md/ro/105776688 | Location unclear; originally flagged 5/5 no lift (lift no longer exclusion as of 2026-11-07) | 2026-11-01 |
 | Ginta Latină 12/5 | https://999.md/ro/105418586 | Ciocana (R-LOC), €119.9k | |
 | Colina Pușkin 8A | https://999.md/ro/105722767 | Floor 1 (R-FLOOR), €112k | |
-| Tudor Vladimirescu 3 (3 rooms, 73 m², 3/3, €84.9k) | https://999.md/ro/105513974 (dupes: 105104604, 105287773, 105736654) | CET-1 zone (R-BLACKLIST-CET1); on sale since 2026-08-13 | 2026-11-02 |
+| Tudor Vladimirescu 3, Chișinău Rîșcani (3 rooms, 73 m², 3/3, €84.9k) | https://999.md/ro/105513974 (dupes: 105104604, 105287773, 105736654) | CET-1 zone in Chișinău Rîșcani (R-BLACKLIST-CET1); on sale since 2026-08-13 | 2026-11-02 |
