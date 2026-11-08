@@ -15,10 +15,10 @@ Hard filters (condensed — FILTERS.md wins on conflict):
 - R-FLOOR: apartments floors 2–8 only; single-storey houses exception. R-TOPFLOOR: top floor flagged.
 - R-LIFT: informational only; high floor without lift flagged but NEVER excluded (all districts including Durlești).
 - R-MANSARD/R-HOUSE: mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land); exception to R-FLOOR/R-LIFT.
-- R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, grey variant (white variant allowed ≤€110k, add renovation estimate), uncommissioned new build; Durlești ALLOWED (exception to suburbs); ignore promoted 999.md ads.
-- R-LOC: priority Centru, Rîșcani, Buiucani within ~0–20 min walk of Komsomol lake/Valea Morilor; OK other Buiucani, Telecentru, Durlești; no Botanica (R-EXCL-BOTANICA); no Poșta Veche; no Ciocana (except near Rîșcani/Port Mall).
+- R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, grey variant (white variant allowed ≤€110k, add renovation estimate), uncommissioned new build, suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions); ignore promoted 999.md ads.
+- R-LOC: priority Centru, Rîșcani, Buiucani within ~0–20 min walk of Komsomol lake/Valea Morilor; OK other Buiucani, Telecentru, Ciocana near Port Mall/Rîșcani edge; no Botanica (R-EXCL-BOTANICA); no Poșta Veche; no suburbs.
 - R-MICRO: ≤5–10 min walk to main road, park or university; R-LAKE 20-min priority overrides this.
 - R-BLACKLIST: east Rîșcani — Florării, str-la Florării, Pajurii, Forăriei, Zimbrului and inner streets.
-- R-BLACKLIST-CET1: whole CET-1 zone IN CHIȘINĂU RÎȘCANI: all of str. Tudor Vladimirescu in Chișinău Rîșcani, all of str. Nicolae Dimo in Chișinău Rîșcani, and ~800 m around CET-1 (≈47.0331, 28.8635). SAME STREETS IN DURLEȘTI ALLOWED. Must verify locality/address, not bare street name; ambiguous locality = MAYBE.
+- R-BLACKLIST-CET1: whole CET-1 zone IN CHIȘINĂU RÎȘCANI: all of str. Tudor Vladimirescu in Chișinău Rîșcani, all of str. Nicolae Dimo in Chișinău Rîșcani, and ~800 m around CET-1 (≈47.0331, 28.8635). SAME STREETS IN DURLEȘTI also EXCLUDED (R-EXCL-SUBURB). Must verify locality/address, not bare street name; unclear locality = MAYBE, do NOT assume Chișinău.
 
 Output: PASS/MAYBE/FAIL with rule IDs. Never invent numbers. Reply to Andrew in Russian. Update FILTERS.md + listings + CHANGELOG.md when rules change.

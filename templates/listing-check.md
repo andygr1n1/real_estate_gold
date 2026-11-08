@@ -16,11 +16,11 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-TOPFLOOR — top floor? (flag)
 - [ ] R-MANSARD / R-HOUSE — mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land)
 - [ ] R-EXCL-HOSTEL · R-EXCL-BASEMENT · R-EXCL-UNFINISHED · R-EXCL-NEWBUILD · R-EXCL-PROMO
-- [ ] R-EXCL-SUBURB — Durlești ALLOWED (exception); other suburbs excluded
-- [ ] R-LOC — sector OK; real address verified from text; Centru/Rîșcani/Buiucani (≤20 min walk to lake) priority; other Buiucani/Telecentru/Durlești acceptable
+- [ ] R-EXCL-SUBURB — no suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions)
+- [ ] R-LOC — sector OK; real address verified from text; Centru/Rîșcani/Buiucani (≤20 min walk to lake) priority; other Buiucani/Telecentru/Ciocana (near Port Mall/Rîșcani edge) acceptable
 - [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min; R-LAKE 20-min priority overrides)
 - [ ] R-BLACKLIST — not in east Rîșcani pocket (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului)
-- [ ] R-BLACKLIST-CET1 — **verify locality**: str. Tudor Vladimirescu / Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); SAME STREETS IN DURLEȘTI ALLOWED; ambiguous locality = MAYBE; not within ~800 m of CET-1 (≈47.0331, 28.8635)
+- [ ] R-BLACKLIST-CET1 — **verify locality**: str. Tudor Vladimirescu / Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); same streets in Durlești ALSO EXCLUDED (R-EXCL-SUBURB); unclear locality = MAYBE (do NOT assume Chișinău); not within ~800 m of CET-1 (≈47.0331, 28.8635)
 - [ ] Not in listings/rejected.md
 
 ## Red flags (R-REDFLAG)

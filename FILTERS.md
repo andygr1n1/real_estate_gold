@@ -46,7 +46,7 @@ Verdict scale:
 - **R-EXCL-UNFINISHED** (updated 2026-11-07) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED** with a **mandatory price cap**: asking price must be **≤€110,000 inclusive**. White variant asking >€110,000 is **FAIL**, even though the general budget cap is €140,000. This applies to apartments and houses, all locations, and uses the asking price (not hypothetical discounted offers). For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
   - Boundary test cases: white variant €110,000 asking = PASS (at cap); white variant €110,001 asking = FAIL (over cap).
 - **R-EXCL-NEWBUILD** — New builds not yet commissioned.
-- **R-EXCL-SUBURB** (updated 2026-11-07) — Suburbs (Codru, Stăuceni, Ialoveni, Sîngera, etc.) are excluded. **Durlești is explicitly allowed** as an exception.
+- **R-EXCL-SUBURB** (updated 2026-11-08) — Suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.) are excluded. **No exceptions.** (Note: Durlești was temporarily allowed 2026-11-07 to 2026-11-08; revoked 2026-11-08 18:28.)
 - **R-EXCL-PROMO** — Promoted/boosted ads on 999.md are ignored (not counted in results).
 
 ## 3a. Building age & special property types
@@ -57,7 +57,7 @@ Verdict scale:
 
 ## 4. Location
 
-- **R-LOC** (updated 2026-11-07) — Priority: **Centru, Rîșcani**, and **Buiucani within approximately 0–20 minute WALK of Komsomol lake / Valea Morilor** (R-LAKE). Other parts of **Buiucani** and **Telecentru** are acceptable. **Durlești** is acceptable.
+- **R-LOC** (updated 2026-11-08) — Priority: **Centru, Rîșcani**, and **Buiucani within approximately 0–20 minute WALK of Komsomol lake / Valea Morilor** (R-LAKE). Other parts of **Buiucani** and **Telecentru** are acceptable. **Ciocana** near Port Mall / Rîșcani edge is acceptable.
 - **R-LAKE** (added 2026-11-07) — Buiucani within ≈0–20 minute walk of Komsomol lake / Valea Morilor has **priority** status. Walking time is measured by actual routes, not straight-line distance. This explicit 20-minute lake priority overrides the generic 5–10 minute R-MICRO rule for these areas.
 - **R-EXCL-BOTANICA** (2026-11-02) — The whole **Botanica** sector is excluded (all streets, all micro-districts), including listings already in the Telegram buffer.
   - **Poșta Veche** excluded.
@@ -72,12 +72,13 @@ Verdict scale:
 - **R-BLACKLIST** (2026-11-01) — East Rîșcani pocket east of str. Tudor Vladimirescu toward the Vadul lui Vodă greenbelt / CET-1: str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului and inner streets between them.
 - **R-BLACKLIST-CET1** (updated 2026-11-08) — Whole CET-1 (Termoelectrica Sursa 1, str. Tudor Vladimirescu 6) zone **in Chișinău Rîșcani**: the entire **str. Tudor Vladimirescu in Chișinău Rîșcani** (all house numbers) and any building within ~800 m of the CET-1 site (≈47.0331, 28.8635). Reasons: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity. Tudor Vladimirescu 3 in Chișinău (4 duplicate ads) rejected.
   - Extended 2026-11-02: the entire **str. Nicolae Dimo in Chișinău Rîșcani** (all house numbers, incl. 1/3, 23 etc.) is also excluded as part of the CET-1 zone, regardless of distance.
-  - **Locality clarification (2026-11-08)**: str. Tudor Vladimirescu and str. Nicolae Dimo exist in BOTH Chișinău Rîșcani (EXCLUDED) and Durlești (ALLOWED subject to all other filters). **Must verify locality/address from listing, not match bare street name.** Ambiguous locality → verdict MAYBE until resolved; never guess exemption.
-  - **Boundary examples (2026-11-08)**:
-    - ❌ EXCLUDED: str. Tudor Vladimirescu, Chișinău mun., Rîșcani sector (CET-1 zone)
-    - ❌ EXCLUDED: str. Nicolae Dimo, Chișinău mun., Rîșcani sector (CET-1 zone)
-    - ✅ ALLOWED: str. Tudor Vladimirescu, Durlești (e.g. Tudor Vladimirescu 91/6, https://999.md/ro/105401431 — not excluded by street name alone; must satisfy all other filters independently)
-    - ✅ ALLOWED: str. Nicolae Dimo, Durlești (subject to all other filters)
+  - **Locality clarification (updated 2026-11-08 18:28)**: str. Tudor Vladimirescu and str. Nicolae Dimo exist in multiple localities. **Must verify locality/address from listing, not match bare street name.** Unclear locality → verdict MAYBE until resolved; do NOT assume Chișinău.
+  - **Boundary examples (updated 2026-11-08 18:28)**:
+    - ❌ EXCLUDED: str. Tudor Vladimirescu, Chișinău mun., Rîșcani sector (R-BLACKLIST-CET1: CET-1 zone)
+    - ❌ EXCLUDED: str. Nicolae Dimo, Chișinău mun., Rîșcani sector (R-BLACKLIST-CET1: CET-1 zone)
+    - ❌ EXCLUDED: str. Tudor Vladimirescu, Durlești (R-EXCL-SUBURB: suburb exclusion; revoked temporary allowance 2026-11-08 18:28)
+    - ❌ EXCLUDED: str. Nicolae Dimo, Durlești (R-EXCL-SUBURB: suburb exclusion)
+    - ⚠️ MAYBE: str. Tudor Vladimirescu or Nicolae Dimo, locality unclear/unverified (must resolve before PASS or FAIL)
   - Matching note (2026-11-04): normalise addresses before checking any blacklist — lowercase, strip diacritics, transliterate Cyrillic (e.g. Николай/Николае Димо = Nicolae Dimo, Тудор Владимиреску = Tudor Vladimirescu; same for Florării/Флорилор, Pajurii/Пажурий, Forăriei/Форэрией, Zimbrului/Зимбрулуй, Poșta Veche/Пошта Веке). Use map coordinates vs the CET-1 radius when available. **Always verify locality: Chișinău Rîșcani vs Durlești.**
 
 ## 5. Rejected listings (mirror of `listings/rejected.md`)
@@ -155,7 +156,7 @@ Reference asking medians (2026-11-01, asking prices, not deals):
 - Ignore promoted ads at the top (R-EXCL-PROMO).
 - List pages render client-side; organic results can be fetched via `https://999.md/graphql` with the site's filters:
   - sale `o_16_1=776` (apartments) — **also search house sale categories** since single-storey houses are now allowed (R-HOUSE)
-  - sectors `o_32_9=15665,15666,15664,15667,15668,15669` — ensure **Durlești** (R-EXCL-SUBURB exception) is not silently omitted by sector queries; add sector code if needed
+  - sectors `o_32_9=15665,15666,15664,15667,15668,15669` — Chișinău sectors only; suburbs excluded (R-EXCL-SUBURB)
   - price filter id `9441`, unit `eur`
 
 ### All sources
@@ -215,11 +216,11 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 - **Лифт — только информация**, не жёсткое исключение (с 07.11.2026). Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** с 07.11.2026 (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
-- Районы: приоритет **Центр, Рышкановка**, и **Буюканы в пределах ≈0–20 минут пешком** от озера Комсомольское / Валя Морилор (с 07.11.2026). Остальные Буюканы и Телецентр — допустимо. **Дурлешты — допустимо** (исключение из пригородов, с 07.11.2026). Ботаника — нет (весь сектор). Старая Почта — нет. Чеканы — нет (кроме части у Рышкановки/Port Mall).
+- Районы: приоритет **Центр, Рышкановка**, и **Буюканы в пределах ≈0–20 минут пешком** от озера Комсомольское / Валя Морилор (с 07.11.2026). Остальные Буюканы и Телецентр — допустимо. Чеканы — у Port Mall/края Рышкановки допустимо. **Пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.; Дурлешты временно разрешены 07.11-08.11.2026, отменено 08.11.2026 18:28). Ботаника — нет (весь сектор). Старая Почта — нет.
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
-- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Тудор Владимиреску в Кишинёве Рышкановка, вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции). **С 08.11.2026: одноимённые улицы в Дурлештах РАЗРЕШЕНЫ** (Тудор Владимиреску в Дурлештах, Николае Димо в Дурлештах — допустимо при соблюдении всех остальных фильтров). Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения.
+- Чёрный список: восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Тудор Владимиреску в Кишинёве Рышкановка, вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции). **С 08.11.2026 18:28: одноимённые улицы в Дурлештах также ИСКЛЮЧЕНЫ** (Дурлешты — пригород, R-EXCL-SUBURB; временное разрешение 08.11.2026 утро отменено 18:28). Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - **MAYBE теперь публикуются** (с 08.11.2026) с буквальной меткой MAYBE и конкретными причинами неопределённости (например, год постройки не подтверждён — требуется проверка ≥2000). PASS = полностью проверено; MAYBE = неизвестный/противоречивый критерий, но нет подтверждённого нарушения обязательного правила; FAIL = подтверждённое нарушение, исключено. Для каждого MAYBE: все существенные неизвестные/конфликты, требуемая проверка, никогда не выдумывать факты. Неизвестный год может публиковаться как MAYBE; подтверждённый <2000 остаётся FAIL.
-- Поиск включает **категорию продажи домов**, так как частные дома разрешены; Дурлешты не упускается запросами по секторам (с 07.11.2026).
+- Поиск включает **категорию продажи домов**, так как частные дома разрешены. Только сектора Кишинёва; пригороды исключены (с 08.11.2026 18:28).
 - Эталон: Матей Басараб 7/5, €66 900, 35 м², ≈€1 911/м², предложение €60–63k. **Это исторический эталон** (меньше 40 м² и возможно построен до 2000 года, с 07.11.2026).
 - Никаких выдуманных цифр; оценки помечаются как оценки.
