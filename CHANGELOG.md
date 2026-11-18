@@ -1,5 +1,36 @@
 # Changelog — filter rules
 
+## 2026-11-18 23:18 (pre-2000 series exception extended)
+
+**R-YEAR and R-SANITARY exception extended** to include three additional building series/types:
+
+### Pre-2000 series exception expanded
+- **R-YEAR**: Extended the list of pre-2000 building series/types allowed when explicitly confirmed:
+  - Previously (2026-11-15): Stalinka, seria 102 (cotileț)
+  - **Now also includes (2026-11-18 23:18):**
+    - **seria 143**
+    - **Czech series/project** (чешский проект / proiect cehesc)
+    - **Individual projects** (индивидуальный проект / proiect individual)
+  
+- Same conditions apply to all exception objects:
+  - Must be explicitly confirmed in the listing
+  - Unconfirmed → verdict **MAYBE**
+  - Commissioned status satisfied (R-EXCL-NEWBUILD)
+  - Flag building-age checks required
+  
+- Other pre-2000 series (135, MS/Varnița, brejnevka, hrușciovka, etc.) remain **FAIL**.
+
+### R-SANITARY exemption updated
+- **R-SANITARY**: Exception updated to include all R-YEAR exception objects. R-YEAR exception objects (Stalinka, seria 102, seria 143, Czech series/project, individual projects) are NOT subject to the two-separate-sanitary-rooms requirement.
+
+### Files updated
+- FILTERS.md: R-YEAR (extended exception list with historical note), R-SANITARY (updated exception reference), Russian summary (both rules)
+- templates/listing-check.md: R-YEAR and R-SANITARY checklists
+- .cursor/rules/real-estate-filters.mdc: R-YEAR and R-SANITARY condensed rules
+- CHANGELOG.md: this entry
+
+All other filters unchanged from 2026-11-18 major overhaul.
+
 ## 2026-11-18 (major overhaul - single price band + stricter locations + new rules)
 
 **Comprehensive filter update with five major changes:**
