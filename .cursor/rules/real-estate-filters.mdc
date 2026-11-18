@@ -7,18 +7,19 @@ alwaysApply: true
 Source of truth: `FILTERS.md`. Agent workflow: `AGENTS.md`. Read both before evaluating any listing. Check `listings/rejected.md` first.
 
 Hard filters (condensed — FILTERS.md wins on conflict):
-- R-BUDGET: asking €40k–140k; above €140k excluded immediately. WHITE VARIANT: asking ≤€90k (>€90k FAIL even if <€140k; 2026-11-08 18:32).
-- R-BANDS: 2 price blocks: €40k–110k inclusive (€110k in first block), >€110k–140k inclusive. QUOTAS: PASS €40k–110k ≤10, PASS >€110k–140k ≤10, MAYBE separate status ≤10 TOTAL (own quota, does NOT consume PASS quota; shown with price band subdivisions).
-- MAYBE PUBLICATION (2026-11-08): MAYBE now PUBLISHED with literal tag and specific reasons (e.g. year unverified — must confirm ≥2000). PASS = fully verified; MAYBE = unknown/contradictory but no confirmed violation; FAIL = confirmed violation, excluded. Include all material unknowns, required verification, never fabricate. Unknown year may publish as MAYBE; known <2000 FAIL.
-- R-TYPE/R-AREA/R-LAYOUT: any number of rooms; total area ≥45 m² (R-AREA; 2026-11-08 18:32); R-PRICE-M2: ≤€1,900/m²; own kitchen, bath, hallway, no walk-through rooms.
-- R-YEAR: construction year ≥2000 (buildings before 2000 excluded; renovation doesn't count; unverified year = MAYBE).
+- R-BUDGET: asking €80k–160k; above €160k or below €80k excluded immediately. WHITE VARIANT: asking ≤€90k (>€90k FAIL even if <€160k); unknown finish = MAYBE (2026-11-17).
+- R-BANDS: ONE single price band: €80k–160k inclusive (2026-11-18). QUOTAS: PASS ≤10, MAYBE separate status ≤10 TOTAL (own quota, does NOT consume PASS quota).
+- MAYBE PUBLICATION: MAYBE now PUBLISHED with literal tag and specific reasons (e.g. year unverified — must confirm ≥2000). PASS = fully verified; MAYBE = unknown/contradictory but no confirmed violation; FAIL = confirmed violation, excluded. Include all material unknowns, required verification, never fabricate. Unknown year may publish as MAYBE; known <2000 FAIL (unless Stalinka/102).
+- R-TYPE/R-AREA/R-LAYOUT: any number of rooms; total area ≥45 m²; R-PRICE-M2: ≤€2,100/m² (2026-11-18; was €1,900); own kitchen, bath, hallway, no walk-through rooms.
+- R-YEAR: construction year ≥2000 (buildings before 2000 excluded; renovation doesn't count; unverified year = MAYBE). EXCEPTION (2026-11-15): Stalinka and seria 102 (cotileț) allowed even if pre-2000, only when explicitly confirmed; unconfirmed = MAYBE; other pre-2000 series = FAIL.
+- R-SANITARY (2026-11-15): new builds (≥2000) require TWO separate sanitary rooms (separate toilet + separate bath/shower); explicitly combined = FAIL; "Grup sanitar: 1" without text = MAYBE; Stalinka/102 exempt from this requirement.
 - R-FLOOR: apartments floors 2–8 only; single-storey houses exception. R-TOPFLOOR: top floor flagged.
-- R-LIFT: informational only; high floor without lift flagged but NEVER excluded (all districts including Durlești).
+- R-LIFT: informational only; high floor without lift flagged but NEVER excluded.
 - R-MANSARD/R-HOUSE: mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land); exception to R-FLOOR/R-LIFT.
-- R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, grey variant (white variant allowed ≤€110k, add renovation estimate), uncommissioned new build, suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions); ignore promoted 999.md ads.
-- R-LOC: priority Centru, Rîșcani, Buiucani within ~0–20 min walk of Komsomol lake/Valea Morilor; OK other Buiucani, Telecentru, Ciocana near Port Mall/Rîșcani edge; no Botanica (R-EXCL-BOTANICA); no Poșta Veche; no suburbs.
+- R-EXCL-*: no hostel/gostinka, soclu/demisol/pe sol, grey variant (white variant allowed ≤€90k, add renovation estimate), uncommissioned new build, suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions); ignore promoted 999.md ads.
+- R-LOC (2026-11-18): ONLY Centru (whole sector), Rîșcani (whole sector), and Buiucani near Komsomol lake/Valea Morilor (~0–20 min walk including adjacent Buiucani). EVERYTHING ELSE EXCLUDED: other Buiucani, Telecentru, all Ciocana (incl. former Port Mall exception, revoked 2026-11-12), Botanica, Poșta Veche, suburbs. Unclear location = MAYBE.
 - R-MICRO: ≤5–10 min walk to main road, park or university; R-LAKE 20-min priority overrides this.
-- R-BLACKLIST: east Rîșcani — Florării, str-la Florării, Pajurii, Forăriei, Zimbrului and inner streets.
+- R-BLACKLIST (2026-11-18): east Rîșcani (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); Drumul Viilor (2026-11-13); Valea Dicescu (2026-11-15); Calea Ieșilor (2026-11-15); Grădinilor (2026-11-15).
 - R-BLACKLIST-CET1: whole CET-1 zone IN CHIȘINĂU RÎȘCANI: all of str. Tudor Vladimirescu in Chișinău Rîșcani, all of str. Nicolae Dimo in Chișinău Rîșcani, and ~800 m around CET-1 (≈47.0331, 28.8635). SAME STREETS IN DURLEȘTI also EXCLUDED (R-EXCL-SUBURB). Must verify locality/address, not bare street name; unclear locality = MAYBE, do NOT assume Chișinău.
 
 Output: PASS/MAYBE/FAIL with rule IDs. Never invent numbers. Reply to Andrew in Russian. Update FILTERS.md + listings + CHANGELOG.md when rules change.
