@@ -1,5 +1,62 @@
 # Changelog — filter rules
 
+## 2026-11-18 (major overhaul - single price band + stricter locations + new rules)
+
+**Comprehensive filter update with five major changes:**
+
+### 1. Price band restructure (2026-11-18 23:05)
+- **R-BUDGET**: Asking price **€80,000–160,000 inclusive** (single band). Above €160k or below €80k excluded immediately.
+- **R-BANDS**: Changed from 2 price blocks (€40k–110k, >€110k–140k) to **ONE single price band €80k–160k**.
+- **Quotas updated**: PASS up to 10 listings; MAYBE separate status up to 10 TOTAL (single band).
+- White variant cap remains **≤€90,000** (unchanged from 2026-11-08).
+- Reporting format updated throughout FILTERS.md, AGENTS.md, templates/listing-check.md.
+
+### 2. €/m² cap raised (2026-11-18 23:06)
+- **R-PRICE-M2**: Maximum asking price per m² raised to **≤€2,100/m²** (was €1,900/m²). Anything above €2,100/m² excluded immediately.
+
+### 3. Location restrictions tightened (2026-11-18 23:05)
+- **R-LOC**: Now **ONLY** three acceptable locations:
+  - Centru (whole sector)
+  - Rîșcani / Рышкановка (whole sector)
+  - Buiucani area around Komsomol lake / Valea Morilor (~0–20 min actual walking route, including adjacent parts of Buiucani)
+- **Everything else now EXCLUDED**:
+  - Other parts of Buiucani (outside the ~0–20 min lake area)
+  - **Telecentru** (previously acceptable; now excluded as of 2026-11-18)
+  - **All Ciocana** (including former Port Mall/Rîșcani edge exception, revoked 2026-11-12)
+  - Botanica, Poșta Veche, all suburbs
+- Unclear location → MAYBE with map check.
+
+### 4. Street blacklist expanded
+- **R-BLACKLIST** extended with four new streets (whole streets, apartments and houses, all statuses):
+  - **str. Drumul Viilor** (added 2026-11-13)
+  - **str. Valea Dicescu** (added 2026-11-15)
+  - **str. Calea Ieșilor** (added 2026-11-15)
+  - **str. Grădinilor** (added 2026-11-15)
+- Existing blacklist unchanged: east Rîșcani pocket (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului), CET-1 zone.
+
+### 5. Building age exception added (2026-11-15)
+- **R-YEAR**: Added **Stalinka and seria 102 (cotileț) exception** — these buildings are allowed even if constructed before 2000, **only when explicitly confirmed**.
+- Unconfirmed Stalinka/102 → MAYBE; other pre-2000 series remain FAIL.
+- Flag building-age checks required.
+
+### 6. Sanitary rooms requirement added (2026-11-15)
+- **R-SANITARY** (NEW): New builds (construction year ≥2000) require **TWO separate sanitary rooms** (separate toilet + separate bathroom/shower).
+- Explicitly combined bathroom → FAIL.
+- 999.md "Grup sanitar: 1" without explicit text description → UNKNOWN → MAYBE with verification.
+- **Exception:** Stalinka and seria 102 (R-YEAR exception objects) are NOT subject to this two-room requirement.
+
+### 7. Unknown finish rule clarified (2026-11-17)
+- **R-EXCL-UNFINISHED**: If finishing is not explicitly stated, the white variant cap is UNKNOWN → verdict MAYBE with verification requirement, not FAIL. Only an explicitly stated white variant >€90k is FAIL.
+
+### Files updated
+- FILTERS.md: R-BUDGET, R-BANDS, R-PRICE-M2, R-LOC, R-BLACKLIST, R-YEAR (Stalinka/102 exception), R-SANITARY (NEW), R-EXCL-UNFINISHED (unknown finish), §12 reporting format, Russian summary
+- AGENTS.md: reporting format (single band)
+- .cursor/rules/real-estate-filters.mdc: all rule updates
+- templates/listing-check.md: R-BUDGET, R-BANDS, R-PRICE-M2, R-LOC, R-BLACKLIST, R-YEAR, R-SANITARY (NEW), R-EXCL-UNFINISHED
+- CHANGELOG.md: this comprehensive entry
+
+All other filters unchanged: white variant €90k cap, area ≥45m², elevator informational, mansards/houses allowed, MAYBE publication with ≤10 separate quota, sources registry, etc.
+
 ## 2026-11-08 (evening - Durlești removed + white €90k + area ≥45m² + benchmark removed)
 
 **Supersedes earlier 2026-11-08 changes.** Four mandatory changes:

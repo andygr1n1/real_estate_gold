@@ -3,13 +3,14 @@
 Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown · Building type/series/year: · Condition:
 
 ## Hard filters (see FILTERS.md)
-- [ ] R-BUDGET — €40k–140k (above €140k = excluded); white variant ≤€90k (>€90k = excluded even if <€140k)
-- [ ] R-BANDS — block: ☐ €40k–110k inclusive ☐ >€110k–140k inclusive
+- [ ] R-BUDGET — €80k–160k (above €160k or below €80k = excluded); white variant ≤€90k (>€90k = excluded even if <€160k); unknown finish = MAYBE
+- [ ] R-BANDS — single band: €80k–160k inclusive
 - [ ] R-TYPE — any number of rooms; rooms: ___
 - [ ] R-AREA — ≥45 m² total area
-- [ ] R-PRICE-M2 — ≤€1,900/m²
+- [ ] R-PRICE-M2 — ≤€2,100/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
-- [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; unverified year = MAYBE)
+- [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; EXCEPTION: Stalinka and seria 102 allowed if explicitly confirmed; unverified year or series = MAYBE)
+- [ ] R-SANITARY — new builds (≥2000) require TWO separate sanitary rooms (separate toilet + separate bath); combined = FAIL; "Grup sanitar: 1" without text = MAYBE; Stalinka/102 exempt
 - [ ] R-FLOOR — apartments floors 2–8; single-storey houses exception
 - [ ] R-EXCL-BOTANICA — not in Botanica sector
 - [ ] R-LIFT — informational only (high floor without lift flagged but NOT excluded)
@@ -17,9 +18,9 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-MANSARD / R-HOUSE — mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land)
 - [ ] R-EXCL-HOSTEL · R-EXCL-BASEMENT · R-EXCL-UNFINISHED · R-EXCL-NEWBUILD · R-EXCL-PROMO
 - [ ] R-EXCL-SUBURB — no suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions)
-- [ ] R-LOC — sector OK; real address verified from text; Centru/Rîșcani/Buiucani (≤20 min walk to lake) priority; other Buiucani/Telecentru/Ciocana (near Port Mall/Rîșcani edge) acceptable
+- [ ] R-LOC — ONLY Centru (whole), Rîșcani (whole), and Buiucani near lake (~0–20 min walk); everything else excluded (other Buiucani, Telecentru, all Ciocana, Botanica, Poșta Veche, suburbs); unclear location = MAYBE
 - [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min; R-LAKE 20-min priority overrides)
-- [ ] R-BLACKLIST — not in east Rîșcani pocket (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului)
+- [ ] R-BLACKLIST — not in blacklisted streets: Florării, str-la Florării, Pajurii, Forăriei, Zimbrului (east Rîșcani); Drumul Viilor; Valea Dicescu; Calea Ieșilor; Grădinilor
 - [ ] R-BLACKLIST-CET1 — **verify locality**: str. Tudor Vladimirescu / Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); same streets in Durlești ALSO EXCLUDED (R-EXCL-SUBURB); unclear locality = MAYBE (do NOT assume Chișinău); not within ~800 m of CET-1 (≈47.0331, 28.8635)
 - [ ] Not in listings/rejected.md
 
