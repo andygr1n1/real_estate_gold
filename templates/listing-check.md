@@ -9,8 +9,8 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-AREA — ≥45 m² total area
 - [ ] R-PRICE-M2 — ≤€2,100/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
-- [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; EXCEPTION: Stalinka and seria 102 allowed if explicitly confirmed; unverified year or series = MAYBE)
-- [ ] R-SANITARY — new builds (≥2000) require TWO separate sanitary rooms (separate toilet + separate bath); combined = FAIL; "Grup sanitar: 1" without text = MAYBE; Stalinka/102 exempt
+- [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; EXCEPTION: Stalinka, seria 102, seria 143, Czech series/project, individual projects allowed if explicitly confirmed; unverified year or series = MAYBE; other pre-2000 series = FAIL)
+- [ ] R-SANITARY — new builds (≥2000) require TWO separate sanitary rooms (separate toilet + separate bath); combined = FAIL; "Grup sanitar: 1" without text = MAYBE; R-YEAR exception objects (Stalinka/102/143/Czech/individual) exempt
 - [ ] R-FLOOR — apartments floors 2–8; single-storey houses exception
 - [ ] R-EXCL-BOTANICA — not in Botanica sector
 - [ ] R-LIFT — informational only (high floor without lift flagged but NOT excluded)
