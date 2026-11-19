@@ -1,5 +1,46 @@
 # Changelog — filter rules
 
+## 2026-11-19 23:29–23:31 (max price lowered to €100k + location narrowed)
+
+**R-BUDGET and R-LOC major tightening.** Owner rule change 2026-11-19 23:28–23:31 Europe/Chisinau.
+
+### 1. Max price lowered to €100k (corrected at 23:31)
+- **R-BUDGET**: Maximum asking price **€100,000 inclusive** (was €160,000). Asking >€100k => **FAIL R-PRICE**. Below €80k stays FAIL.
+- **R-BANDS**: Single price band **€80,000–100,000 inclusive** (was €80,000–160,000).
+- White variant cap **≤€90,000** unchanged (still below general cap).
+- **Correction note**: Initially set to €125,000 at 23:29, corrected to €100,000 at 23:31.
+
+### 2. Locations narrowed to Rîșcanovca neighbourhood only (not whole Rîșcani sector)
+- **R-LOC**: Acceptable locations now **strictly**:
+  - **Centru** (whole sector) — unchanged
+  - **Rîșcanovca / Рышкановка neighbourhood ONLY** (not the whole Rîșcani sector; other parts of Rîșcani such as Poșta Veche, Petricani, Cartierul Moldova / Socoleni direction are **EXCLUDED**)
+  - **Buiucani area around Komsomol lake / Valea Morilor** (~0–20 min walk including adjacent Buiucani) — unchanged
+- **Everything else => FAIL R-EXCL-AREA**, including:
+  - Other parts of Rîșcani sector (Poșta Veche, Petricani, Cartierul Moldova / Socoleni direction, etc.)
+  - Other Buiucani (outside lake area)
+  - Telecentru, all Ciocana, Botanica, suburbs
+- **Unclear micro-district** (e.g. only 'Rîșcani' without street/map) => **MAYBE** with map check.
+- **R-EXCL-BOTANICA** updated: Poșta Veche clarified as part of Rîșcani sector but not Rîșcanovca neighbourhood.
+
+### 3. All other criteria unchanged
+- €/m² cap ≤€2,100 unchanged
+- Area ≥45 m² unchanged
+- White variant ≤€90k unchanged
+- Construction year ≥2000 (with series exceptions) unchanged
+- Two sanitary rooms for new builds unchanged
+- Floors 2–8 unchanged
+- PASS ≤10 / MAYBE ≤10 quotas unchanged
+- CET-1 zone (Tudor Vladimirescu allowed per 19.11 19:42) and street blacklists unchanged
+
+### Files updated
+- FILTERS.md: R-BUDGET (€100k with correction note), R-BANDS (€80k–100k), R-LOC (Rîșcanovca neighbourhood only with historical note), R-EXCL-BOTANICA (Poșta Veche clarification), §12 reporting format (€80k–100k), Russian summary (both rules)
+- .cursor/rules/real-estate-filters.mdc: R-BUDGET (€100k), R-BANDS (€80k–100k), R-LOC (Rîșcanovca neighbourhood)
+- AGENTS.md: reporting format (€80k–100k)
+- templates/listing-check.md: R-BUDGET (€100k), R-BANDS (€80k–100k), R-LOC (Rîșcanovca neighbourhood)
+- CHANGELOG.md: this entry
+
+**Historical context:** Price band was €80k–160k from 2026-11-18 to 2026-11-19 23:29. Whole Rîșcani sector was acceptable from 2026-11-18 to 2026-11-19 23:29.
+
 ## 2026-11-19 (Tudor Vladimirescu removed from blacklist)
 
 **R-BLACKLIST-CET1**: str. Tudor Vladimirescu (Chișinău, Rîșcani) removed from the CET-1 zone blacklist. Owner rule change 2026-11-19 19:42 Europe/Chisinau.
