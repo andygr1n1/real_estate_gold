@@ -29,11 +29,11 @@ Reply to Andrew in **Russian**. Repo files are in English.
 
 ## Reporting format
 
-Always organize into the single price band from R-BANDS (€80k–160k inclusive). Present in this order:
+Always organize into the single price band from R-BANDS (€80k–100k inclusive). Present in this order:
 1. **PASS** (up to 10) — ranked best first
 2. **MAYBE** (up to 10 TOTAL) — ranked best potential first
 
-MAYBE has its own independent ≤10 quota; does NOT consume PASS quota. Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €160k or below €80k.
+MAYBE has its own independent ≤10 quota; does NOT consume PASS quota. Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €100k or below €80k.
 
 ### MAYBE publication (added 2026-11-08)
 **MAYBE candidates are PUBLISHED** with literal tag **MAYBE** and specific reasons:

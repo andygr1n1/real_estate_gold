@@ -12,8 +12,8 @@ Verdict scale:
 
 ## 1. Budget & type
 
-- **R-BUDGET** (updated 2026-11-18) — Asking price **€80,000–160,000 inclusive**. Anything above €160k or below €80k is excluded immediately.
-- **R-BANDS** (updated 2026-11-18) — Every report uses **ONE single price band**: **€80,000–160,000 inclusive**.
+- **R-BUDGET** (updated 2026-11-19) — Asking price **€80,000–100,000 inclusive**. Anything above €100k or below €80k is excluded immediately.
+- **R-BANDS** (updated 2026-11-19) — Every report uses **ONE single price band**: **€80,000–100,000 inclusive**.
   
   **Quotas per batch** (updated 2026-11-18):
   - **PASS**: up to 10 listings
@@ -21,7 +21,7 @@ Verdict scale:
   
   MAYBE has its own independent ≤10 quota; MAYBE does NOT consume PASS quota. Leftovers buffered and published in chunks ≤10 at noon/evening. Each section starts with a one-line summary: listings scanned, PASS count, MAYBE count. Rank PASS first (best first), then MAYBE (best potential first). Empty → say "нет подходящих".
   
-  **Historical note:** Was €40,000–140,000 with 2 price blocks (€40k–110k, >€110k–140k) until 2026-11-18; superseded by single band €80,000–160,000.
+  **Historical note:** Was €40,000–140,000 with 2 price blocks (€40k–110k, >€110k–140k) until 2026-11-18; superseded by single band €80,000–160,000 (2026-11-18), then €80,000–100,000 (2026-11-19).
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
 - **R-AREA** (updated 2026-11-08) — Total area **≥ 45 m²** for every listing, any room count. Anything below 45 m² (or with unknown area) is excluded immediately, including listings already in the Telegram buffer. (Note: was ≥40 m² until 2026-11-08 18:32; superseded by ≥45 m².)
@@ -66,27 +66,27 @@ Verdict scale:
 
 ## 4. Location
 
-- **R-LOC** (updated 2026-11-18) — **ONLY** the following locations are acceptable:
+- **R-LOC** (updated 2026-11-19) — **ONLY** the following locations are acceptable:
   - **Centru** (whole sector)
-  - **Rîșcani (Рышкановка)** (whole sector)
+  - **Rîșcanovca / Рышкановка neighbourhood ONLY** (not the whole Rîșcani sector; other parts of Rîșcani such as Poșta Veche, Petricani, Cartierul Moldova / Socoleni direction are EXCLUDED)
   - **Buiucani area around Komsomol lake / Valea Morilor** — approximately 0–20 minute actual walking route, including adjacent parts of Buiucani (R-LAKE)
   
   **Everything else is EXCLUDED**, including:
+  - Other parts of Rîșcani sector (Poșta Veche, Petricani, Cartierul Moldova / Socoleni direction, etc.) — only Rîșcanovca neighbourhood is acceptable
   - Other parts of Buiucani (outside the ~0–20 min lake area)
   - **Telecentru** (previously acceptable; now excluded as of 2026-11-18)
   - **All Ciocana** (including former Port Mall/Rîșcani edge exception, revoked 2026-11-12)
   - Botanica (R-EXCL-BOTANICA)
-  - Poșta Veche
   - All suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.) (R-EXCL-SUBURB)
   - CET-1 zone (R-BLACKLIST-CET1)
   
-  Unclear location → verdict **MAYBE** with map check until resolved.
+  Unclear micro-district (e.g. only 'Rîșcani' without street/map) → verdict **MAYBE** with map check until resolved.
   
-  **Historical note:** Telecentru, other Buiucani, and Ciocana near Port Mall were acceptable until 2026-11-18; superseded by Centru/Rîșcani/lake-only rule.
+  **Historical note:** Telecentru, other Buiucani, and Ciocana near Port Mall were acceptable until 2026-11-18; whole Rîșcani sector was acceptable until 2026-11-19, now restricted to Rîșcanovca neighbourhood only.
 - **R-LAKE** (added 2026-11-07) — Buiucani within ≈0–20 minute walk of Komsomol lake / Valea Morilor has **priority** status. Walking time is measured by actual routes, not straight-line distance. This explicit 20-minute lake priority overrides the generic 5–10 minute R-MICRO rule for these areas.
 - **R-EXCL-BOTANICA** (2026-11-02) — The whole **Botanica** sector is excluded (all streets, all micro-districts), including listings already in the Telegram buffer.
-  - **Poșta Veche** excluded.
-  - **Ciocana** excluded, except the part bordering Rîșcani / near Port Mall.
+  - **Poșta Veche** excluded (part of Rîșcani sector but not Rîșcanovca neighbourhood).
+  - **Ciocana** excluded entirely as of 2026-11-18.
   - Verify the real address from the listing text, not just the sector field.
 - **R-MICRO** — Within ≈5–10 min walk of:
   - a main road/boulevard (bd. Moscova, Alecu Russo, Kiev, Ștefan cel Mare, Dacia, Decebal, Ion Creangă, Calea Ieșilor, Mircea cel Bătrân, etc.), or
@@ -221,11 +221,11 @@ MAYBE candidates are now published (previously excluded from buffer/reports). Un
 
 ## 12. Reporting format
 
-Always organize into the single price band from R-BANDS (€80k–160k inclusive). Present in this order:
+Always organize into the single price band from R-BANDS (€80k–100k inclusive). Present in this order:
 1. **PASS** (up to 10) — ranked best first
 2. **MAYBE** (up to 10 TOTAL) — ranked best potential first
 
-Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Empty section → say "нет подходящих".
+Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €100k or below €80k. Empty section → say "нет подходящих".
 
 ### Per listing
 **Status PASS/MAYBE** · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer (based on real comparables per R-PRICE) · **verdict with rule IDs**.
@@ -236,8 +236,8 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 
 ## Кратко по-русски (жёсткие правила)
 
-- **Цена €80–160k** (с 18.11.2026); всё дороже €160k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €160k). **Неизвестная отделка** (не указана явно) → MAYBE с проверкой, не FAIL (с 17.11.2026).
-- **Отчёт всегда из одного блока**: €80k–160k включительно (с 18.11.2026; было 2 блока €40k–110k и >€110k–140k до 18.11.2026).
+- **Цена €80–100k** (с 19.11.2026); всё дороже €100k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €100k). **Неизвестная отделка** (не указана явно) → MAYBE с проверкой, не FAIL (с 17.11.2026).
+- **Отчёт всегда из одного блока**: €80k–100k включительно (с 19.11.2026; было 2 блока €40k–110k и >€110k–140k до 18.11.2026, затем €80k–160k 18.11.2026).
 - **Квоты на публикацию (с 18.11.2026):** PASS до 10 объявлений, **MAYBE отдельная группа до 10 ВСЕГО** (независимая квота, не потребляет квоту PASS). Остатки в буфер, публикуются порциями ≤10 в полдень/вечером.
 - Любое число комнат; площадь — от 45 м² (меньше 45 м² — исключаем).
 - **Цена за м² — не дороже €2 100/м²** (дороже — исключаем, с 18.11.2026; было ≤€1 900/м² до 18.11.2026).
@@ -248,7 +248,7 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
-- **Районы (с 18.11.2026): ТОЛЬКО Центр (весь сектор), Рышкановка (весь сектор), и зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан).** Всё остальное исключено: другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), Старая Почта, **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначная локация = MAYBE с проверкой на карте.
+- **Районы (с 19.11.2026): ТОЛЬКО Центр (весь сектор), микрорайон Рышкановка (не весь сектор Рышкановка; другие части сектора — Старая Почта, Петричаны, Картиерул Молдова / направление Соколены — исключены), и зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан).** Всё остальное исключено: другие части сектора Рышкановка (Старая Почта, Петричаны, Картиерул Молдова / Соколены и др.; только микрорайон Рышкановка допустим), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
 - **Чёрный список (с 19.11.2026):** восток Рышкановки (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции кроме ул. Тудор Владимиреску); **Drumul Viilor** (13.11.2026); **Valea Dicescu** (15.11.2026); **Calea Ieșilor** (15.11.2026); **Grădinilor** (15.11.2026). **ул. Тудор Владимиреску разрешена** (изменено 19.11.2026); близость к ТЭЦ-1 — информационный флаг, не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
 - Рекламные (поднятые) объявления 999.md игнорируются.
