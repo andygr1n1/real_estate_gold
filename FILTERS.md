@@ -24,7 +24,7 @@ Verdict scale:
   **Historical note:** Was €40,000–140,000 with 2 price blocks (€40k–110k, >€110k–140k) until 2026-11-18; superseded by single band €80,000–160,000 (2026-11-18), then €80,000–100,000 (2026-11-19).
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
-- **R-AREA** (updated 2026-11-08) — Total area **≥ 45 m²** for every listing, any room count. Anything below 45 m² (or with unknown area) is excluded immediately, including listings already in the Telegram buffer. (Note: was ≥40 m² until 2026-11-08 18:32; superseded by ≥45 m².)
+- **R-AREA** (updated 2026-11-20) — Total area **≥ 55 m²** for every listing, any room count. Anything below 55 m² is **FAIL** immediately. Unknown area → verdict **MAYBE** with area verification required. (Note: was ≥40 m² until 2026-11-08 18:32, then ≥45 m² until 2026-11-20 00:46; superseded by ≥55 m².)
 - **R-PRICE-M2** (updated 2026-11-18) — Asking price per m² **≤ €2,100/m²** (price ÷ total area). Anything above €2,100/m² is excluded immediately. (Note: was ≤€1,900/m² until 2026-11-18; superseded by ≤€2,100/m².)
 
 ## 2. Floors & elevator
@@ -239,7 +239,7 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 - **Цена €80–100k** (с 19.11.2026); всё дороже €100k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €100k). **Неизвестная отделка** (не указана явно) → MAYBE с проверкой, не FAIL (с 17.11.2026).
 - **Отчёт всегда из одного блока**: €80k–100k включительно (с 19.11.2026; было 2 блока €40k–110k и >€110k–140k до 18.11.2026, затем €80k–160k 18.11.2026).
 - **Квоты на публикацию (с 18.11.2026):** PASS до 10 объявлений, **MAYBE отдельная группа до 10 ВСЕГО** (независимая квота, не потребляет квоту PASS). Остатки в буфер, публикуются порциями ≤10 в полдень/вечером.
-- Любое число комнат; площадь — от 45 м² (меньше 45 м² — исключаем).
+- Любое число комнат; площадь — от 55 м² (меньше 55 м² — исключаем; неизвестная площадь → MAYBE с проверкой).
 - **Цена за м² — не дороже €2 100/м²** (дороже — исключаем, с 18.11.2026; было ≤€1 900/м² до 18.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - **Год постройки ≥2000** — здания построенные до 2000 исключены; ремонт не считается; непроверенный год = MAYBE. **Исключение (с 18.11.2026 23:18): Сталинка, серия 102 (котелец), серия 143, чешский проект (proiect cehesc) и индивидуальный проект (proiect individual) разрешены даже если до 2000, только при явном подтверждении в объявлении**; неподтверждённые = MAYBE; другие серии до 2000 (135, MS/Вэрница, брежневка, хрущёвка и т.д.) остаются FAIL. Новостройки — только сданные.

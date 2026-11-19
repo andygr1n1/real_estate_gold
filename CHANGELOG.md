@@ -1,5 +1,26 @@
 # Changelog — filter rules
 
+## 2026-11-20 00:46 (minimum area raised to ≥55 m²)
+
+**R-AREA tightened.** Owner rule change 2026-11-20 00:46 Europe/Chisinau.
+
+### Minimum total area raised to ≥55 m²
+- **R-AREA**: Minimum total area **≥55 m²** inclusive (was ≥45 m²). Any room count.
+- Known area <55 m² => **FAIL R-AREA** (excluded immediately)
+- Unknown area => verdict **MAYBE** with area verification required
+- Applies to apartments and houses, all locations, all statuses (PASS/MAYBE/buffer)
+
+### Files updated
+- FILTERS.md: R-AREA (≥55 m² with historical note), Russian summary
+- .cursor/rules/real-estate-filters.mdc: R-AREA (≥55 m²)
+- templates/listing-check.md: R-AREA (≥55 m²)
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+- Budget €80k–100k, location (Centru/Rîșcanovca/lake), €2,100/m², white ≤€90k, year ≥2000, two sanitary rooms for new builds, floors 2–8, quotas ≤10 PASS / ≤10 MAYBE — all unchanged
+
+**Historical context:** Minimum area was ≥40 m² until 2026-11-08 18:32, then ≥45 m² from 2026-11-08 18:32 to 2026-11-20 00:46.
+
 ## 2026-11-19 23:29–23:31 (max price lowered to €100k + location narrowed)
 
 **R-BUDGET and R-LOC major tightening.** Owner rule change 2026-11-19 23:28–23:31 Europe/Chisinau.
