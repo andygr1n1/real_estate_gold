@@ -1,5 +1,25 @@
 # Changelog — filter rules
 
+## 2026-11-19 (Tudor Vladimirescu removed from blacklist)
+
+**R-BLACKLIST-CET1**: str. Tudor Vladimirescu (Chișinău, Rîșcani) removed from the CET-1 zone blacklist. Owner rule change 2026-11-19 19:42 Europe/Chisinau.
+
+### What changed
+- **str. Tudor Vladimirescu is now ALLOWED** in Chișinău Rîșcani. Evaluate addresses on this street by all other filters; they can be PASS or MAYBE.
+- **Being near CET-1 becomes informational only** — flagged as "близко к ТЭЦ-1" but NOT an exclusion.
+- **Rest of R-BLACKLIST-CET1 unchanged**: str. Nicolae Dimo in Chișinău Rîșcani still excluded; any other address within ~800 m of CET-1 (≈47.0331, 28.8635), excluding Tudor Vladimirescu, still excluded.
+
+### Files updated
+- FILTERS.md: R-BLACKLIST-CET1 (updated date, reworded rule, updated boundary examples, added historical note), §5 rejected listings (annotated Tudor Vladimirescu 3 entry), Russian summary (updated blacklist description)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST-CET1 (updated with date, new wording)
+- listings/rejected.md: annotated Tudor Vladimirescu 3 entry with re-evaluation note
+- CHANGELOG.md: this entry
+
+### Historical context
+str. Tudor Vladimirescu in Chișinău Rîșcani was excluded as part of the CET-1 zone blacklist from 2026-11-02 to 2026-11-19. Tudor Vladimirescu 3 listing (73 m², 3/3, €84.9k, https://999.md/ro/105513974) was rejected on 2026-11-02 for R-BLACKLIST-CET1; may now be re-evaluated if still live.
+
+All other filters unchanged from 2026-11-18 major overhaul.
+
 ## 2026-11-18 23:18 (pre-2000 series exception extended)
 
 **R-YEAR and R-SANITARY exception extended** to include three additional building series/types:

@@ -21,7 +21,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-LOC — ONLY Centru (whole), Rîșcani (whole), and Buiucani near lake (~0–20 min walk); everything else excluded (other Buiucani, Telecentru, all Ciocana, Botanica, Poșta Veche, suburbs); unclear location = MAYBE
 - [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min; R-LAKE 20-min priority overrides)
 - [ ] R-BLACKLIST — not in blacklisted streets: Florării, str-la Florării, Pajurii, Forăriei, Zimbrului (east Rîșcani); Drumul Viilor; Valea Dicescu; Calea Ieșilor; Grădinilor
-- [ ] R-BLACKLIST-CET1 — **verify locality**: str. Tudor Vladimirescu / Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); same streets in Durlești ALSO EXCLUDED (R-EXCL-SUBURB); unclear locality = MAYBE (do NOT assume Chișinău); not within ~800 m of CET-1 (≈47.0331, 28.8635)
+- [ ] R-BLACKLIST-CET1 — **verify locality**: str. Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); str. Tudor Vladimirescu ALLOWED (changed 2026-11-19; flag CET-1 proximity as informational); same streets in Durlești ALSO EXCLUDED (R-EXCL-SUBURB); unclear locality = MAYBE (do NOT assume Chișinău); not within ~800 m of CET-1 (≈47.0331, 28.8635) excluding Tudor Vladimirescu
 - [ ] Not in listings/rejected.md
 
 ## Red flags (R-REDFLAG)
