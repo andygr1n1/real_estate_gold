@@ -100,16 +100,17 @@ Verdict scale:
   - **str. Valea Dicescu** (added 2026-11-15)
   - **str. Calea Ieșilor** (added 2026-11-15)
   - **str. Grădinilor** (added 2026-11-15)
-- **R-BLACKLIST-CET1** (updated 2026-11-08) — Whole CET-1 (Termoelectrica Sursa 1, str. Tudor Vladimirescu 6) zone **in Chișinău Rîșcani**: the entire **str. Tudor Vladimirescu in Chișinău Rîșcani** (all house numbers) and any building within ~800 m of the CET-1 site (≈47.0331, 28.8635). Reasons: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity. Tudor Vladimirescu 3 in Chișinău (4 duplicate ads) rejected.
-  - Extended 2026-11-02: the entire **str. Nicolae Dimo in Chișinău Rîșcani** (all house numbers, incl. 1/3, 23 etc.) is also excluded as part of the CET-1 zone, regardless of distance.
-  - **Locality clarification (updated 2026-11-08 18:28)**: str. Tudor Vladimirescu and str. Nicolae Dimo exist in multiple localities. **Must verify locality/address from listing, not match bare street name.** Unclear locality → verdict MAYBE until resolved; do NOT assume Chișinău.
-  - **Boundary examples (updated 2026-11-08 18:28)**:
-    - ❌ EXCLUDED: str. Tudor Vladimirescu, Chișinău mun., Rîșcani sector (R-BLACKLIST-CET1: CET-1 zone)
+- **R-BLACKLIST-CET1** (updated 2026-11-19) — CET-1 (Termoelectrica Sursa 1) zone **in Chișinău Rîșcani**: the entire **str. Nicolae Dimo in Chișinău Rîșcani** (all house numbers, incl. 1/3, 23 etc.) is excluded, and any building (excluding those on Tudor Vladimirescu) within ~800 m of the CET-1 site (≈47.0331, 28.8635) is excluded. **str. Tudor Vladimirescu is now ALLOWED** (changed 2026-11-19). Proximity to CET-1 (for non-excluded addresses) is flagged as informational ("близко к ТЭЦ-1") but not an exclusion. Reasons for CET-1 concern: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity.
+  - **Locality clarification**: str. Tudor Vladimirescu and str. Nicolae Dimo exist in multiple localities. **Must verify locality/address from listing, not match bare street name.** Unclear locality → verdict MAYBE until resolved; do NOT assume Chișinău.
+  - **Boundary examples (updated 2026-11-19)**:
+    - ✅ ALLOWED: str. Tudor Vladimirescu, Chișinău mun., Rîșcani sector (evaluate by all other filters; flag CET-1 proximity)
     - ❌ EXCLUDED: str. Nicolae Dimo, Chișinău mun., Rîșcani sector (R-BLACKLIST-CET1: CET-1 zone)
-    - ❌ EXCLUDED: str. Tudor Vladimirescu, Durlești (R-EXCL-SUBURB: suburb exclusion; revoked temporary allowance 2026-11-08 18:28)
+    - ❌ EXCLUDED: str. Tudor Vladimirescu, Durlești (R-EXCL-SUBURB: suburb exclusion)
     - ❌ EXCLUDED: str. Nicolae Dimo, Durlești (R-EXCL-SUBURB: suburb exclusion)
+    - ❌ EXCLUDED: other addresses within ~800 m of CET-1 (≈47.0331, 28.8635), excluding Tudor Vladimirescu
     - ⚠️ MAYBE: str. Tudor Vladimirescu or Nicolae Dimo, locality unclear/unverified (must resolve before PASS or FAIL)
-  - Matching note (2026-11-04): normalise addresses before checking any blacklist — lowercase, strip diacritics, transliterate Cyrillic (e.g. Николай/Николае Димо = Nicolae Dimo, Тудор Владимиреску = Tudor Vladimirescu; same for Florării/Флорилор, Pajurii/Пажурий, Forăriei/Форэрией, Zimbrului/Зимбрулуй, Poșta Veche/Пошта Веке). Use map coordinates vs the CET-1 radius when available. **Always verify locality: Chișinău Rîșcani vs Durlești.**
+  - Matching note (2026-11-04): normalise addresses before checking any blacklist — lowercase, strip diacritics, transliterate Cyrillic (e.g. Николай/Nicolae Димо = Nicolae Dimo, Тудор Владимиреску = Tudor Vladimirescu; same for Florării/Флорилор, Pajurii/Пажурий, Forăriei/Форэрией, Zimbrului/Зимбрулуй, Poșta Veche/Пошта Веке). Use map coordinates vs the CET-1 radius when available. **Always verify locality: Chișinău Rîșcani vs Durlești.**
+  - **Historical note (2026-11-19)**: str. Tudor Vladimirescu in Chișinău Rîșcani was excluded 2026-11-02 to 2026-11-19; changed to allowed 2026-11-19.
 
 ## 5. Rejected listings (mirror of `listings/rejected.md`)
 
@@ -124,7 +125,7 @@ Verdict scale:
 | Pandurilor 14 | https://999.md/ro/105776688 | Location unclear; previously flagged 5/5 no lift (lift no longer exclusion as of 2026-11-07) |
 | Ginta Latină 12/5 | https://999.md/ro/105418586 | R-LOC Ciocana (€119.9k) |
 | Colina Pușkin 8A | https://999.md/ro/105722767 | R-FLOOR floor 1 (€112k) |
-| Tudor Vladimirescu 3 (3 rooms, 73 m², 3/3, €84.9k; dupes 105104604, 105287773, 105736654) | https://999.md/ro/105513974 | R-BLACKLIST-CET1 (2026-11-02) |
+| Tudor Vladimirescu 3, Chișinău Rîșcani (3 rooms, 73 m², 3/3, €84.9k; dupes 105104604, 105287773, 105736654) | https://999.md/ro/105513974 | R-BLACKLIST-CET1 (2026-11-02); **NOTE (2026-11-19): street removed from blacklist, may be re-evaluated if still live** |
 
 ## 5a. MAYBE listings (published per 2026-11-08 rules)
 
@@ -249,7 +250,7 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
 - **Районы (с 18.11.2026): ТОЛЬКО Центр (весь сектор), Рышкановка (весь сектор), и зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан).** Всё остальное исключено: другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), Старая Почта, **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначная локация = MAYBE с проверкой на карте.
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
-- **Чёрный список (с 18.11.2026):** восток Рышкановки за Тудор Владимиреску (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); вся зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Тудор Владимиреску в Кишинёве Рышкановка, вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции); **Drumul Viilor** (13.11.2026); **Valea Dicescu** (15.11.2026); **Calea Ieșilor** (15.11.2026); **Grădinilor** (15.11.2026). Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
+- **Чёрный список (с 19.11.2026):** восток Рышкановки (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции кроме ул. Тудор Владимиреску); **Drumul Viilor** (13.11.2026); **Valea Dicescu** (15.11.2026); **Calea Ieșilor** (15.11.2026); **Grădinilor** (15.11.2026). **ул. Тудор Владимиреску разрешена** (изменено 19.11.2026); близость к ТЭЦ-1 — информационный флаг, не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - **MAYBE теперь публикуются** с буквальной меткой MAYBE и конкретными причинами неопределённости (например, год постройки не подтверждён — требуется проверка ≥2000). PASS = полностью проверено; MAYBE = неизвестный/противоречивый критерий, но нет подтверждённого нарушения обязательного правила; FAIL = подтверждённое нарушение, исключено. Для каждого MAYBE: все существенные неизвестные/конфликты, требуемая проверка, никогда не выдумывать факты. Неизвестный год может публиковаться как MAYBE; подтверждённый <2000 остаётся FAIL (если не сталинка/102).
 - Поиск включает **категорию продажи домов**, так как частные дома разрешены. Только сектора Кишинёва; пригороды исключены.
