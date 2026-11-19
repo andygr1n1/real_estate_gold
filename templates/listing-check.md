@@ -6,7 +6,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-BUDGET — €80k–100k (above €100k or below €80k = excluded); white variant ≤€90k (>€90k = excluded even if <€100k); unknown finish = MAYBE
 - [ ] R-BANDS — single band: €80k–100k inclusive
 - [ ] R-TYPE — any number of rooms; rooms: ___
-- [ ] R-AREA — ≥45 m² total area
+- [ ] R-AREA — ≥55 m² total area (known <55 m² = FAIL; unknown = MAYBE with verification)
 - [ ] R-PRICE-M2 — ≤€2,100/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; EXCEPTION: Stalinka, seria 102, seria 143, Czech series/project, individual projects allowed if explicitly confirmed; unverified year or series = MAYBE; other pre-2000 series = FAIL)
