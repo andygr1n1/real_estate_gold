@@ -60,7 +60,6 @@ Verdict scale:
   Unconfirmed exception series → verdict **MAYBE**; other pre-2000 series (135, MS/Varnița, brejnevka, hrușciovka, etc.) remain **FAIL**. Renovation in an old building does NOT count. Unverified construction year → verdict **MAYBE**, not PASS. Never invent or guess a construction year. Flag building-age checks. Commissioned status still required (R-EXCL-NEWBUILD).
   
   **Historical note:** Exception initially covered Stalinka and seria 102 only (2026-11-15); extended to include seria 143, Czech series, and individual projects 2026-11-18 23:18.
-- **R-SANITARY** (updated 2026-11-18) — **New builds (≥2000) require TWO separate sanitary rooms**: separate toilet + separate bathroom/shower. Explicitly combined bathroom → **FAIL**. 999.md "Grup sanitar: 1" without explicit text description → **UNKNOWN** → verdict **MAYBE** with verification requirement. **Exception (updated 2026-11-18):** R-YEAR exception objects (Stalinka, seria 102, seria 143, Czech series/project, individual projects) are NOT subject to this two-room requirement.
 - **R-MANSARD** (added 2026-11-07) — **Mansards are now ALLOWED**. Flag for verification: roof condition, legal registration, cadastral compliance.
 - **R-HOUSE** (added 2026-11-07) — **Single-storey private houses are now ALLOWED**. Explicit exception to R-FLOOR (2–8 requirement) and R-LIFT. Flag for verification: legal status, cadastral registration, land ownership/rights.
 
@@ -254,7 +253,6 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 - **Цена за м² — не дороже €2 200/м²** (дороже — исключаем, с 20.11.2026; было ≤€2 100/м² до 20.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - **Год постройки ≥2000** — здания построенные до 2000 исключены; ремонт не считается; непроверенный год = MAYBE. **Исключение (с 18.11.2026 23:18): Сталинка, серия 102 (котелец), серия 143, чешский проект (proiect cehesc) и индивидуальный проект (proiect individual) разрешены даже если до 2000, только при явном подтверждении в объявлении**; неподтверждённые = MAYBE; другие серии до 2000 (135, MS/Вэрница, брежневка, хрущёвка и т.д.) остаются FAIL. Новостройки — только сданные.
-- **Санузлы в новостройках ≥2000 (с 18.11.2026):** нужны ДВА отдельных помещения (отдельный туалет + отдельная ванная/душ). Явно совмещённый санузел → FAIL. 999.md "Grup sanitar: 1" без явного текста → НЕИЗВЕСТНО → MAYBE с проверкой. **Исключение:** объекты исключения R-YEAR (сталинка, 102, 143, чешский проект, индивидуальный проект) не подпадают под требование двух помещений.
 - Этажи 2–8 для квартир; первый и выше 8-го — нет; последний этаж — флаг (крыша). **Частные одноэтажные дома — исключение** из правила 2–8 этажей.
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
