@@ -1,5 +1,58 @@
 # Changelog — filter rules
 
+## 2026-11-20 11:06 (price raised to €120k, price/m² to €2200, whole Rîșcani except Poșta Veche, CET-1 zone removed)
+
+**Major filter expansion.** Owner rule change 2026-11-20 11:06 Europe/Chisinau.
+
+### 1. Max price raised to €120,000
+- **R-BUDGET**: Maximum asking price **€120,000 inclusive** (was €100,000). Asking >€120k => **FAIL R-BUDGET**. Below €80k stays FAIL.
+- **R-BANDS**: Single price band **€80,000–120,000 inclusive** (was €80,000–100,000).
+- White variant cap **≤€90,000** unchanged (still applies even within the €120k general cap).
+
+### 2. Max price per m² raised to €2,200/m²
+- **R-PRICE-M2**: Maximum asking price per m² **≤€2,200/m²** (was €2,100/m²). Anything above €2,200/m² excluded immediately.
+
+### 3. Location expanded to whole Rîșcani sector (except Poșta Veche)
+- **R-LOC**: Acceptable locations now:
+  - **Centru** (whole sector) — unchanged
+  - **Rîșcani / Рышкановка (whole sector)** EXCEPT **Poșta Veche** (Poșta Veche specifically excluded; Rîșcanovca, Petricani, Cartierul Moldova, Socoleni, Studenților, Ceucari, and all other parts of Rîșcani sector now allowed)
+  - **Buiucani area around Komsomol lake / Valea Morilor** (~0–20 min walk including adjacent Buiucani) — unchanged
+- Previously (2026-11-19): only Rîșcanovca neighbourhood was acceptable from Rîșcani sector.
+- **R-EXCL-BOTANICA** note: Poșta Veche remains excluded (part of Rîșcani sector but specifically excluded).
+
+### 4. CET-1 zone exclusion removed entirely
+- **R-BLACKLIST-CET1 removed, replaced with R-CET1-INFO** (informational only): CET-1 proximity is now **informational only**, NOT an exclusion.
+- All addresses previously excluded under CET-1 zone rule now evaluated by standard filters:
+  - str. Nicolae Dimo (Chișinău Rîșcani) — now allowed
+  - str. Tudor Vladimirescu (Chișinău Rîșcani) — already allowed since 2026-11-19, confirmed
+  - All addresses within ~800 m of CET-1 (≈47.0331, 28.8635) — now allowed
+- Proximity to CET-1 should be flagged as "близко к ТЭЦ-1" for informational purposes only.
+- Locality verification still required: must verify from listing, not assume Chișinău.
+
+### 5. Street blacklist reduced (east Rîșcani removed)
+- **R-BLACKLIST**: East Rîșcani streets removed from blacklist:
+  - str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului — removed from blacklist (were excluded 2026-11-01 to 2026-11-20)
+  - These streets now evaluated by standard filters
+- Remaining blacklist unchanged:
+  - str. Drumul Viilor (added 2026-11-13)
+  - str. Valea Dicescu (added 2026-11-15)
+  - str. Calea Ieșilor (added 2026-11-15)
+  - str. Grădinilor (added 2026-11-15)
+
+### 6. Morning message filter summary updated
+- **Publication workflow**: Morning empty-results message updated to reflect new values: €80–120k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor.
+
+### Files updated
+- FILTERS.md: R-BUDGET (€120k), R-BANDS (€80k–120k), R-PRICE-M2 (€2,200/m²), R-LOC (whole Rîșcani except Poșta Veche), R-BLACKLIST (east Rîșcani removed), R-BLACKLIST-CET1 replaced with R-CET1-INFO (informational only), §13 morning message filter summary, Russian summary (all changes)
+- AGENTS.md: reporting format (€80k–120k), morning message filter summary
+- .cursor/rules/real-estate-filters.mdc: all rule updates (budget, price/m², location, blacklist, CET-1 info, Telegram posting)
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+- Area ≥55 m², white variant ≤€90k, year ≥2000 + commissioned (with series exceptions Stalinka/102/143/Czech/individual), two sanitary rooms for new builds, floors 2–8, quotas ≤10 PASS / ≤10 MAYBE, remaining street blacklist (Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor), excluded districts (Telecentru, Ciocana, Botanica, suburbs) — all unchanged.
+
+**Historical context:** Maximum price was €100k from 2026-11-19 to 2026-11-20; €/m² was €2,100 from 2026-11-18 to 2026-11-20; only Rîșcanovca neighbourhood was acceptable from Rîșcani sector from 2026-11-19 to 2026-11-20; CET-1 zone was a hard exclusion from 2026-11-02 to 2026-11-20; east Rîșcani streets were blacklisted from 2026-11-01 to 2026-11-20.
+
 ## 2026-11-20 10:11 (morning run empty results message)
 
 **Publication workflow change.** Owner rule change 2026-11-20 10:11 Europe/Chisinau.
