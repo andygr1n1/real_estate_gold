@@ -1,5 +1,25 @@
 # Changelog — filter rules
 
+## 2026-11-20 11:51 (R-SANITARY requirement removed)
+
+**Sanitary rooms requirement removed.** Owner rule change 2026-11-20 11:51 Europe/Chisinau.
+
+### Two-separate-sanitary-rooms requirement removed
+- **R-SANITARY removed entirely**: No building (new builds included) needs two sanitary rooms any more.
+- A single/combined bathroom is neither FAIL nor a MAYBE reason.
+- Sanitary rooms are still reported per listing as information only.
+- Removed now-redundant wording about series exceptions (Stalinka, seria 102, seria 143, Czech series/project, individual projects) being "exempt from the two-sanitary-rooms requirement," but the series exceptions themselves remain unchanged.
+
+### Files updated
+- FILTERS.md: R-SANITARY section removed, Russian summary updated
+- AGENTS.md: no changes needed (R-SANITARY not mentioned)
+- .cursor/rules/real-estate-filters.mdc: R-SANITARY removed
+- templates/listing-check.md: R-SANITARY checklist item removed
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+All filter rules unchanged: budget €80k–120k, area ≥55 m², price/m² ≤€2,200, construction year ≥2000 with series exceptions (Stalinka/102/143/Czech/individual), floors 2–8, location (Rîșcani except Poșta Veche / Centru / Komsomol lake–Valea Morilor), etc.
+
 ## 2026-11-20 11:06 (price raised to €120k, price/m² to €2200, whole Rîșcani except Poșta Veche, CET-1 zone removed)
 
 **Major filter expansion.** Owner rule change 2026-11-20 11:06 Europe/Chisinau.
