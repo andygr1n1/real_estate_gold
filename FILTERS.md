@@ -232,6 +232,23 @@ Each section starts with a one-line summary (scanned / PASS count / MAYBE count)
 
 **For MAYBE listings, add:** specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification steps, material unknowns/conflicts.
 
+## 13. Publication & Telegram posting rules
+
+### Morning run (∼09:00) empty results message (added 2026-11-20)
+When the daily morning (~09:00) search run completes and finds **NO fresh eligible PASS or MAYBE** listings, it still posts **ONE short plain-text Russian message** to the Telegram channel 'real estate investments' stating that nothing new was found under the current filters.
+
+**Message must include:**
+- Statement that no new results were found
+- One-line filter summary: €80–100k, ≥55 m², ≤€2100/m², floors 2–8, Rîșcanovca / Centru / Komsomol lake–Valea Morilor
+- One-line coverage summary: sources and pages scanned (honest if partial)
+
+**Important notes:**
+- **Not posted** if the run itself failed (failure reported in the Grok Bot chat instead)
+- The message **adds nothing to posted_ids** (it's not a listing)
+- **12:00/19:00 buffer runs unchanged**: empty buffer => no message posted
+
+**Previous rule (superseded 2026-11-20):** morning run finding no fresh results => no messages anywhere.
+
 ---
 
 ## Кратко по-русски (жёсткие правила)
