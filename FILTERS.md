@@ -12,8 +12,8 @@ Verdict scale:
 
 ## 1. Budget & type
 
-- **R-BUDGET** (updated 2026-11-19) — Asking price **€80,000–100,000 inclusive**. Anything above €100k or below €80k is excluded immediately.
-- **R-BANDS** (updated 2026-11-19) — Every report uses **ONE single price band**: **€80,000–100,000 inclusive**.
+- **R-BUDGET** (updated 2026-11-20) — Asking price **€80,000–120,000 inclusive**. Anything above €120k or below €80k is excluded immediately.
+- **R-BANDS** (updated 2026-11-20) — Every report uses **ONE single price band**: **€80,000–120,000 inclusive**.
   
   **Quotas per batch** (updated 2026-11-18):
   - **PASS**: up to 10 listings
@@ -21,11 +21,11 @@ Verdict scale:
   
   MAYBE has its own independent ≤10 quota; MAYBE does NOT consume PASS quota. Leftovers buffered and published in chunks ≤10 at noon/evening. Each section starts with a one-line summary: listings scanned, PASS count, MAYBE count. Rank PASS first (best first), then MAYBE (best potential first). Empty → say "нет подходящих".
   
-  **Historical note:** Was €40,000–140,000 with 2 price blocks (€40k–110k, >€110k–140k) until 2026-11-18; superseded by single band €80,000–160,000 (2026-11-18), then €80,000–100,000 (2026-11-19).
+  **Historical note:** Was €40,000–140,000 with 2 price blocks (€40k–110k, >€110k–140k) until 2026-11-18; superseded by single band €80,000–160,000 (2026-11-18), then €80,000–100,000 (2026-11-19), then €80,000–120,000 (2026-11-20).
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
 - **R-AREA** (updated 2026-11-20) — Total area **≥ 55 m²** for every listing, any room count. Anything below 55 m² is **FAIL** immediately. Unknown area → verdict **MAYBE** with area verification required. (Note: was ≥40 m² until 2026-11-08 18:32, then ≥45 m² until 2026-11-20 00:46; superseded by ≥55 m².)
-- **R-PRICE-M2** (updated 2026-11-18) — Asking price per m² **≤ €2,100/m²** (price ÷ total area). Anything above €2,100/m² is excluded immediately. (Note: was ≤€1,900/m² until 2026-11-18; superseded by ≤€2,100/m².)
+- **R-PRICE-M2** (updated 2026-11-20) — Asking price per m² **≤ €2,200/m²** (price ÷ total area). Anything above €2,200/m² is excluded immediately. (Note: was ≤€1,900/m² until 2026-11-18, then ≤€2,100/m² until 2026-11-20; superseded by ≤€2,200/m².)
 
 ## 2. Floors & elevator
 
@@ -66,23 +66,22 @@ Verdict scale:
 
 ## 4. Location
 
-- **R-LOC** (updated 2026-11-19) — **ONLY** the following locations are acceptable:
+- **R-LOC** (updated 2026-11-20) — **ONLY** the following locations are acceptable:
   - **Centru** (whole sector)
-  - **Rîșcanovca / Рышкановка neighbourhood ONLY** (not the whole Rîșcani sector; other parts of Rîșcani such as Poșta Veche, Petricani, Cartierul Moldova / Socoleni direction are EXCLUDED)
+  - **Rîșcani / Рышкановка (whole sector)** EXCEPT **Poșta Veche**, which remains excluded
   - **Buiucani area around Komsomol lake / Valea Morilor** — approximately 0–20 minute actual walking route, including adjacent parts of Buiucani (R-LAKE)
   
   **Everything else is EXCLUDED**, including:
-  - Other parts of Rîșcani sector (Poșta Veche, Petricani, Cartierul Moldova / Socoleni direction, etc.) — only Rîșcanovca neighbourhood is acceptable
+  - **Poșta Veche** (part of Rîșcani sector but specifically excluded)
   - Other parts of Buiucani (outside the ~0–20 min lake area)
-  - **Telecentru** (previously acceptable; now excluded as of 2026-11-18)
+  - **Telecentru** (previously acceptable; excluded as of 2026-11-18)
   - **All Ciocana** (including former Port Mall/Rîșcani edge exception, revoked 2026-11-12)
   - Botanica (R-EXCL-BOTANICA)
   - All suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.) (R-EXCL-SUBURB)
-  - CET-1 zone (R-BLACKLIST-CET1)
   
   Unclear micro-district (e.g. only 'Rîșcani' without street/map) → verdict **MAYBE** with map check until resolved.
   
-  **Historical note:** Telecentru, other Buiucani, and Ciocana near Port Mall were acceptable until 2026-11-18; whole Rîșcani sector was acceptable until 2026-11-19, now restricted to Rîșcanovca neighbourhood only.
+  **Historical note:** Telecentru, other Buiucani, and Ciocana near Port Mall were acceptable until 2026-11-18; whole Rîșcani sector was acceptable until 2026-11-19, then restricted to Rîșcanovca neighbourhood only (2026-11-19), then expanded to whole Rîșcani sector except Poșta Veche (2026-11-20).
 - **R-LAKE** (added 2026-11-07) — Buiucani within ≈0–20 minute walk of Komsomol lake / Valea Morilor has **priority** status. Walking time is measured by actual routes, not straight-line distance. This explicit 20-minute lake priority overrides the generic 5–10 minute R-MICRO rule for these areas.
 - **R-EXCL-BOTANICA** (2026-11-02) — The whole **Botanica** sector is excluded (all streets, all micro-districts), including listings already in the Telegram buffer.
   - **Poșta Veche** excluded (part of Rîșcani sector but not Rîșcanovca neighbourhood).
@@ -94,23 +93,18 @@ Verdict scale:
   - a university (USM, UTM, ASEM, USMF, Pedagogical University).
   - Remote inner-block / outskirt streets are excluded.
   - Note: The explicit R-LAKE 20-minute priority for Buiucani near Valea Morilor / Komsomol lake takes precedence over this generic 5–10 minute rule.
-- **R-BLACKLIST** (updated 2026-11-18) — The following streets are excluded entirely (whole street, both apartments and houses, all statuses including buffer):
-  - East Rîșcani pocket: str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului and inner streets between them (added 2026-11-01)
+- **R-BLACKLIST** (updated 2026-11-20) — The following streets are excluded entirely (whole street, both apartments and houses, all statuses including buffer):
   - **str. Drumul Viilor** (added 2026-11-13)
   - **str. Valea Dicescu** (added 2026-11-15)
   - **str. Calea Ieșilor** (added 2026-11-15)
   - **str. Grădinilor** (added 2026-11-15)
-- **R-BLACKLIST-CET1** (updated 2026-11-19) — CET-1 (Termoelectrica Sursa 1) zone **in Chișinău Rîșcani**: the entire **str. Nicolae Dimo in Chișinău Rîșcani** (all house numbers, incl. 1/3, 23 etc.) is excluded, and any building (excluding those on Tudor Vladimirescu) within ~800 m of the CET-1 site (≈47.0331, 28.8635) is excluded. **str. Tudor Vladimirescu is now ALLOWED** (changed 2026-11-19). Proximity to CET-1 (for non-excluded addresses) is flagged as informational ("близко к ТЭЦ-1") but not an exclusion. Reasons for CET-1 concern: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity.
+  
+  **Historical note:** East Rîșcani pocket (str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului) was excluded from 2026-11-01 to 2026-11-20; removed from blacklist 2026-11-20 (now evaluated by standard filters).
+- **R-CET1-INFO** (updated 2026-11-20) — CET-1 (Termoelectrica Sursa 1) proximity **is informational only** and NOT an exclusion. All addresses previously excluded under the CET-1 zone rule are now evaluated by standard filters. Proximity to CET-1 (≈47.0331, 28.8635) should be flagged as "близко к ТЭЦ-1" for informational purposes. Reasons for CET-1 concern: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity.
   - **Locality clarification**: str. Tudor Vladimirescu and str. Nicolae Dimo exist in multiple localities. **Must verify locality/address from listing, not match bare street name.** Unclear locality → verdict MAYBE until resolved; do NOT assume Chișinău.
-  - **Boundary examples (updated 2026-11-19)**:
-    - ✅ ALLOWED: str. Tudor Vladimirescu, Chișinău mun., Rîșcani sector (evaluate by all other filters; flag CET-1 proximity)
-    - ❌ EXCLUDED: str. Nicolae Dimo, Chișinău mun., Rîșcani sector (R-BLACKLIST-CET1: CET-1 zone)
-    - ❌ EXCLUDED: str. Tudor Vladimirescu, Durlești (R-EXCL-SUBURB: suburb exclusion)
-    - ❌ EXCLUDED: str. Nicolae Dimo, Durlești (R-EXCL-SUBURB: suburb exclusion)
-    - ❌ EXCLUDED: other addresses within ~800 m of CET-1 (≈47.0331, 28.8635), excluding Tudor Vladimirescu
-    - ⚠️ MAYBE: str. Tudor Vladimirescu or Nicolae Dimo, locality unclear/unverified (must resolve before PASS or FAIL)
-  - Matching note (2026-11-04): normalise addresses before checking any blacklist — lowercase, strip diacritics, transliterate Cyrillic (e.g. Николай/Nicolae Димо = Nicolae Dimo, Тудор Владимиреску = Tudor Vladimirescu; same for Florării/Флорилор, Pajurii/Пажурий, Forăriei/Форэрией, Zimbrului/Зимбрулуй, Poșta Veche/Пошта Веке). Use map coordinates vs the CET-1 radius when available. **Always verify locality: Chișinău Rîșcani vs Durlești.**
-  - **Historical note (2026-11-19)**: str. Tudor Vladimirescu in Chișinău Rîșcani was excluded 2026-11-02 to 2026-11-19; changed to allowed 2026-11-19.
+  - **All addresses now evaluated by standard filters**: str. Nicolae Dimo (Chișinău Rîșcani), str. Tudor Vladimirescu (Chișinău Rîșcani), and all addresses within ~800 m of CET-1 are now judged by location (R-LOC), price (R-BUDGET, R-PRICE-M2), and all other standard filters.
+  - Matching note (2026-11-04): normalise addresses before checking — lowercase, strip diacritics, transliterate Cyrillic (e.g. Николай/Nicolae Димо = Nicolae Dimo, Тудор Владимиреску = Tudor Vladimirescu; same for Poșta Veche/Пошта Веке).
+  - **Historical note (2026-11-20)**: CET-1 zone was a hard exclusion from 2026-11-02 to 2026-11-20, covering str. Nicolae Dimo in Chișinău Rîșcani and ~800 m around CET-1. str. Tudor Vladimirescu was excluded 2026-11-02 to 2026-11-19, then allowed with CET-1 flag 2026-11-19. As of 2026-11-20, the entire CET-1 zone exclusion is removed; CET-1 proximity is flagged for information only.
 
 ## 5. Rejected listings (mirror of `listings/rejected.md`)
 
@@ -221,11 +215,11 @@ MAYBE candidates are now published (previously excluded from buffer/reports). Un
 
 ## 12. Reporting format
 
-Always organize into the single price band from R-BANDS (€80k–100k inclusive). Present in this order:
+Always organize into the single price band from R-BANDS (€80k–120k inclusive). Present in this order:
 1. **PASS** (up to 10) — ranked best first
 2. **MAYBE** (up to 10 TOTAL) — ranked best potential first
 
-Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €100k or below €80k. Empty section → say "нет подходящих".
+Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €120k or below €80k. Empty section → say "нет подходящих".
 
 ### Per listing
 **Status PASS/MAYBE** · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer (based on real comparables per R-PRICE) · **verdict with rule IDs**.
@@ -239,7 +233,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 **Message must include:**
 - Statement that no new results were found
-- One-line filter summary: €80–100k, ≥55 m², ≤€2100/m², floors 2–8, Rîșcanovca / Centru / Komsomol lake–Valea Morilor
+- One-line filter summary: €80–120k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor
 - One-line coverage summary: sources and pages scanned (honest if partial)
 
 **Important notes:**
@@ -253,11 +247,11 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 ## Кратко по-русски (жёсткие правила)
 
-- **Цена €80–100k** (с 19.11.2026); всё дороже €100k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €100k). **Неизвестная отделка** (не указана явно) → MAYBE с проверкой, не FAIL (с 17.11.2026).
-- **Отчёт всегда из одного блока**: €80k–100k включительно (с 19.11.2026; было 2 блока €40k–110k и >€110k–140k до 18.11.2026, затем €80k–160k 18.11.2026).
+- **Цена €80–120k** (с 20.11.2026); всё дороже €120k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €120k). **Неизвестная отделка** (не указана явно) → MAYBE с проверкой, не FAIL (с 17.11.2026).
+- **Отчёт всегда из одного блока**: €80k–120k включительно (с 20.11.2026; было €80k–100k до 20.11.2026).
 - **Квоты на публикацию (с 18.11.2026):** PASS до 10 объявлений, **MAYBE отдельная группа до 10 ВСЕГО** (независимая квота, не потребляет квоту PASS). Остатки в буфер, публикуются порциями ≤10 в полдень/вечером.
 - Любое число комнат; площадь — от 55 м² (меньше 55 м² — исключаем; неизвестная площадь → MAYBE с проверкой).
-- **Цена за м² — не дороже €2 100/м²** (дороже — исключаем, с 18.11.2026; было ≤€1 900/м² до 18.11.2026).
+- **Цена за м² — не дороже €2 200/м²** (дороже — исключаем, с 20.11.2026; было ≤€2 100/м² до 20.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - **Год постройки ≥2000** — здания построенные до 2000 исключены; ремонт не считается; непроверенный год = MAYBE. **Исключение (с 18.11.2026 23:18): Сталинка, серия 102 (котелец), серия 143, чешский проект (proiect cehesc) и индивидуальный проект (proiect individual) разрешены даже если до 2000, только при явном подтверждении в объявлении**; неподтверждённые = MAYBE; другие серии до 2000 (135, MS/Вэрница, брежневка, хрущёвка и т.д.) остаются FAIL. Новостройки — только сданные.
 - **Санузлы в новостройках ≥2000 (с 18.11.2026):** нужны ДВА отдельных помещения (отдельный туалет + отдельная ванная/душ). Явно совмещённый санузел → FAIL. 999.md "Grup sanitar: 1" без явного текста → НЕИЗВЕСТНО → MAYBE с проверкой. **Исключение:** объекты исключения R-YEAR (сталинка, 102, 143, чешский проект, индивидуальный проект) не подпадают под требование двух помещений.
@@ -265,9 +259,9 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
-- **Районы (с 19.11.2026): ТОЛЬКО Центр (весь сектор), микрорайон Рышкановка (не весь сектор Рышкановка; другие части сектора — Старая Почта, Петричаны, Картиерул Молдова / направление Соколены — исключены), и зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан).** Всё остальное исключено: другие части сектора Рышкановка (Старая Почта, Петричаны, Картиерул Молдова / Соколены и др.; только микрорайон Рышкановка допустим), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
+- **Районы (с 20.11.2026): ТОЛЬКО Центр (весь сектор), весь сектор Рышкановка КРОМЕ Старой Почты (Старая Почта исключена; Петричаны, Картиерул Молдова, Соколены, Студенцилор, Чеукарь и другие части сектора теперь допустимы), и зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан).** Всё остальное исключено: Старая Почта (часть сектора Рышкановка, но специально исключена), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
-- **Чёрный список (с 19.11.2026):** восток Рышкановки (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); зона ТЭЦ-1 **в Кишинёве, сектор Рышкановка** (вся ул. Николае Димо в Кишинёве Рышкановка, и ~800 м вокруг станции кроме ул. Тудор Владимиреску); **Drumul Viilor** (13.11.2026); **Valea Dicescu** (15.11.2026); **Calea Ieșilor** (15.11.2026); **Grădinilor** (15.11.2026). **ул. Тудор Владимиреску разрешена** (изменено 19.11.2026); близость к ТЭЦ-1 — информационный флаг, не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
+- **Чёрный список (с 20.11.2026):** **Drumul Viilor** (13.11.2026); **Valea Dicescu** (15.11.2026); **Calea Ieșilor** (15.11.2026); **Grădinilor** (15.11.2026). **Зона ТЭЦ-1 полностью снята с чёрного списка** (20.11.2026): ул. Николае Димо, ул. Тудор Владимиреску, ул. Florării, Pajurii, Forăriei, Zimbrului и все адреса около ТЭЦ-1 теперь оцениваются по стандартным фильтрам. Близость к ТЭЦ-1 — только информационный флаг "близко к ТЭЦ-1", не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - **MAYBE теперь публикуются** с буквальной меткой MAYBE и конкретными причинами неопределённости (например, год постройки не подтверждён — требуется проверка ≥2000). PASS = полностью проверено; MAYBE = неизвестный/противоречивый критерий, но нет подтверждённого нарушения обязательного правила; FAIL = подтверждённое нарушение, исключено. Для каждого MAYBE: все существенные неизвестные/конфликты, требуемая проверка, никогда не выдумывать факты. Неизвестный год может публиковаться как MAYBE; подтверждённый <2000 остаётся FAIL (если не сталинка/102).
 - Поиск включает **категорию продажи домов**, так как частные дома разрешены. Только сектора Кишинёва; пригороды исключены.
