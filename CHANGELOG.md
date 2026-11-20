@@ -1,5 +1,33 @@
 # Changelog — filter rules
 
+## 2026-11-20 10:11 (morning run empty results message)
+
+**Publication workflow change.** Owner rule change 2026-11-20 10:11 Europe/Chisinau.
+
+### Morning run empty results posting
+When the daily morning (~09:00) search run completes and finds **NO fresh eligible PASS or MAYBE** listings, it now posts **ONE short plain-text Russian message** to the Telegram channel 'real estate investments' stating that nothing new was found.
+
+**Message must include:**
+- Statement that no new results were found under current filters
+- One-line filter summary: €80–100k, ≥55 m², ≤€2100/m², floors 2–8, Rîșcanovca / Centru / Komsomol lake–Valea Morilor
+- One-line coverage summary: sources and pages scanned (honest if partial)
+
+**Important notes:**
+- **Not posted** if the run itself failed (failure reported in the Grok Bot chat instead)
+- The message **adds nothing to posted_ids** (it's not a listing)
+- **12:00/19:00 buffer runs unchanged**: empty buffer => no message posted
+
+**Previous rule (superseded 2026-11-20):** morning run finding no fresh results => no messages anywhere.
+
+### Files updated
+- FILTERS.md: §13 Publication & Telegram posting rules (NEW section)
+- AGENTS.md: Empty results handling (NEW section)
+- .cursor/rules/real-estate-filters.mdc: TELEGRAM POSTING rule
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+All filter rules unchanged: budget, location, area, price/m², construction year, floors, quotas, etc.
+
 ## 2026-11-20 00:46 (minimum area raised to ≥55 m²)
 
 **R-AREA tightened.** Owner rule change 2026-11-20 00:46 Europe/Chisinau.

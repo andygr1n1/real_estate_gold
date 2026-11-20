@@ -22,4 +22,6 @@ Hard filters (condensed — FILTERS.md wins on conflict):
 - R-BLACKLIST (2026-11-18): east Rîșcani (Florării, str-la Florării, Pajurii, Forăriei, Zimbrului); Drumul Viilor (2026-11-13); Valea Dicescu (2026-11-15); Calea Ieșilor (2026-11-15); Grădinilor (2026-11-15).
 - R-BLACKLIST-CET1 (2026-11-19): CET-1 zone IN CHIȘINĂU RÎȘCANI: all of str. Nicolae Dimo in Chișinău Rîșcani, and ~800 m around CET-1 (≈47.0331, 28.8635) excluding str. Tudor Vladimirescu. **str. Tudor Vladimirescu ALLOWED** (changed 2026-11-19); CET-1 proximity flagged as informational, not exclusion. SAME STREETS IN DURLEȘTI also EXCLUDED (R-EXCL-SUBURB). Must verify locality/address, not bare street name; unclear locality = MAYBE, do NOT assume Chișinău.
 
+TELEGRAM POSTING (2026-11-20): Morning run (~09:00) with NO fresh PASS or MAYBE => post ONE short Russian message (nothing new + one-line filter summary + coverage summary; honest if partial). NOT posted if run failed (failure → Grok Bot chat). Message adds nothing to posted_ids. Buffer runs (12:00/19:00) unchanged: empty buffer => no message.
+
 Output: PASS/MAYBE/FAIL with rule IDs. Never invent numbers. Reply to Andrew in Russian. Update FILTERS.md + listings + CHANGELOG.md when rules change.

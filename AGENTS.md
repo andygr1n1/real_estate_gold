@@ -47,3 +47,14 @@ For each MAYBE: include all material unknowns/conflicts, required verification, 
 **Status PASS/MAYBE** · price block · link · price · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer (based on real comparables per R-PRICE) · verdict with rule IDs.
 
 **For MAYBE:** add specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification, material unknowns.
+
+## Empty results handling (added 2026-11-20)
+
+**Morning run (~09:00):** When the daily morning search finds NO fresh eligible PASS or MAYBE listings, post ONE short plain-text Russian message to the Telegram channel stating:
+- No new results under current filters
+- One-line filter summary (€80–100k, ≥55 m², ≤€2100/m², floors 2–8, Rîșcanovca / Centru / Komsomol lake–Valea Morilor)
+- One-line coverage summary (sources and pages scanned; honest if partial)
+
+Do NOT post this message if the run itself failed (report failure in Grok Bot chat instead). The message adds nothing to posted_ids.
+
+**Buffer runs (12:00/19:00):** Empty buffer => no message (unchanged).
