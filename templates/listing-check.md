@@ -11,7 +11,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; EXCEPTION: Stalinka, seria 102, seria 143, Czech series/project, individual projects allowed if explicitly confirmed; unverified year or series = MAYBE; other pre-2000 series = FAIL)
 - [ ] R-FLOOR — apartments floor ≥2 (no upper limit); single-storey houses exception
-- [ ] R-EXCL-BOTANICA — not in Botanica sector
+- [ ] R-EXCL-BOTANICA — Botanica sector ALLOWED (2026-11-21 23:06) except Malaia Malina and Bolșaia Malina (R-BLACKLIST); all other Botanica evaluated by standard filters
 - [ ] R-LIFT — informational only (high floor without lift flagged but NOT excluded)
 - [ ] R-TOPFLOOR — top floor? (flag)
 - [ ] R-MANSARD / R-HOUSE — mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land)
