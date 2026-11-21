@@ -33,6 +33,8 @@
 - templates/listing-check.md: R-BUDGET (€159k), R-BANDS (€159k), R-LOC (fixed stale line, added Alba Iulia)
 - CHANGELOG.md: this entry
 
+**Follow-up clarification (2026-11-21 20:28):** Added '(MAYBE only)' suffix to Alba Iulia mentions in filter summaries (AGENTS.md, FILTERS.md, .cursor/rules/real-estate-filters.mdc) and added R-ALBA-IULIA note to AGENTS.md reporting format section.
+
 ### All other criteria unchanged
 - Area ≥55 m², white variant ≤€90k, price/m² ≤€2,200, year ≥2000 + commissioned (with series exceptions Stalinka/102/143/Czech/individual), floors 2–8, quotas ≤10 PASS / ≤10 MAYBE, street blacklist (Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor), excluded districts (Telecentru, Ciocana, Botanica, suburbs except Alba Iulia), CET-1 informational only — all unchanged.
 
