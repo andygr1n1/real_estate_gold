@@ -1,5 +1,28 @@
 # Changelog — filter rules
 
+## 2026-11-21 21:00 (str. Pajurii blacklisted)
+
+**Street blacklist update.** Owner rule change 2026-11-21 21:00 Europe/Chisinau.
+
+### str. Pajurii added to R-BLACKLIST
+- **R-BLACKLIST**: Added **str. Pajurii** (Chișinău, Rîșcani; all house numbers, apartments and houses; variants Pajurii/Păjurii/Пажурий) to excluded streets (added 2026-11-21 21:00).
+- Historical note updated: Pajurii was previously in East Rîșcani pocket exclusion (2026-11-01 to 2026-11-20), removed 2026-11-20, now re-blacklisted 2026-11-21 21:00.
+- R-CET1-INFO updated to note Pajurii is now blacklisted (R-BLACKLIST 2026-11-21 21:00).
+- Russian summary blacklist updated with Pajurii and note about re-blacklisting.
+
+### Rejected listing added
+- Pajurii 11, Chișinău Rîșcani (3 rooms, 68 m², 3/5, seria 102, €126.9k) | https://999.md/ro/105823043 | R-BLACKLIST Pajurii (2026-11-21); was published 21.11 in Telegram msg 535 before the rule
+
+### Files updated
+- FILTERS.md: R-BLACKLIST (added Pajurii, updated header date to 2026-11-21, updated historical note), R-CET1-INFO (noted Pajurii blacklisted), §5 rejected listings (added Pajurii 11), Russian summary (blacklist list with Pajurii)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST (added Pajurii), R-CET1-INFO (noted Pajurii blacklisted)
+- templates/listing-check.md: R-BLACKLIST checklist (updated to current blacklist including Pajurii, removed obsolete east Rîșcani references)
+- listings/rejected.md: added Pajurii 11 row
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000, floors 2–8, other blacklisted streets (Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor), location rules — all unchanged.
+
 ## 2026-11-21 20:21 (max price €159k, whole str. Alba Iulia allowed as MAYBE-only)
 
 **Major filter expansion.** Owner rule change 2026-11-21 20:21 Europe/Chisinau.
