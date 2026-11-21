@@ -1,5 +1,29 @@
 # Changelog — filter rules
 
+## 2026-11-21 21:09 (str. Ceucari and str. Braniștii blacklisted)
+
+**Street blacklist update.** Owner rule change 2026-11-21 21:09 Europe/Chisinau.
+
+### str. Ceucari and str. Braniștii added to R-BLACKLIST
+- **R-BLACKLIST**: Added **str. Ceucari** (Chișinău, Rîșcani; all house numbers, apartments and houses; variants Ceucari/Чеукарь) (added 2026-11-21 21:09).
+- **R-BLACKLIST**: Added **str. Braniștii** (Chișinău, Rîșcani; all house numbers, apartments and houses; variants Braniștii/Branistii/Брэништий/Браништий) (added 2026-11-21 21:09).
+- Removed Ceucari from examples of allowed Rîșcani micro-districts in .cursor/rules/real-estate-filters.mdc (now noted as blacklisted along with Braniștii).
+- Russian summary blacklist updated with both streets.
+
+### Rejected listings added
+- Ceucari 11/1 | https://999.md/ro/105795066 | R-BLACKLIST Ceucari (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule
+- Braniștii 5/4 (€129.9k) | https://999.md/ro/105552611 | R-BLACKLIST Braniștii (2026-11-21); was published 21.11 as PASS in Telegram msg 535 before the rule
+
+### Files updated
+- FILTERS.md: R-BLACKLIST (added Ceucari and Braniștii), §5 rejected listings (added Ceucari 11/1 and Braniștii 5/4), Russian summary (blacklist list with both streets)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST (added Ceucari and Braniștii), R-LOC (removed Ceucari from allowed examples, noted both blacklisted)
+- templates/listing-check.md: R-BLACKLIST checklist (added Ceucari and Braniștii)
+- listings/rejected.md: added Ceucari 11/1 and Braniștii 5/4 rows
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000, floors 2–8, other blacklisted streets (Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii), location rules — all unchanged.
+
 ## 2026-11-21 21:00 (str. Pajurii blacklisted)
 
 **Street blacklist update.** Owner rule change 2026-11-21 21:00 Europe/Chisinau.
@@ -98,7 +122,7 @@ All filter rules unchanged: budget €80k–120k, area ≥55 m², price/m² ≤�
 ### 3. Location expanded to whole Rîșcani sector (except Poșta Veche)
 - **R-LOC**: Acceptable locations now:
   - **Centru** (whole sector) — unchanged
-  - **Rîșcani / Рышкановка (whole sector)** EXCEPT **Poșta Veche** (Poșta Veche specifically excluded; Rîșcanovca, Petricani, Cartierul Moldova, Socoleni, Studenților, Ceucari, and all other parts of Rîșcani sector now allowed)
+  - **Rîșcani / Рышкановка (whole sector)** EXCEPT **Poșta Veche** (Poșta Veche specifically excluded; Rîșcanovca, Petricani, Cartierul Moldova, Socoleni, Studenților, Ceucari [later blacklisted 2026-11-21], and all other parts of Rîșcani sector now allowed)
   - **Buiucani area around Komsomol lake / Valea Morilor** (~0–20 min walk including adjacent Buiucani) — unchanged
 - Previously (2026-11-19): only Rîșcanovca neighbourhood was acceptable from Rîșcani sector.
 - **R-EXCL-BOTANICA** note: Poșta Veche remains excluded (part of Rîșcani sector but specifically excluded).

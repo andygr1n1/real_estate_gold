@@ -6,6 +6,8 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 |---|---|---|---|
 | Pajurii 13/1 | | Remote location (R-MICRO, later R-BLACKLIST) | 2026-10-31 |
 | Pajurii 11, Chișinău Rîșcani (3 rooms, 68 m², 3/5, seria 102, €126.9k) | https://999.md/ro/105823043 | R-BLACKLIST Pajurii (2026-11-21); was published 21.11 in Telegram msg 535 before the rule | 2026-11-21 |
+| Ceucari 11/1 | https://999.md/ro/105795066 | R-BLACKLIST Ceucari (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule | 2026-11-21 |
+| Braniștii 5/4 (€129.9k) | https://999.md/ro/105552611 | R-BLACKLIST Braniștii (2026-11-21); was published 21.11 as PASS in Telegram msg 535 before the rule | 2026-11-21 |
 | 2 Florării 1 | https://999.md/ro/103530986 | Blacklisted area (R-BLACKLIST) | 2026-11-01 |
 | Podul Înalt 20 | | Ciocana (R-LOC) | |
 | Piața Unirii Principatelor 3 | | Floor 15 (R-FLOOR) | |
