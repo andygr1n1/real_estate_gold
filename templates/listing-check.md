@@ -19,7 +19,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-EXCL-SUBURB — no suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions)
 - [ ] R-LOC — ONLY Centru (whole), whole Rîșcani sector except Poșta Veche, Buiucani near Komsomol lake/Valea Morilor (~0–20 min walk), and whole str. Alba Iulia in Chișinău (R-ALBA-IULIA, 2026-11-21: max verdict MAYBE with note «Алба Юлия — вне основной зоны»); everything else excluded
 - [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min; R-LAKE 20-min priority overrides)
-- [ ] R-BLACKLIST — not in blacklisted streets: Drumul Viilor; Valea Dicescu; Calea Ieșilor; Grădinilor; Pajurii (Chișinău Rîșcani; variants Pajurii/Păjurii/Пажурий)
+- [ ] R-BLACKLIST — not in blacklisted streets: Drumul Viilor; Valea Dicescu; Calea Ieșilor; Grădinilor; Pajurii (Chișinău Rîșcani; variants Pajurii/Păjurii/Пажурий); Ceucari (Chișinău Rîșcani; variants Ceucari/Чеукарь); Braniștii (Chișinău Rîșcani; variants Braniștii/Branistii/Брэништий/Браништий)
 - [ ] R-BLACKLIST-CET1 — **verify locality**: str. Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); str. Tudor Vladimirescu ALLOWED (changed 2026-11-19; flag CET-1 proximity as informational); same streets in Durlești ALSO EXCLUDED (R-EXCL-SUBURB); unclear locality = MAYBE (do NOT assume Chișinău); not within ~800 m of CET-1 (≈47.0331, 28.8635) excluding Tudor Vladimirescu
 - [ ] Not in listings/rejected.md
 
