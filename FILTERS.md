@@ -12,8 +12,8 @@ Verdict scale:
 
 ## 1. Budget & type
 
-- **R-BUDGET** (updated 2026-11-20) — Asking price **€80,000–120,000 inclusive**. Anything above €120k or below €80k is excluded immediately.
-- **R-BANDS** (updated 2026-11-20) — Every report uses **ONE single price band**: **€80,000–120,000 inclusive**.
+- **R-BUDGET** (updated 2026-11-21) — Asking price **€80,000–159,000 inclusive**. Anything above €159k or below €80k is excluded immediately.
+- **R-BANDS** (updated 2026-11-21) — Every report uses **ONE single price band**: **€80,000–159,000 inclusive**.
   
   **Quotas per batch** (updated 2026-11-18):
   - **PASS**: up to 10 listings
@@ -21,7 +21,7 @@ Verdict scale:
   
   MAYBE has its own independent ≤10 quota; MAYBE does NOT consume PASS quota. Leftovers buffered and published in chunks ≤10 at noon/evening. Each section starts with a one-line summary: listings scanned, PASS count, MAYBE count. Rank PASS first (best first), then MAYBE (best potential first). Empty → say "нет подходящих".
   
-  **Historical note:** Was €40,000–140,000 with 2 price blocks (€40k–110k, >€110k–140k) until 2026-11-18; superseded by single band €80,000–160,000 (2026-11-18), then €80,000–100,000 (2026-11-19), then €80,000–120,000 (2026-11-20).
+  **Historical note:** Was €40,000–140,000 with 2 price blocks (€40k–110k, >€110k–140k) until 2026-11-18; superseded by single band €80,000–160,000 (2026-11-18), then €80,000–100,000 (2026-11-19), then €80,000–120,000 (2026-11-20), then €80,000–159,000 (2026-11-21 20:21).
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
 - **R-AREA** (updated 2026-11-20) — Total area **≥ 55 m²** for every listing, any room count. Anything below 55 m² is **FAIL** immediately. Unknown area → verdict **MAYBE** with area verification required. (Note: was ≥40 m² until 2026-11-08 18:32, then ≥45 m² until 2026-11-20 00:46; superseded by ≥55 m².)
@@ -40,7 +40,7 @@ Verdict scale:
 
 - **R-EXCL-HOSTEL** — Hostel units (cămin / gostinka / shared kitchen or bath).
 - **R-EXCL-BASEMENT** — Soclu, demisol, semi-basement, "pe sol".
-- **R-EXCL-UNFINISHED** (updated 2026-11-17) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED** with a **mandatory price cap**: asking price must be **≤€90,000 inclusive**. White variant asking >€90,000 is **FAIL**, even though the general budget cap is €160,000. This applies to apartments and houses, all locations, all statuses (PASS/MAYBE/buffer), and uses the asking price (not hypothetical discounted offers). For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
+- **R-EXCL-UNFINISHED** (updated 2026-11-17) — Grey variant (no finishing at all) is excluded. **White variant (variantă albă) is ALLOWED** with a **mandatory price cap**: asking price must be **≤€90,000 inclusive**. White variant asking >€90,000 is **FAIL**, even though the general budget cap is €159,000. This applies to apartments and houses, all locations, all statuses (PASS/MAYBE/buffer), and uses the asking price (not hypothetical discounted offers). For white variant, add an estimated renovation budget (label it as an estimate) and the building must still be commissioned (R-EXCL-NEWBUILD).
   - **Unknown finish rule** (added 2026-11-17): If finishing is not explicitly stated, the white cap is UNKNOWN → verdict **MAYBE** with verification requirement, not FAIL. Only an explicitly stated white variant >€90k is FAIL.
   - Boundary test cases: white variant €90,000 asking = PASS (at cap); white variant €90,001 asking = FAIL (over cap).
   - Historical note: cap was €110,000 from 2026-11-07 to 2026-11-08 18:32; superseded by €90,000 cap 2026-11-08 18:32.
@@ -65,10 +65,11 @@ Verdict scale:
 
 ## 4. Location
 
-- **R-LOC** (updated 2026-11-20) — **ONLY** the following locations are acceptable:
+- **R-LOC** (updated 2026-11-21) — **ONLY** the following locations are acceptable:
   - **Centru** (whole sector)
   - **Rîșcani / Рышкановка (whole sector)** EXCEPT **Poșta Veche**, which remains excluded
   - **Buiucani area around Komsomol lake / Valea Morilor** — approximately 0–20 minute actual walking route, including adjacent parts of Buiucani (R-LAKE)
+  - **Whole str. Alba Iulia, Chișinău** (added 2026-11-21 20:21) — every building on str. Alba Iulia in Chișinău (Buiucani/Sculeanca included) is location-OK regardless of distance from the lake (R-ALBA-IULIA). **Alba Iulia listings are ALWAYS MAYBE at best, never PASS**, and are published with the literal note «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Other R-* rules still apply (a confirmed violation is still FAIL). Alba Iulia streets in suburbs/other localities remain excluded (R-EXCL-SUBURB).
   
   **Everything else is EXCLUDED**, including:
   - **Poșta Veche** (part of Rîșcani sector but specifically excluded)
@@ -214,11 +215,11 @@ MAYBE candidates are now published (previously excluded from buffer/reports). Un
 
 ## 12. Reporting format
 
-Always organize into the single price band from R-BANDS (€80k–120k inclusive). Present in this order:
+Always organize into the single price band from R-BANDS (€80k–159k inclusive). Present in this order:
 1. **PASS** (up to 10) — ranked best first
 2. **MAYBE** (up to 10 TOTAL) — ranked best potential first
 
-Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €120k or below €80k. Empty section → say "нет подходящих".
+Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €159k or below €80k. Empty section → say "нет подходящих".
 
 ### Per listing
 **Status PASS/MAYBE** · link · price · rooms · m² · €/m² · street + number · floor/total · lift yes/no/unknown · building type/series/year · layout · condition · nearest main road/park/university · risks · fair price + opening offer (based on real comparables per R-PRICE) · **verdict with rule IDs**.
@@ -232,7 +233,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 **Message must include:**
 - Statement that no new results were found
-- One-line filter summary: €80–120k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor
+- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia
 - One-line coverage summary: sources and pages scanned (honest if partial)
 
 **Important notes:**
@@ -246,8 +247,8 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 ## Кратко по-русски (жёсткие правила)
 
-- **Цена €80–120k** (с 20.11.2026); всё дороже €120k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €120k). **Неизвестная отделка** (не указана явно) → MAYBE с проверкой, не FAIL (с 17.11.2026).
-- **Отчёт всегда из одного блока**: €80k–120k включительно (с 20.11.2026; было €80k–100k до 20.11.2026).
+- **Цена €80–159k** (с 21.11.2026 20:21; было €80–120k); всё дороже €159k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă) — не дороже €90k** (дороже €90k — исключаем, даже если меньше €159k). **Неизвестная отделка** (не указана явно) → MAYBE с проверкой, не FAIL (с 17.11.2026).
+- **Отчёт всегда из одного блока**: €80k–159k включительно (с 21.11.2026 20:21; было €80k–120k).
 - **Квоты на публикацию (с 18.11.2026):** PASS до 10 объявлений, **MAYBE отдельная группа до 10 ВСЕГО** (независимая квота, не потребляет квоту PASS). Остатки в буфер, публикуются порциями ≤10 в полдень/вечером.
 - Любое число комнат; площадь — от 55 м² (меньше 55 м² — исключаем; неизвестная площадь → MAYBE с проверкой).
 - **Цена за м² — не дороже €2 200/м²** (дороже — исключаем, с 20.11.2026; было ≤€2 100/м² до 20.11.2026).
@@ -257,7 +258,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
-- **Районы (с 20.11.2026): ТОЛЬКО Центр (весь сектор), весь сектор Рышкановка КРОМЕ Старой Почты (Старая Почта исключена; Петричаны, Картиерул Молдова, Соколены, Студенцилор, Чеукарь и другие части сектора теперь допустимы), и зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан).** Всё остальное исключено: Старая Почта (часть сектора Рышкановка, но специально исключена), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
+- **Районы (с 21.11.2026 20:21): ТОЛЬКО Центр (весь сектор), весь сектор Рышкановка КРОМЕ Старой Почты (Старая Почта исключена; Петричаны, Картиерул Молдова, Соколены, Студенцилор, Чеукарь и другие части сектора теперь допустимы), зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан), и вся ул. Алба Юлия в Кишинёве (добавлена 21.11.2026 20:21) — любое здание на ул. Алба Юлия в Кишинёве (включая Скулянку/Буюканы) допустимо по местоположению независимо от расстояния до озера (R-ALBA-IULIA). Алба Юлия всегда максимум MAYBE, никогда не PASS, с пометкой «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Другие правила R-* применяются (подтверждённое нарушение = FAIL). Ул. Алба Юлия в пригородах/других населённых пунктах исключена (R-EXCL-SUBURB).** Всё остальное исключено: Старая Почта (часть сектора Рышкановка, но специально исключена), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
 - **Чёрный список (с 20.11.2026):** **Drumul Viilor** (13.11.2026); **Valea Dicescu** (15.11.2026); **Calea Ieșilor** (15.11.2026); **Grădinilor** (15.11.2026). **Зона ТЭЦ-1 полностью снята с чёрного списка** (20.11.2026): ул. Николае Димо, ул. Тудор Владимиреску, ул. Florării, Pajurii, Forăriei, Zimbrului и все адреса около ТЭЦ-1 теперь оцениваются по стандартным фильтрам. Близость к ТЭЦ-1 — только информационный флаг "близко к ТЭЦ-1", не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
 - Рекламные (поднятые) объявления 999.md игнорируются.
