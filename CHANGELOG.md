@@ -1,5 +1,34 @@
 # Changelog — filter rules
 
+## 2026-11-21 21:21 (bd. Gagarin and str. Tudor Vladimirescu blacklisted)
+
+**Street blacklist update.** Owner rule change 2026-11-21 21:21 Europe/Chisinau.
+
+### bd./str. Gagarin and str. Tudor Vladimirescu (re-blacklisted) added to R-BLACKLIST
+- **R-BLACKLIST**: Added **bd./str. Gagarin** (Chișinău, Centru; all house numbers, apartments and houses; variants Iuri Gagarin/Gagarin/Гагарина) (added 2026-11-21 21:21).
+- **R-BLACKLIST**: Re-added **str. Tudor Vladimirescu** (Chișinău, Rîșcani; all house numbers, apartments and houses; variants Тудор Владимиреску) (added 2026-11-21 21:21; re-blacklisted, was removed 2026-11-19).
+- Updated R-BLACKLIST historical note: Tudor Vladimirescu was in CET-1 zone blacklist 2026-11-02 to 2026-11-19, removed 2026-11-19, re-blacklisted 2026-11-21 21:21.
+- R-CET1-INFO updated: removed Tudor Vladimirescu from "evaluated by standard filters" list; noted it is re-blacklisted (R-BLACKLIST 2026-11-21 21:21). Updated historical note.
+- Russian summary: added Gagarin and Tudor Vladimirescu to blacklist list with full variants and re-blacklisting note for Tudor Vladimirescu.
+
+### Rejected listings added
+- Gagarin 7 (dupes 105832341, 105823686) | https://999.md/ro/105966142 | R-BLACKLIST Gagarin (2026-11-21); was published 21.11 as MAYBE in Telegram msg 538 before the rule
+- Tudor Vladimirescu 1/4, Chișinău Rîșcani | https://999.md/ro/104749432 | R-BLACKLIST Tudor Vladimirescu (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule
+- Tudor Vladimirescu 1/1, Chișinău Rîșcani | https://999.md/ro/105936700 | R-BLACKLIST Tudor Vladimirescu (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule
+
+### Updated existing rejected listing
+- Tudor Vladimirescu 3, Chișinău Rîșcani: reason updated from "R-BLACKLIST-CET1 (2026-11-02)" to "R-BLACKLIST Tudor Vladimirescu (2026-11-21); originally rejected as R-BLACKLIST-CET1 (2026-11-02), street was removed from blacklist 2026-11-19, re-blacklisted 2026-11-21"
+
+### Files updated
+- FILTERS.md: R-BLACKLIST (added Gagarin and Tudor Vladimirescu, updated historical note), R-CET1-INFO (removed Tudor Vladimirescu from evaluated list, updated historical note), §5 rejected listings (added Gagarin 7, T.Vladimirescu 1/4, T.Vladimirescu 1/1, updated T.Vladimirescu 3), Russian summary (blacklist with both streets)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST (added both streets, updated historical note), R-CET1-INFO (removed Tudor Vladimirescu, noted re-blacklisted)
+- templates/listing-check.md: R-BLACKLIST checklist (added both streets), R-BLACKLIST-CET1 (updated Tudor Vladimirescu from ALLOWED to EXCLUDED)
+- listings/rejected.md: added Gagarin 7, T.Vladimirescu 1/4, T.Vladimirescu 1/1 rows; updated T.Vladimirescu 3 reason
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000, floors 2–8, other blacklisted streets (Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii, Ceucari, Braniștii), location rules — all unchanged.
+
 ## 2026-11-21 21:09 (str. Ceucari and str. Braniștii blacklisted)
 
 **Street blacklist update.** Owner rule change 2026-11-21 21:09 Europe/Chisinau.
