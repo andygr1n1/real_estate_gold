@@ -233,7 +233,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 **Message must include:**
 - Statement that no new results were found
-- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia
+- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia (MAYBE only)
 - One-line coverage summary: sources and pages scanned (honest if partial)
 
 **Important notes:**
