@@ -29,7 +29,7 @@ Verdict scale:
 
 ## 2. Floors & elevator
 
-- **R-FLOOR** (updated 2026-11-07) — For **apartments**: floors **2–8 only**. Never ground floor, never above the 8th. For **single-storey houses**: explicit exception to the 2–8 rule.
+- **R-FLOOR** (updated 2026-11-21) — For **apartments**: floor **≥2** (second floor and above). Never ground floor (floor 1). No upper floor limit. For **single-storey houses**: explicit exception to the floor ≥2 requirement.
 - **R-LIFT** (updated 2026-11-07):
   - Lift presence (yes/no/unknown) is **informational only**.
   - High floor (≥4) without a lift is **flagged** as a practical concern, but **NEVER a hard exclusion**.
@@ -61,7 +61,7 @@ Verdict scale:
   
   **Historical note:** Exception initially covered Stalinka and seria 102 only (2026-11-15); extended to include seria 143, Czech series, and individual projects 2026-11-18 23:18.
 - **R-MANSARD** (added 2026-11-07) — **Mansards are now ALLOWED**. Flag for verification: roof condition, legal registration, cadastral compliance.
-- **R-HOUSE** (added 2026-11-07) — **Single-storey private houses are now ALLOWED**. Explicit exception to R-FLOOR (2–8 requirement) and R-LIFT. Flag for verification: legal status, cadastral registration, land ownership/rights.
+- **R-HOUSE** (added 2026-11-07) — **Single-storey private houses are now ALLOWED**. Explicit exception to R-FLOOR (floor ≥2 requirement) and R-LIFT. Flag for verification: legal status, cadastral registration, land ownership/rights.
 
 ## 4. Location
 
@@ -244,7 +244,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 **Message must include:**
 - Statement that no new results were found
-- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia (MAYBE only)
+- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², этаж от 2-го, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia (MAYBE only)
 - One-line coverage summary: sources and pages scanned (honest if partial)
 
 **Important notes:**
@@ -265,7 +265,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 - **Цена за м² — не дороже €2 200/м²** (дороже — исключаем, с 20.11.2026; было ≤€2 100/м² до 20.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - **Год постройки ≥2000** — здания построенные до 2000 исключены; ремонт не считается; непроверенный год = MAYBE. **Исключение (с 18.11.2026 23:18): Сталинка, серия 102 (котелец), серия 143, чешский проект (proiect cehesc) и индивидуальный проект (proiect individual) разрешены даже если до 2000, только при явном подтверждении в объявлении**; неподтверждённые = MAYBE; другие серии до 2000 (135, MS/Вэрница, брежневка, хрущёвка и т.д.) остаются FAIL. Новостройки — только сданные.
-- Этажи 2–8 для квартир; первый и выше 8-го — нет; последний этаж — флаг (крыша). **Частные одноэтажные дома — исключение** из правила 2–8 этажей.
+- Этажи от 2-го и выше для квартир (с 21.11.2026 23:04; было 2–8 до 21.11.2026); первый этаж — нет; верхний предел снят; последний этаж — флаг (крыша). **Частные одноэтажные дома — исключение** из правила этаж ≥2.
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.

@@ -10,7 +10,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-PRICE-M2 — ≤€2,100/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; EXCEPTION: Stalinka, seria 102, seria 143, Czech series/project, individual projects allowed if explicitly confirmed; unverified year or series = MAYBE; other pre-2000 series = FAIL)
-- [ ] R-FLOOR — apartments floors 2–8; single-storey houses exception
+- [ ] R-FLOOR — apartments floor ≥2 (no upper limit); single-storey houses exception
 - [ ] R-EXCL-BOTANICA — not in Botanica sector
 - [ ] R-LIFT — informational only (high floor without lift flagged but NOT excluded)
 - [ ] R-TOPFLOOR — top floor? (flag)
