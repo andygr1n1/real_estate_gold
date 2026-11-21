@@ -1,5 +1,33 @@
 # Changelog — filter rules
 
+## 2026-11-21 23:04 (maximum floor limit removed)
+
+**Floor requirement simplified.** Owner rule change 2026-11-21 23:04 Europe/Chisinau.
+
+### Maximum floor limit removed from R-FLOOR
+- **R-FLOOR**: Apartments must be on floor **≥2** (second floor and above). No upper floor limit (was floors 2–8).
+- Never ground floor (floor 1) — unchanged.
+- Top-floor flag (R-TOPFLOOR) remains informational only — unchanged.
+- High floor without lift warning remains informational only — unchanged.
+- Single-storey houses exception unchanged (explicit exception to floor ≥2 requirement).
+
+### Filter summaries updated
+- Morning "nothing found" message filter summary: "floors 2–8" changed to "этаж от 2-го" (floor from 2nd and up).
+- Updated in FILTERS.md §13, AGENTS.md, .cursor/rules/real-estate-filters.mdc.
+- Russian summary: "Этажи 2–8 для квартир" changed to "Этажи от 2-го и выше для квартир (с 21.11.2026 23:04; было 2–8 до 21.11.2026); первый этаж — нет; верхний предел снят".
+
+### Files updated
+- FILTERS.md: R-FLOOR (updated date to 2026-11-21, removed upper limit), R-HOUSE (updated exception text), §13 morning message filter summary, Russian summary (updated with date and note)
+- AGENTS.md: morning message filter summary (changed "floors 2–8" to "этаж от 2-го")
+- .cursor/rules/real-estate-filters.mdc: R-FLOOR (added "no upper limit (2026-11-21)"), TELEGRAM POSTING summary (changed "floors 2–8" to "этаж от 2-го")
+- templates/listing-check.md: R-FLOOR checklist (changed "floors 2–8" to "floor ≥2 (no upper limit)")
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000, blacklisted streets (9 streets), location rules — all unchanged.
+
+**Note:** Historical CHANGELOG entries mentioning "floors 2–8" left unchanged as historical records.
+
 ## 2026-11-21 21:21 (bd. Gagarin and str. Tudor Vladimirescu blacklisted)
 
 **Street blacklist update.** Owner rule change 2026-11-21 21:21 Europe/Chisinau.

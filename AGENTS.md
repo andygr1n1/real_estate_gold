@@ -54,7 +54,7 @@ For each MAYBE: include all material unknowns/conflicts, required verification, 
 
 **Morning run (~09:00):** When the daily morning search finds NO fresh eligible PASS or MAYBE listings, post ONE short plain-text Russian message to the Telegram channel stating:
 - No new results under current filters
-- One-line filter summary (€80–159k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani except Poșta Veche / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia (MAYBE only))
+- One-line filter summary (€80–159k, ≥55 m², ≤€2200/m², этаж от 2-го, Rîșcani except Poșta Veche / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia (MAYBE only))
 - One-line coverage summary (sources and pages scanned; honest if partial)
 
 Do NOT post this message if the run itself failed (report failure in Grok Bot chat instead). The message adds nothing to posted_ids.
