@@ -3,8 +3,8 @@
 Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown · Building type/series/year: · Condition:
 
 ## Hard filters (see FILTERS.md)
-- [ ] R-BUDGET — €80k–100k (above €100k or below €80k = excluded); white variant ≤€90k (>€90k = excluded even if <€100k); unknown finish = MAYBE
-- [ ] R-BANDS — single band: €80k–100k inclusive
+- [ ] R-BUDGET — €80k–159k (above €159k or below €80k = excluded); white variant ≤€90k (>€90k = excluded even if <€159k); unknown finish = MAYBE
+- [ ] R-BANDS — single band: €80k–159k inclusive
 - [ ] R-TYPE — any number of rooms; rooms: ___
 - [ ] R-AREA — ≥55 m² total area (known <55 m² = FAIL; unknown = MAYBE with verification)
 - [ ] R-PRICE-M2 — ≤€2,100/m²
@@ -17,7 +17,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-MANSARD / R-HOUSE — mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land)
 - [ ] R-EXCL-HOSTEL · R-EXCL-BASEMENT · R-EXCL-UNFINISHED · R-EXCL-NEWBUILD · R-EXCL-PROMO
 - [ ] R-EXCL-SUBURB — no suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions)
-- [ ] R-LOC — ONLY Centru (whole), Rîșcanovca neighbourhood (not whole Rîșcani sector; Poșta Veche, Petricani, Cartierul Moldova/Socoleni etc. excluded), and Buiucani near lake (~0–20 min walk); everything else excluded (other Rîșcani parts, other Buiucani, Telecentru, all Ciocana, Botanica, suburbs); unclear micro-district = MAYBE
+- [ ] R-LOC — ONLY Centru (whole), whole Rîșcani sector except Poșta Veche, Buiucani near Komsomol lake/Valea Morilor (~0–20 min walk), and whole str. Alba Iulia in Chișinău (R-ALBA-IULIA, 2026-11-21: max verdict MAYBE with note «Алба Юлия — вне основной зоны»); everything else excluded
 - [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min; R-LAKE 20-min priority overrides)
 - [ ] R-BLACKLIST — not in blacklisted streets: Florării, str-la Florării, Pajurii, Forăriei, Zimbrului (east Rîșcani); Drumul Viilor; Valea Dicescu; Calea Ieșilor; Grădinilor
 - [ ] R-BLACKLIST-CET1 — **verify locality**: str. Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); str. Tudor Vladimirescu ALLOWED (changed 2026-11-19; flag CET-1 proximity as informational); same streets in Durlești ALSO EXCLUDED (R-EXCL-SUBURB); unclear locality = MAYBE (do NOT assume Chișinău); not within ~800 m of CET-1 (≈47.0331, 28.8635) excluding Tudor Vladimirescu

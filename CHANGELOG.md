@@ -1,5 +1,43 @@
 # Changelog — filter rules
 
+## 2026-11-21 20:21 (max price €159k, whole str. Alba Iulia allowed as MAYBE-only)
+
+**Major filter expansion.** Owner rule change 2026-11-21 20:21 Europe/Chisinau.
+
+### 1. Max price raised to €159,000
+- **R-BUDGET**: Maximum asking price **€159,000 inclusive** (was €120,000). Asking >€159k => **FAIL R-BUDGET**. Below €80k stays FAIL.
+- **R-BANDS**: Single price band **€80,000–159,000 inclusive** (was €80,000–120,000).
+- Historical note appended: ", then €80,000–159,000 (2026-11-21 20:21)".
+- White variant cap **≤€90,000** unchanged (still applies even within the €159k general cap).
+- Fixed stale phrase in R-EXCL-UNFINISHED: "even though the general budget cap is €160,000" changed to "€159,000".
+
+### 2. New location rule R-ALBA-IULIA added
+- **R-LOC**: Added **whole str. Alba Iulia, Chișinău** to acceptable locations (added 2026-11-21 20:21).
+- Every building on str. Alba Iulia in Chișinău (Buiucani/Sculeanca included) is location-OK regardless of distance from the lake (R-ALBA-IULIA).
+- **Alba Iulia listings are ALWAYS MAYBE at best, never PASS**, published with literal note «Алба Юлия — вне основной зоны (Скулянка/Буюканы)».
+- Other R-* rules still apply (a confirmed violation is still FAIL).
+- Alba Iulia streets in suburbs/other localities remain excluded (R-EXCL-SUBURB).
+- Added to .cursor/rules/real-estate-filters.mdc R-LOC line.
+- Russian summary updated with equivalent bullet.
+
+### 3. Morning message filter summary updated
+- **Publication workflow**: Morning empty-results message updated to reflect new values: €80–159k, ≥55 m², ≤€2200/m², floors 2–8, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia.
+
+### 4. Template R-LOC checklist updated
+- **templates/listing-check.md**: Fixed stale R-LOC checklist line that still said "Rîșcanovca neighbourhood" (outdated since 2026-11-20). Updated to: "ONLY Centru (whole), whole Rîșcani sector except Poșta Veche, Buiucani near Komsomol lake/Valea Morilor (~0–20 min walk), and whole str. Alba Iulia in Chișinău (R-ALBA-IULIA, 2026-11-21: max verdict MAYBE with note «Алба Юлия — вне основной зоны»); everything else excluded".
+
+### Files updated
+- FILTERS.md: R-BUDGET (€159k), R-BANDS (€80k–159k with updated historical note), R-EXCL-UNFINISHED (fixed stale €160k mention), R-LOC (whole str. Alba Iulia with R-ALBA-IULIA), §13 morning message filter summary, Russian summary (price, single-block line, districts with Alba Iulia)
+- AGENTS.md: reporting format (€80k–159k), morning message filter summary (Alba Iulia)
+- .cursor/rules/real-estate-filters.mdc: R-BUDGET (€159k), R-BANDS (€159k), R-LOC (R-ALBA-IULIA), TELEGRAM POSTING (€159k, Alba Iulia)
+- templates/listing-check.md: R-BUDGET (€159k), R-BANDS (€159k), R-LOC (fixed stale line, added Alba Iulia)
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+- Area ≥55 m², white variant ≤€90k, price/m² ≤€2,200, year ≥2000 + commissioned (with series exceptions Stalinka/102/143/Czech/individual), floors 2–8, quotas ≤10 PASS / ≤10 MAYBE, street blacklist (Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor), excluded districts (Telecentru, Ciocana, Botanica, suburbs except Alba Iulia), CET-1 informational only — all unchanged.
+
+**Historical context:** Maximum price was €120k from 2026-11-20 to 2026-11-21 20:21. Alba Iulia was not explicitly mentioned before 2026-11-21 20:21 (would have been excluded as part of Buiucani outside lake area or Sculeanca).
+
 ## 2026-11-20 11:51 (R-SANITARY requirement removed)
 
 **Sanitary rooms requirement removed.** Owner rule change 2026-11-20 11:51 Europe/Chisinau.
