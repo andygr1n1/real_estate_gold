@@ -1,5 +1,44 @@
 # Changelog — filter rules
 
+## 2026-11-21 23:06 (Botanica sector allowed, Malaia/Bolșaia Malina blacklisted)
+
+**Major location expansion.** Owner rule change 2026-11-21 23:06 Europe/Chisinau.
+
+### Botanica sector allowed (except Malaia/Bolșaia Malina)
+- **R-LOC**: Added **whole Botanica sector** to acceptable locations (added 2026-11-21 23:06).
+- **EXCEPTION**: Malaia Malina and Bolșaia Malina micro-districts and streets are blacklisted (R-BLACKLIST).
+- All other Botanica locations evaluated by standard filters; **PASS possible**.
+- **R-EXCL-BOTANICA**: Rule superseded. Botanica sector is now ALLOWED (except Malaia/Bolșaia Malina blacklisted areas).
+- Historical note: whole Botanica was excluded 2026-11-02 to 2026-11-21 23:06.
+
+### Malaia Malina and Bolșaia Malina added to R-BLACKLIST
+- **R-BLACKLIST**: Added **Malaia Malina / Bolșaia Malina** (Chișinău, Botanica; whole micro-districts and streets named after them, apartments and houses; variants Малая Малина/Большая Малина/Malina Mică/Malina Mare) (added 2026-11-21 23:06).
+- Unclear address → MAYBE with map check.
+- R-BLACKLIST now includes 9 streets + 2 areas (Malaia Malina, Bolșaia Malina).
+
+### Filter summaries updated
+- Morning "nothing found" message filter summary locations updated to: **"Центр, Рышкановка (без Старой Почты), Ботаника (без Малой/Большой Малины), озеро Комсомольское + вся ул. Алба Юлия (только MAYBE)"**
+- Updated in FILTERS.md §13, AGENTS.md, .cursor/rules/real-estate-filters.mdc.
+- Russian summary districts line updated: added Botanica with exception note (Малая/Большая Малина blacklisted), updated date to 2026-11-21 23:06.
+- Russian summary blacklist line updated: reorganized into "Улицы" and "Районы" sections, added Malaia/Bolșaia Malina to areas section.
+
+### Rejected listings added/updated
+- **Added**: Malaia Malina (Romanescu 11997) | R-BLACKLIST Malaia Malina (2026-11-21); was published as MAYBE in Telegram msg 537/538 on 21.11 before the rule
+- **Fixed**: Gagarin 7 entry corrected from "msg 538" to "msg 537"
+
+### Files updated
+- FILTERS.md: R-LOC (added Botanica with Malaia/Bolșaia Malina exception), R-EXCL-BOTANICA (superseded note), R-BLACKLIST (added Malaia/Bolșaia Malina to new "Areas" section), removed Botanica from excluded list, §13 morning message filter summary (updated locations), Russian summary (districts and blacklist updated)
+- AGENTS.md: morning message filter summary (updated locations)
+- .cursor/rules/real-estate-filters.mdc: R-LOC (added Botanica), R-BLACKLIST (added Malaia/Bolșaia Malina), TELEGRAM POSTING summary (updated locations)
+- templates/listing-check.md: R-EXCL-BOTANICA (updated to note Botanica allowed except Malaia/Bolșaia Malina)
+- listings/rejected.md: added Malaia Malina row, fixed Gagarin 7 msg number
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000, floor ≥2 (no upper limit), blacklisted streets (9 streets: Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii, Ceucari, Braniștii, Gagarin, Tudor Vladimirescu) — all unchanged.
+
+**Historical context:** Whole Botanica sector was excluded from 2026-11-02 to 2026-11-21 23:06. Now allowed except Malaia/Bolșaia Malina blacklisted areas.
+
 ## 2026-11-21 23:04 (maximum floor limit removed)
 
 **Floor requirement simplified.** Owner rule change 2026-11-21 23:04 Europe/Chisinau.

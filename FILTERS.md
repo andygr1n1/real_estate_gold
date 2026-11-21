@@ -69,6 +69,7 @@ Verdict scale:
   - **Centru** (whole sector)
   - **Rîșcani / Рышкановка (whole sector)** EXCEPT **Poșta Veche**, which remains excluded
   - **Buiucani area around Komsomol lake / Valea Morilor** — approximately 0–20 minute actual walking route, including adjacent parts of Buiucani (R-LAKE)
+  - **Whole Botanica sector** (added 2026-11-21 23:06) EXCEPT **Malaia Malina and Bolșaia Malina** (micro-districts and streets), which are blacklisted (R-BLACKLIST). All other Botanica locations evaluated by standard filters; PASS possible.
   - **Whole str. Alba Iulia, Chișinău** (added 2026-11-21 20:21) — every building on str. Alba Iulia in Chișinău (Buiucani/Sculeanca included) is location-OK regardless of distance from the lake (R-ALBA-IULIA). **Alba Iulia listings are ALWAYS MAYBE at best, never PASS**, and are published with the literal note «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Other R-* rules still apply (a confirmed violation is still FAIL). Alba Iulia streets in suburbs/other localities remain excluded (R-EXCL-SUBURB).
   
   **Everything else is EXCLUDED**, including:
@@ -76,15 +77,14 @@ Verdict scale:
   - Other parts of Buiucani (outside the ~0–20 min lake area)
   - **Telecentru** (previously acceptable; excluded as of 2026-11-18)
   - **All Ciocana** (including former Port Mall/Rîșcani edge exception, revoked 2026-11-12)
-  - Botanica (R-EXCL-BOTANICA)
   - All suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.) (R-EXCL-SUBURB)
   
   Unclear micro-district (e.g. only 'Rîșcani' without street/map) → verdict **MAYBE** with map check until resolved.
   
   **Historical note:** Telecentru, other Buiucani, and Ciocana near Port Mall were acceptable until 2026-11-18; whole Rîșcani sector was acceptable until 2026-11-19, then restricted to Rîșcanovca neighbourhood only (2026-11-19), then expanded to whole Rîșcani sector except Poșta Veche (2026-11-20).
 - **R-LAKE** (added 2026-11-07) — Buiucani within ≈0–20 minute walk of Komsomol lake / Valea Morilor has **priority** status. Walking time is measured by actual routes, not straight-line distance. This explicit 20-minute lake priority overrides the generic 5–10 minute R-MICRO rule for these areas.
-- **R-EXCL-BOTANICA** (2026-11-02) — The whole **Botanica** sector is excluded (all streets, all micro-districts), including listings already in the Telegram buffer.
-  - **Poșta Veche** excluded (part of Rîșcani sector but not Rîșcanovca neighbourhood).
+- **R-EXCL-BOTANICA** (superseded 2026-11-21 23:06) — **Botanica sector is now ALLOWED** (added to R-LOC 2026-11-21 23:06), except Malaia Malina and Bolșaia Malina micro-districts/streets (blacklisted R-BLACKLIST). All other Botanica locations evaluated by standard filters; PASS possible. Historical note: whole Botanica was excluded 2026-11-02 to 2026-11-21 23:06.
+  - **Poșta Veche** excluded (part of Rîșcani sector but specifically excluded in R-LOC).
   - **Ciocana** excluded entirely as of 2026-11-18.
   - Verify the real address from the listing text, not just the sector field.
 - **R-MICRO** — Within ≈5–10 min walk of:
@@ -93,7 +93,9 @@ Verdict scale:
   - a university (USM, UTM, ASEM, USMF, Pedagogical University).
   - Remote inner-block / outskirt streets are excluded.
   - Note: The explicit R-LAKE 20-minute priority for Buiucani near Valea Morilor / Komsomol lake takes precedence over this generic 5–10 minute rule.
-- **R-BLACKLIST** (updated 2026-11-21) — The following streets are excluded entirely (whole street, both apartments and houses, all statuses including buffer):
+- **R-BLACKLIST** (updated 2026-11-21) — The following streets and areas are excluded entirely (whole street/area, both apartments and houses, all statuses including buffer):
+  
+  **Streets:**
   - **str. Drumul Viilor** (added 2026-11-13)
   - **str. Valea Dicescu** (added 2026-11-15)
   - **str. Calea Ieșilor** (added 2026-11-15)
@@ -103,6 +105,9 @@ Verdict scale:
   - **str. Braniștii** (Chișinău, Rîșcani; all house numbers, apartments and houses; variants Braniștii/Branistii/Брэништий/Браништий) (added 2026-11-21 21:09)
   - **bd./str. Gagarin** (Chișinău, Centru; all house numbers, apartments and houses; variants Iuri Gagarin/Gagarin/Гагарина) (added 2026-11-21 21:21)
   - **str. Tudor Vladimirescu** (Chișinău, Rîșcani; all house numbers, apartments and houses; variants Тудор Владимиреску) (added 2026-11-21 21:21; re-blacklisted, was removed 2026-11-19)
+  
+  **Areas:**
+  - **Malaia Malina / Bolșaia Malina** (Chișinău, Botanica; whole micro-districts and streets named after them, apartments and houses; variants Малая Малина/Большая Малина/Malina Mică/Malina Mare) (added 2026-11-21 23:06). Unclear address → MAYBE with map check.
   
   **Historical note:** East Rîșcani pocket (str. Florării, str-la Florării, str. Pajurii, str. Forăriei, str. Zimbrului) was excluded from 2026-11-01 to 2026-11-20; removed from blacklist 2026-11-20 (now evaluated by standard filters). str. Pajurii re-blacklisted 2026-11-21 21:00. str. Tudor Vladimirescu was in CET-1 zone blacklist 2026-11-02 to 2026-11-19, removed 2026-11-19, re-blacklisted 2026-11-21 21:21.
 - **R-CET1-INFO** (updated 2026-11-21) — CET-1 (Termoelectrica Sursa 1) proximity **is informational only** and NOT an exclusion. All addresses previously excluded under the CET-1 zone rule are now evaluated by standard filters. Proximity to CET-1 (≈47.0331, 28.8635) should be flagged as "близко к ТЭЦ-1" for informational purposes. Reasons for CET-1 concern: plant can burn fuel oil (păcură), gas filters reported non-compliant (UTM study), planned ~250 MW new plant construction on site, weak liquidity.
@@ -119,7 +124,8 @@ Verdict scale:
 | Pajurii 11, Chișinău Rîșcani (3 rooms, 68 m², 3/5, seria 102, €126.9k) | https://999.md/ro/105823043 | R-BLACKLIST Pajurii (2026-11-21); was published 21.11 in Telegram msg 535 before the rule |
 | Ceucari 11/1 | https://999.md/ro/105795066 | R-BLACKLIST Ceucari (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule |
 | Braniștii 5/4 (€129.9k) | https://999.md/ro/105552611 | R-BLACKLIST Braniștii (2026-11-21); was published 21.11 as PASS in Telegram msg 535 before the rule |
-| Gagarin 7 (dupes 105832341, 105823686) | https://999.md/ro/105966142 | R-BLACKLIST Gagarin (2026-11-21); was published 21.11 as MAYBE in Telegram msg 538 before the rule |
+| Gagarin 7 (dupes 105832341, 105823686) | https://999.md/ro/105966142 | R-BLACKLIST Gagarin (2026-11-21); was published 21.11 as MAYBE in Telegram msg 537 before the rule |
+| Malaia Malina (Romanescu 11997) | — | R-BLACKLIST Malaia Malina (2026-11-21); was published as MAYBE in Telegram msg 537/538 on 21.11 before the rule |
 | Tudor Vladimirescu 1/4, Chișinău Rîșcani | https://999.md/ro/104749432 | R-BLACKLIST Tudor Vladimirescu (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule |
 | Tudor Vladimirescu 1/1, Chișinău Rîșcani | https://999.md/ro/105936700 | R-BLACKLIST Tudor Vladimirescu (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule |
 | 2 Florării 1 | https://999.md/ro/103530986 | R-BLACKLIST |
@@ -244,7 +250,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 **Message must include:**
 - Statement that no new results were found
-- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², этаж от 2-го, Rîșcani (except Poșta Veche) / Centru / Komsomol lake–Valea Morilor / whole str. Alba Iulia (MAYBE only)
+- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², этаж от 2-го, Центр, Рышкановка (без Старой Почты), Ботаника (без Малой/Большой Малины), озеро Комсомольское + вся ул. Алба Юлия (только MAYBE)
 - One-line coverage summary: sources and pages scanned (honest if partial)
 
 **Important notes:**
@@ -269,9 +275,9 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
-- **Районы (с 21.11.2026 20:21): ТОЛЬКО Центр (весь сектор), весь сектор Рышкановка КРОМЕ Старой Почты (Старая Почта исключена; Петричаны, Картиерул Молдова, Соколены, Студенцилор, Чеукарь и другие части сектора теперь допустимы), зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан), и вся ул. Алба Юлия в Кишинёве (добавлена 21.11.2026 20:21) — любое здание на ул. Алба Юлия в Кишинёве (включая Скулянку/Буюканы) допустимо по местоположению независимо от расстояния до озера (R-ALBA-IULIA). Алба Юлия всегда максимум MAYBE, никогда не PASS, с пометкой «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Другие правила R-* применяются (подтверждённое нарушение = FAIL). Ул. Алба Юлия в пригородах/других населённых пунктах исключена (R-EXCL-SUBURB).** Всё остальное исключено: Старая Почта (часть сектора Рышкановка, но специально исключена), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), Ботаника (весь сектор), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
+- **Районы (с 21.11.2026 23:06): ТОЛЬКО Центр (весь сектор), весь сектор Рышкановка КРОМЕ Старой Почты (Старая Почта исключена; Петричаны, Картиерул Молдова, Соколены, Студенцилор и другие части сектора допустимы; Чеукарь в чёрном списке с 21.11.2026), весь сектор Ботаника КРОМЕ Малой Малины и Большой Малины (добавлена 21.11.2026 23:06; Малая/Большая Малина в чёрном списке; вся остальная Ботаника оценивается по стандартным фильтрам, PASS возможен; была полностью исключена 02.11–21.11.2026), зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан), и вся ул. Алба Юлия в Кишинёве (добавлена 21.11.2026 20:21) — любое здание на ул. Алба Юлия в Кишинёве (включая Скулянку/Буюканы) допустимо по местоположению независимо от расстояния до озера (R-ALBA-IULIA). Алба Юлия всегда максимум MAYBE, никогда не PASS, с пометкой «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Другие правила R-* применяются (подтверждённое нарушение = FAIL). Ул. Алба Юлия в пригородах/других населённых пунктах исключена (R-EXCL-SUBURB).** Всё остальное исключено: Старая Почта (часть сектора Рышкановка, но специально исключена), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
-- **Чёрный список (с 21.11.2026 21:21):** **Drumul Viilor** (13.11.2026); **Valea Dicescu** (15.11.2026); **Calea Ieșilor** (15.11.2026); **Grădinilor** (15.11.2026); **Pajurii / Păjurii / Пажурий** (21.11.2026 21:00; Кишинёв Рышкановка, все номера домов, квартиры и дома; была в восточном кармане Рышкановки 01.11–20.11.2026, снова внесена в чёрный список 21.11.2026); **Ceucari / Чеукарь** (21.11.2026 21:09; Кишинёв Рышкановка, все номера домов, квартиры и дома); **Braniștii / Branistii / Брэништий / Браништий** (21.11.2026 21:09; Кишинёв Рышкановка, все номера домов, квартиры и дома); **бул./ул. Gagarin / Гагарина** (21.11.2026 21:21; Кишинёв Центр, все номера домов, квартиры и дома); **ул. Тудор Владимиреску / Tudor Vladimirescu** (21.11.2026 21:21; Кишинёв Рышкановка, все номера домов, квартиры и дома; была в чёрном списке зоны ТЭЦ-1 02.11–19.11.2026, разрешена 19.11.2026, снова внесена в чёрный список 21.11.2026). **Зона ТЭЦ-1 полностью снята с чёрного списка** (20.11.2026): ул. Николае Димо, ул. Florării, Forăriei, Zimbrului и все адреса около ТЭЦ-1 теперь оцениваются по стандартным фильтрам (кроме Pajurii, Ceucari, Braniștii, Тудор Владимиреску — в чёрном списке с 21.11.2026). Близость к ТЭЦ-1 — только информационный флаг "близко к ТЭЦ-1", не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
+- **Чёрный список (с 21.11.2026 23:06):** **Улицы:** Drumul Viilor (13.11.2026); Valea Dicescu (15.11.2026); Calea Ieșilor (15.11.2026); Grădinilor (15.11.2026); Pajurii / Păjurii / Пажурий (21.11.2026 21:00; Кишинёв Рышкановка, все номера домов, квартиры и дома; была в восточном кармане Рышкановки 01.11–20.11.2026, снова внесена в чёрный список 21.11.2026); Ceucari / Чеукарь (21.11.2026 21:09; Кишинёв Рышкановка, все номера домов, квартиры и дома); Braniștii / Branistii / Брэништий / Браништий (21.11.2026 21:09; Кишинёв Рышкановка, все номера домов, квартиры и дома); бул./ул. Gagarin / Гагарина (21.11.2026 21:21; Кишинёв Центр, все номера домов, квартиры и дома); ул. Тудор Владимиреску / Tudor Vladimirescu (21.11.2026 21:21; Кишинёв Рышкановка, все номера домов, квартиры и дома; была в чёрном списке зоны ТЭЦ-1 02.11–19.11.2026, разрешена 19.11.2026, снова внесена в чёрный список 21.11.2026). **Районы:** Малая Малина / Большая Малина (Малая Малина/Большая Малина/Malina Mică/Malina Mare) (21.11.2026 23:06; Кишинёв Ботаника, целые микрорайоны и улицы с этими названиями, квартиры и дома; неоднозначный адрес = MAYBE с проверкой на карте). **Зона ТЭЦ-1 полностью снята с чёрного списка** (20.11.2026): ул. Николае Димо, ул. Florării, Forăriei, Zimbrului и все адреса около ТЭЦ-1 теперь оцениваются по стандартным фильтрам (кроме Pajurii, Ceucari, Braniștii, Тудор Владимиреску — в чёрном списке с 21.11.2026). Близость к ТЭЦ-1 — только информационный флаг "близко к ТЭЦ-1", не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
 - Рекламные (поднятые) объявления 999.md игнорируются.
 - **MAYBE теперь публикуются** с буквальной меткой MAYBE и конкретными причинами неопределённости (например, год постройки не подтверждён — требуется проверка ≥2000). PASS = полностью проверено; MAYBE = неизвестный/противоречивый критерий, но нет подтверждённого нарушения обязательного правила; FAIL = подтверждённое нарушение, исключено. Для каждого MAYBE: все существенные неизвестные/конфликты, требуемая проверка, никогда не выдумывать факты. Неизвестный год может публиковаться как MAYBE; подтверждённый <2000 остаётся FAIL (если не сталинка/102).
 - Поиск включает **категорию продажи домов**, так как частные дома разрешены. Только сектора Кишинёва; пригороды исключены.
