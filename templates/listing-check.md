@@ -9,7 +9,7 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-AREA — ≥55 m² total area (known <55 m² = FAIL; unknown = MAYBE with verification)
 - [ ] R-PRICE-M2 — ≤€2,100/m²
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
-- [ ] R-YEAR — construction year ≥2000 (buildings before 2000 excluded; EXCEPTION: Stalinka, seria 102, seria 143, Czech series/project, individual projects allowed if explicitly confirmed; unverified year or series = MAYBE; other pre-2000 series = FAIL)
+- [ ] R-YEAR / R-EXCL-OLD-STOCK — OLD HOUSING STOCK EXCLUDED: ONLY buildings ≥2000 AND commissioned eligible; any pre-2000 building = FAIL; any Soviet/typical series = FAIL; unverified year with no old-stock indication = MAYBE (must verify ≥2000); pre-2000 exception REVOKED 2026-11-22
 - [ ] R-FLOOR — apartments floor ≥2 (no upper limit); single-storey houses exception
 - [ ] R-EXCL-BOTANICA — Botanica sector ALLOWED (2026-11-21 23:06) except Malaia Malina and Bolșaia Malina (R-BLACKLIST); all other Botanica evaluated by standard filters
 - [ ] R-LIFT — informational only (high floor without lift flagged but NOT excluded)
