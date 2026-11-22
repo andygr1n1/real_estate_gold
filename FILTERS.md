@@ -50,16 +50,11 @@ Verdict scale:
 
 ## 3a. Building age & special property types
 
-- **R-YEAR** (updated 2026-11-18) — Buildings constructed **before 2000 are excluded**. Only construction year **≥2000 (inclusive)** is allowed for both apartments and houses. **Exception (updated 2026-11-18):** The following building series/types are allowed even if pre-2000, **only when explicitly confirmed in the listing**:
-  - **Stalinka**
-  - **seria 102 (cotileț)**
-  - **seria 143**
-  - **Czech series/project** (чешский проект / proiect cehesc)
-  - **Individual projects** (индивидуальный проект / proiect individual)
+- **R-YEAR / R-EXCL-OLD-STOCK** (updated 2026-11-22) — **OLD HOUSING STOCK EXCLUDED ENTIRELY.** Only buildings constructed in **2000 or later (≥2000)** AND commissioned are eligible for both apartments and houses. Any building constructed before 2000 is **FAIL** immediately. Any Soviet-era or typical series building is **FAIL** immediately. Renovation in an old building does NOT count. Unverified construction year with no old-stock indication → verdict **MAYBE** (must verify ≥2000), never PASS. Never invent or guess a construction year. Flag building-age checks. Commissioned status required (R-EXCL-NEWBUILD).
   
-  Unconfirmed exception series → verdict **MAYBE**; other pre-2000 series (135, MS/Varnița, brejnevka, hrușciovka, etc.) remain **FAIL**. Renovation in an old building does NOT count. Unverified construction year → verdict **MAYBE**, not PASS. Never invent or guess a construction year. Flag building-age checks. Commissioned status still required (R-EXCL-NEWBUILD).
+  **Pre-2000 series exception REVOKED (2026-11-22 20:52):** Exception for Stalinka, seria 102 (cotileț), seria 143, Czech series/project, and individual projects was **superseded and revoked** as of 2026-11-22 20:52. These building types are now **FAIL** (old housing stock excluded).
   
-  **Historical note:** Exception initially covered Stalinka and seria 102 only (2026-11-15); extended to include seria 143, Czech series, and individual projects 2026-11-18 23:18.
+  **Historical note:** Buildings ≥2000 have always been required. Exception for pre-2000 series was added 2026-11-15 (Stalinka, seria 102), extended 2026-11-18 23:18 (seria 143, Czech series, individual projects), then **revoked entirely 2026-11-22 20:52** — all pre-2000 buildings now excluded without exception.
 - **R-MANSARD** (added 2026-11-07) — **Mansards are now ALLOWED**. Flag for verification: roof condition, legal registration, cadastral compliance.
 - **R-HOUSE** (added 2026-11-07) — **Single-storey private houses are now ALLOWED**. Explicit exception to R-FLOOR (floor ≥2 requirement) and R-LIFT. Flag for verification: legal status, cadastral registration, land ownership/rights.
 
@@ -145,7 +140,7 @@ MAYBE candidates are now published with specific reasons. See FILTERS.md §11 fo
 
 | Listing | Link | Status & Required Verification |
 |---|---|---|
-| Cornului 9/3, Buiucani (Gonvaro-Con) | https://999.md/ro/105823314 | **MAYBE** (2026-11-07, updated 2026-11-08): 2+living, cadastral 93 m², 6/6, €135k (€1,452/m²) or €128k scenario (€1,376/m²). Lift status: prior source Ascensor=false NOT confirmed on site. **Material unknowns:** Construction year UNVERIFIED (must confirm ≥2000 for R-YEAR); mansard status UNVERIFIED (must verify roof/legal/cadastral for R-MANSARD); lift presence NOT confirmed on site. **Required verification:** year ≥2000, roof/legal/cadastral compliance, on-site lift confirmation. Do NOT fabricate year or clear risks; do NOT upgrade to PASS without verification. |
+| Cornului 9/3, Buiucani (Gonvaro-Con) | https://999.md/ro/105823314 | **NO LONGER ELIGIBLE** (2026-11-22 20:52): Old housing stock rule change. Was MAYBE (2026-11-07, updated 2026-11-08): 2+living, cadastral 93 m², 6/6, €135k (€1,452/m²) or €128k scenario (€1,376/m²). Construction year UNVERIFIED; with pre-2000 exception revoked 2026-11-22 20:52, any unverified year requires strict verification ≥2000 AND commissioned, no old-stock series allowed. Mansard status also UNVERIFIED. No longer considered without year verification. |
 
 ## 6. Benchmark
 
@@ -271,7 +266,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 - Любое число комнат; площадь — от 55 м² (меньше 55 м² — исключаем; неизвестная площадь → MAYBE с проверкой).
 - **Цена за м² — не дороже €2 200/м²** (дороже — исключаем, с 20.11.2026; было ≤€2 100/м² до 20.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
-- **Год постройки ≥2000** — здания построенные до 2000 исключены; ремонт не считается; непроверенный год = MAYBE. **Исключение (с 18.11.2026 23:18): Сталинка, серия 102 (котелец), серия 143, чешский проект (proiect cehesc) и индивидуальный проект (proiect individual) разрешены даже если до 2000, только при явном подтверждении в объявлении**; неподтверждённые = MAYBE; другие серии до 2000 (135, MS/Вэрница, брежневка, хрущёвка и т.д.) остаются FAIL. Новостройки — только сданные.
+- **Год постройки ≥2000, дом сдан; старый жилой фонд не рассматриваем** (с 22.11.2026 20:52) — ТОЛЬКО здания построенные в 2000 году или позже И сданные. Любое здание построенное до 2000 года = FAIL сразу. Любое здание советской/типовой серии = FAIL сразу. Ремонт в старом доме не считается. Непроверенный год без признаков старого фонда = MAYBE (требуется проверка ≥2000), никогда не PASS. **Исключение для Сталинки/102/143/чешского/индивидуального проектов ОТМЕНЕНО** (22.11.2026 20:52; было разрешено 15.11–22.11.2026) — теперь весь старый фонд исключён без исключений. Новостройки — только сданные.
 - Этажи от 2-го и выше для квартир (с 21.11.2026 23:04; было 2–8 до 21.11.2026); первый этаж — нет; верхний предел снят; последний этаж — флаг (крыша). **Частные одноэтажные дома — исключение** из правила этаж ≥2.
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).

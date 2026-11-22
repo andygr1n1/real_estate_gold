@@ -1,5 +1,46 @@
 # Changelog — filter rules
 
+## 2026-11-22 20:52 (old housing stock excluded entirely, pre-2000 exception revoked)
+
+**Major filter tightening.** Owner rule change 2026-11-22 20:52 Europe/Chisinau.
+
+### Old housing stock excluded entirely
+- **R-YEAR / R-EXCL-OLD-STOCK**: **OLD HOUSING STOCK EXCLUDED ENTIRELY**. Only buildings constructed in **2000 or later (≥2000)** AND commissioned are eligible.
+- **Any pre-2000 building** = FAIL immediately.
+- **Any Soviet-era or typical series building** = FAIL immediately.
+- Renovation in an old building does NOT count.
+- Unverified construction year with no old-stock indication → verdict MAYBE (must verify ≥2000), never PASS.
+
+### Pre-2000 series exception REVOKED
+- **Exception for pre-2000 building series REVOKED** as of 2026-11-22 20:52.
+- **Previously allowed** (2026-11-15 to 2026-11-22): Stalinka, seria 102 (cotileț), seria 143, Czech series/project, individual projects.
+- **Now**: All these building types are **FAIL** (old housing stock excluded without exception).
+- R-YEAR updated with superseded/revoked note and historical context preserved.
+
+### Russian summary updated
+- Updated to: **"Год постройки ≥2000, дом сдан; старый жилой фонд не рассматриваем"** (с 22.11.2026 20:52).
+- Noted exception revoked: **"Исключение для Сталинки/102/143/чешского/индивидуального проектов ОТМЕНЕНО"** (22.11.2026 20:52; было разрешено 15.11–22.11.2026).
+- Clear statement: "теперь весь старый фонд исключён без исключений".
+
+### MAYBE listings updated
+- **Cornului 9/3, Buiucani** marked as **NO LONGER ELIGIBLE** (2026-11-22 20:52) due to old housing stock rule change. Construction year was UNVERIFIED; with pre-2000 exception revoked, requires strict verification ≥2000 AND commissioned, no old-stock series allowed.
+
+### Files updated
+- FILTERS.md: R-YEAR (revoked exception, marked as superseded with date 2026-11-22 20:52, preserved historical note), Russian summary (updated with old housing stock exclusion note), §5a MAYBE listings (marked Cornului 9/3 as no longer eligible)
+- .cursor/rules/real-estate-filters.mdc: R-YEAR / R-EXCL-OLD-STOCK (revoked exception with date)
+- templates/listing-check.md: R-YEAR checklist (updated to reflect revoked exception)
+- CHANGELOG.md: this entry
+
+### Impact
+- **Significantly reduces eligible properties**: all pre-2000 buildings now excluded
+- **Previously MAYBE listings** relying on pre-2000 exception (Stalinka, seria 102, etc.) are now ineligible
+- **Only modern housing stock** (2000+) accepted
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, floor ≥2 (no upper limit), blacklisted streets (10 streets), blacklisted areas (2 areas), location rules — all unchanged.
+
+**Historical context:** Pre-2000 series exception was introduced 2026-11-15 (Stalinka, seria 102), extended 2026-11-18 23:18 (seria 143, Czech series, individual projects), operated for one week, then revoked entirely 2026-11-22 20:52.
+
 ## 2026-11-22 19:46 (șos. Muncești blacklisted)
 
 **Street blacklist update.** Owner rule change 2026-11-22 19:46 Europe/Chisinau.
