@@ -4,6 +4,7 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 
 | Listing / address | Link | Reason (rule) | Date |
 |---|---|---|---|
+| bd. Dacia 59 (Edera Home), Botanica | https://999.md/ro/105072311 | R-BLACKLIST-BUILDING bd. Dacia 59 (Edera Home); building blacklisted | 2026-11-22 |
 | Pajurii 13/1 | | Remote location (R-MICRO, later R-BLACKLIST) | 2026-10-31 |
 | Pajurii 11, Chișinău Rîșcani (3 rooms, 68 m², 3/5, seria 102, €126.9k) | https://999.md/ro/105823043 | R-BLACKLIST Pajurii (2026-11-21); was published 21.11 in Telegram msg 535 before the rule | 2026-11-21 |
 | Ceucari 11/1 | https://999.md/ro/105795066 | R-BLACKLIST Ceucari (2026-11-21); was published 21.11 as MAYBE in Telegram msg 536 before the rule | 2026-11-21 |
