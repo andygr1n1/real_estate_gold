@@ -1,5 +1,32 @@
 # Changelog — filter rules
 
+## 2026-11-22 19:46 (șos. Muncești blacklisted)
+
+**Street blacklist update.** Owner rule change 2026-11-22 19:46 Europe/Chisinau.
+
+### șos. Muncești added to R-BLACKLIST
+- **R-BLACKLIST**: Added **șos. Muncești** (Chișinău; all house numbers, apartments and houses; variants Мунчешть/Muncesti/Munceşti) (added 2026-11-22 19:46).
+- Updated R-BLACKLIST header date to 2026-11-22.
+- Updated blacklist counts throughout documentation: "9 streets" → "10 streets".
+
+### Blacklist summary updated
+- Russian summary: Updated blacklist header date to 22.11.2026 19:46, added counts "Улицы (10)" and "Районы (2)", added Muncești with full variants.
+- .cursor/rules/real-estate-filters.mdc: Updated R-BLACKLIST date to 2026-11-22, added counts "Streets (10)" and "Areas (2)", added Muncești.
+- templates/listing-check.md: Updated R-BLACKLIST to include count "(10)" and added Muncești; also added areas note "(2): Malaia Malina, Bolșaia Malina".
+
+### Files updated
+- FILTERS.md: R-BLACKLIST (added Muncești, updated header date), Russian summary (blacklist updated with counts and Muncești)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST (added Muncești with counts)
+- templates/listing-check.md: R-BLACKLIST checklist (added Muncești with counts)
+- CHANGELOG.md: this entry
+
+### Current blacklist
+- **10 streets**: Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii, Ceucari, Braniștii, Gagarin, Tudor Vladimirescu, Muncești
+- **2 areas**: Malaia Malina, Bolșaia Malina
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000, floor ≥2 (no upper limit), location rules (Centru, Rîșcani except Poșta Veche, Botanica except Malaia/Bolșaia Malina, Komsomol lake area, Alba Iulia MAYBE-only) — all unchanged.
+
 ## 2026-11-21 23:06 (Botanica sector allowed, Malaia/Bolșaia Malina blacklisted)
 
 **Major location expansion.** Owner rule change 2026-11-21 23:06 Europe/Chisinau.
