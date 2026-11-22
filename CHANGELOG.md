@@ -1,5 +1,40 @@
 # Changelog — filter rules
 
+## 2026-11-22 21:30 (bd. Dacia 59 building blacklisted)
+
+**Building-level blacklist added.** Owner rule change 2026-11-22 21:30 Europe/Chisinau.
+
+### bd. Dacia 59 (Edera Home) building blacklisted
+- **R-BLACKLIST-BUILDING**: Added **bd. Dacia 59** (Chișinău, Botanica; complex Edera Home) to blacklist.
+- **Any apartment in this building** = FAIL R-BLACKLIST-BUILDING immediately.
+- **Only this building number**: other bd. Dacia numbers (e.g. Dacia 57, Dacia 61, etc.) evaluated normally by standard filters.
+- **Dacia 59/x that names Edera Home** → FAIL.
+- **Unclear address** (Dacia 59 without Edera Home confirmation) → MAYBE with check.
+- **No recovery**: blacklisted building, any apartment excluded.
+
+### Blacklist structure updated
+- **R-BLACKLIST** now includes three categories:
+  - **Streets (10)**: Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii, Ceucari, Braniștii, Gagarin, Tudor Vladimirescu, Muncești
+  - **Areas (2)**: Malaia Malina, Bolșaia Malina
+  - **Buildings (1)**: bd. Dacia 59 (Edera Home)
+
+### Russian summary updated
+- Blacklist header date updated to **22.11.2026 21:30**
+- Added **"Дома (1)"** section: **"бд. Дачия 59 (Edera Home)"** (22.11.2026 21:30; Кишинёв Ботаника, комплекс Edera Home, любая квартира в этом доме; только этот номер дома; другие номера на бд. Дачия оцениваются нормально; Dacia 59/x с упоминанием Edera Home = FAIL; неясный адрес = MAYBE с проверкой)
+
+### Rejected listing added
+- **bd. Dacia 59 (Edera Home), Botanica** | https://999.md/ro/105072311 | R-BLACKLIST-BUILDING bd. Dacia 59 (Edera Home); building blacklisted | 2026-11-22
+
+### Files updated
+- FILTERS.md: R-BLACKLIST (added Buildings section with bd. Dacia 59, updated header to include R-BLACKLIST-BUILDING), Russian summary (blacklist updated with "Дома (1)" section)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST / R-BLACKLIST-BUILDING (added Buildings (1) section with bd. Dacia 59)
+- templates/listing-check.md: R-BLACKLIST checklist (added R-BLACKLIST-BUILDING, added buildings (1) note)
+- listings/rejected.md: added bd. Dacia 59 row
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (no upper limit), blacklisted streets (10 streets), blacklisted areas (2 areas), location rules — all unchanged.
+
 ## 2026-11-22 20:52 (old housing stock excluded entirely, pre-2000 exception revoked)
 
 **Major filter tightening.** Owner rule change 2026-11-22 20:52 Europe/Chisinau.
