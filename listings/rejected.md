@@ -5,6 +5,30 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 | Listing / address | Link | Reason (rule) | Date |
 |---|---|---|---|
 | bd. Dacia 62/G Grand Family, Botanica | | R-BLACKLIST-BUILDING bd. Dacia 62 (Grand Family); building blacklisted; posted 23.11 msg 569-571 | 2026-11-23 |
+| bd. Dacia 62/G (Exfactor Grand Family), Chișinău Botanica (1+living, 55 m², 8/10, €119.9k) | https://999.md/ro/105474701 | R-BLACKLIST-BUILDING bd. Dacia 62 + R-BLACKLIST-AREA Aeroport (2026-11-23 17:34); was published 23.11 in Telegram msg 569 (PASS) before the rule | 2026-11-23 |
+| bd. Dacia 62 (Grand Family), Chișinău Botanica (2 rooms, 76 m², 4/8, €125.25k) | https://999.md/ro/105464506 | R-BLACKLIST-BUILDING bd. Dacia 62 + R-BLACKLIST-AREA Aeroport (2026-11-23 17:34) | 2026-11-23 |
+| bd. Dacia 60/12, Chișinău Botanica (2 rooms, 77 m², 4/9, €139.9k) | https://999.md/ro/102536035 | R-BLACKLIST-AREA Aeroport — Dacia ≥44, OSM quarter Galata/Aeroport (2026-11-23 17:34) | 2026-11-23 |
+| bd. Dacia 60/5, Chișinău Botanica (4 rooms, 98 m², 5/9, €114k) | https://999.md/ro/104568102 | R-BLACKLIST-AREA Aeroport (2026-11-23 17:34); also R-YEAR old stock seria 143 | 2026-11-23 |
+| bd. Dacia 60/5, Chișinău Botanica (4 rooms, 100 m², 7/9, €130k) | https://999.md/ro/104762066 | R-BLACKLIST-AREA Aeroport (2026-11-23 17:34); also R-YEAR old stock seria 143 | 2026-11-23 |
+| bd. Dacia («район Аэропорт»), Chișinău Botanica (4 rooms, 98 m², 5/9, €114k) | https://999.md/ro/104761792 | R-BLACKLIST-AREA Aeroport (2026-11-23 17:34); also R-YEAR old stock seria 143 | 2026-11-23 |
+| bd. Dacia 60/1, Chișinău Botanica (3 rooms, 65 m², 9/9, €109.9k) | https://999.md/ro/105195939 | R-BLACKLIST-AREA Aeroport (2026-11-23 17:34); also R-YEAR old stock (individual project) | 2026-11-23 |
+| bd. Dacia 69/1, Chișinău Botanica (3 rooms, 76 m², 6/9, €109.9k) | https://999.md/ro/104987978 | R-BLACKLIST-AREA Aeroport (2026-11-23 17:34) | 2026-11-23 |
+| bd. Dacia (no number, pin ~0.7 km from Galata/Aeroport), Chișinău Botanica (3 rooms, 76 m², 5/9, €125k) | https://999.md/ro/104447320 | R-BLACKLIST-AREA Aeroport (2026-11-23 17:34) | 2026-11-23 |
+| str-la Gheorghe Cucereanu 11, Băcioii Noi, Chișinău Botanica (house, 110 m², €137.7k) | https://999.md/ro/105584525 | R-BLACKLIST-AREA Aeroport — Băcioii Noi, MD-2026, ~1.3 km from Galata/Aeroport (2026-11-23 17:34) | 2026-11-23 |
+| bd. Dacia «în zona Aeroportului», Chișinău Botanica (2 rooms, 55 m², 8/9, €110k) | https://999.md/ro/105732248 | R-BLACKLIST-AREA Aeroport — labelled «zona Aeroportului» (2026-11-23 17:34) | 2026-11-23 |
+| șos. Muncești 782/1, Chișinău Botanica (2 rooms, 69 m², 4/5, €124.9k) | https://999.md/ro/104789230 | R-BLACKLIST-AREA Aeroport (~0.9 km) + R-BLACKLIST Muncești (2026-11-23 17:34) | 2026-11-23 |
+| bd. Dacia 58 (DMZ Home Construct), Chișinău Botanica (1+living, 50 m², 2/9, white, €88k) | https://999.md/ro/103836871 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27); was published 23.11 in Telegram msgs 569–571 (MAYBE) before the rule; agency dup acces-444616 | 2026-11-23 |
+| bd. Dacia 44, Chișinău Botanica (2 rooms, 57 m², 9/10, €109.9k) | https://999.md/ro/105963789 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 49, Chișinău Botanica (3 rooms, 70 m², 3/9, €105k) | https://999.md/ro/105068085 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 49, Chișinău Botanica (3 rooms, 70 m², 3/9, €105k) | https://999.md/ro/105740768 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 49, Chișinău Botanica (3 rooms, 70 m², 3/9, €105k) | https://999.md/ro/105624860 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 49/6, Chișinău Botanica (2 rooms, 86 m², 13/16, €145k) | https://999.md/ro/105869385 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 56 («Satul German», Inamstro), Chișinău Botanica (2 rooms, 71 m², 3/7, €119.9k) | https://999.md/ro/105143272 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44; text «minutes from the airport», pin in Băcioi (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia (no number, pin 46.9791, 28.8696 — east of Dacia 44), Chișinău Botanica (3 rooms, 80 m², 8/14, €149k) | https://999.md/ro/105679995 | R-BLACKLIST-AREA Aeroport — unnumbered Dacia, pin east of Dacia 44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 59 (Edera Home), Chișinău Botanica (1 room, 60 m², 2/20, €85.985k) | https://999.md/ro/105804949 | R-BLACKLIST-BUILDING bd. Dacia 59 + R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 59 (Edera Home), Chișinău Botanica (1 room, 60 m², 12/20, €85.985k) | https://999.md/ro/105806202 | R-BLACKLIST-BUILDING bd. Dacia 59 + R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 59/C (Edera Home), Chișinău Botanica (2 rooms, 65 m², 2/9, €87k) | https://999.md/ro/101374285 | R-BLACKLIST-BUILDING bd. Dacia 59 + R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27) | 2026-11-23 |
+| bd. Dacia 47/2, Chișinău Botanica (3 rooms, 85 m², 8/16, €149k) | https://999.md/ro/105676325 | R-BLACKLIST-AREA Aeroport — bd. Dacia ≥44 (2026-11-23 18:27); removed from buffer, never published | 2026-11-23 |
 | Nicolae Titulescu 36/A, Botanica (1 room + living, 65 m², €110,000, 15/17) | https://999.md/ro/105988976 | R-BLACKLIST Nicolae Titulescu (2026-11-23); was published as MAYBE in Telegram msg 568 on 23.11 before the rule | 2026-11-23 |
 | Sarmizegetusa 53, Botanica (2 rooms, 63 m², €89,900, white variant, 5/10) | https://999.md/ro/105995223 | R-BLACKLIST Sarmizegetusa (2026-11-23); was published as MAYBE in Telegram msg 568 on 23.11 before the rule | 2026-11-23 |
 | bd. Dacia 59 (Edera Home), Botanica | https://999.md/ro/105072311 | R-BLACKLIST-BUILDING bd. Dacia 59 (Edera Home); building blacklisted | 2026-11-22 |

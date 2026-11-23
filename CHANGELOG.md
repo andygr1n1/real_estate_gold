@@ -1,5 +1,44 @@
 # Changelog — filter rules
 
+## 2026-11-23 18:27 — Aeroport area boundary firmed
+
+**Aeroport blacklist boundary made firm.** Owner rule change 2026-11-23 18:27 Europe/Chisinau (confirmed by Andrew).
+
+### Aeroport area boundary firmed (R-BLACKLIST-AREA)
+
+**Old description** (2026-11-23 17:34): vague wording "eastern stretch of bd. Dacia towards the airport roughly from ~Dacia 44 / Valea Crucii onwards including Dacia 58, Dacia 62..."
+
+**New firm boundary** (2026-11-23 18:27):
+- **Aeroport = every bd. Dacia house number ≥44** (including 44–59, 60/x, 62, 69/x etc.)
+- **Plus Galata, Băcioii Noi, str. Aeroportului**
+- **Any listing labelled «zona Aeroport»**
+- **Anything within ~1.5 km of the airport**
+- **Unnumbered bd. Dacia listing**: pin at longitude ≥28.868 (east of Dacia 44, OSM 46.9775, 28.8684) → **FAIL**; west of it → **MAYBE** with map check
+- Unclear distance → MAYBE with map check
+
+### Rejected listings added (24 rows)
+
+Added 24 rejected listings to `listings/rejected.md` for Aeroport area and bd. Dacia 62:
+- bd. Dacia 62/G (Exfactor Grand Family) — 105474701 (was published msg 569 PASS)
+- bd. Dacia 62 (Grand Family) — 105464506
+- bd. Dacia 60/12, 60/5 (multiple), 60/1, 69/1 — Aeroport area
+- bd. Dacia 58 (DMZ Home Construct) — 103836871 (was published msgs 569-571 MAYBE)
+- bd. Dacia 44, 47/2, 49 (multiple), 49/6, 56 — Aeroport area, bd. Dacia ≥44
+- bd. Dacia (unnumbered, pins east of Dacia 44) — multiple
+- bd. Dacia 59 (Edera Home) — multiple (building + area blacklist)
+- str-la Gheorghe Cucereanu 11, Băcioii Noi — Aeroport area
+- bd. Dacia «în zona Aeroportului» — labelled Aeroport
+- șos. Muncești 782/1 — Aeroport area + Muncești street
+
+### Files updated
+- FILTERS.md: "Last updated" date (2026-11-23 18:27), R-BLACKLIST-AREA Aeroport description (firmed boundary: bd. Dacia ≥44, plus Galata/Băcioii Noi/Aeroportului/labelled Aeroport/~1.5 km; unnumbered Dacia longitude ≥28.868 = FAIL), Russian summary (Aeroport description updated with firm boundary)
+- listings/rejected.md: added 24 rows for Aeroport area and Dacia 62
+- listings/shortlist.md: checked, no Dacia 58/62 URLs found (no changes needed)
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant R-WHITE (≤€100k, new stock, floors 1–10, ≥50 m², restricted location), ≥55 m² (non-white), price/m² ≤€2,200, year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (non-white), blacklisted streets (12 streets), blacklisted areas (3 areas), blacklisted buildings (2 buildings), location rules — all unchanged.
+
 ## 2026-11-23 17:34 — Dacia 62 and Aeroport area blacklisted
 
 **Blacklist expanded: building and area.** Owner rule change 2026-11-23 17:34 Europe/Chisinau.
