@@ -1,5 +1,47 @@
 # Changelog — filter rules
 
+## 2026-11-23 09:50 (str. Sarmizegetusa blacklisted)
+
+**Street blacklist expanded.** Owner rule change 2026-11-23 09:50 Europe/Chisinau.
+
+### str. Sarmizegetusa (whole street) blacklisted
+- **R-BLACKLIST**: Added **str. Sarmizegetusa** (Chișinău, Botanica; all house numbers, apartments and houses; variants Сармизеджетуса/Сармизегетуса/Sarmisegetusa) to street blacklist.
+- **Any apartment or house on this street** = FAIL R-BLACKLIST immediately (all statuses including buffer).
+- **All house numbers** (53, 53A, 53D, 18/1, etc.) excluded without exception.
+- **No recovery**: blacklisted street, entire street excluded.
+
+### Blacklist structure updated
+- **R-BLACKLIST** street list now includes **11 streets** (was 10):
+  - Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii, Ceucari, Braniștii, Gagarin, Tudor Vladimirescu, Muncești, **Sarmizegetusa** (new)
+- **Areas (2)**: Malaia Malina, Bolșaia Malina (unchanged)
+- **Buildings (1)**: bd. Dacia 59 (Edera Home) (unchanged)
+
+### R-LOC Botanica description updated
+- **Botanica sector allowed-location text** now mentions Sarmizegetusa exclusion:
+- "Whole Botanica sector EXCEPT Malaia Malina and Bolșaia Malina (micro-districts and streets) **and str. Sarmizegetusa (whole street, all house numbers)**, which are blacklisted (R-BLACKLIST)"
+
+### Russian summary updated
+- Blacklist header date updated to **23.11.2026 09:50**
+- Streets count updated from **(10)** to **(11)**
+- Added **"ул. Сармизеджетуса / Sarmizegetusa / Сармизегетуса / Sarmisegetusa"** to street list (23.11.2026 09:50; Кишинёв Ботаника, все номера домов, квартиры и дома)
+
+### Telegram posting filter summary updated
+- Empty-results message now includes Sarmizegetusa in Botanica exclusions:
+- "Ботаника (без Малой/Большой Малины, без Сармизеджетусы)"
+
+### Rejected listing added
+- **Sarmizegetusa 53, Botanica** (2 rooms, 63 m², €89,900, white variant, 5/10) | https://999.md/ro/105995223 | R-BLACKLIST Sarmizegetusa (2026-11-23); was published as MAYBE in Telegram msg 568 on 23.11 before the rule | 2026-11-23
+
+### Files updated
+- FILTERS.md: R-BLACKLIST (added Sarmizegetusa to Streets section), R-LOC (updated Botanica description to mention Sarmizegetusa exclusion), Russian summary (updated blacklist date to 23.11.2026 09:50, streets count to 11, added Sarmizegetusa to list), §5 rejected listings (added Sarmizegetusa 53 row)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST / R-BLACKLIST-BUILDING (updated streets count to 11, added Sarmizegetusa), R-LOC (updated Botanica description), TELEGRAM POSTING (updated filter summary to include Sarmizegetusa in Botanica exclusions)
+- templates/listing-check.md: R-BLACKLIST checklist (updated streets count to 11, added Sarmizegetusa)
+- listings/rejected.md: added Sarmizegetusa 53 row
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant ≤€90k, area ≥55 m², price/m² ≤€2,200, year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (no upper limit), blacklisted areas (2 areas), blacklisted buildings (1 building), location rules — all unchanged.
+
 ## 2026-11-22 21:30 (bd. Dacia 59 building blacklisted)
 
 **Building-level blacklist added.** Owner rule change 2026-11-22 21:30 Europe/Chisinau.
