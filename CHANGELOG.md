@@ -1,5 +1,46 @@
 # Changelog — filter rules
 
+## 2026-11-23 17:34 — Dacia 62 and Aeroport area blacklisted
+
+**Blacklist expanded: building and area.** Owner rule change 2026-11-23 17:34 Europe/Chisinau.
+
+### bd. Dacia 62 (Grand Family) building blacklisted
+- **R-BLACKLIST-BUILDING**: Added **bd. Dacia 62** (Chișinău, Botanica; all blocks 62, 62/1, 62/A…62/G including Grand Family complex) to building blacklist.
+- **Any apartment in this building** = FAIL R-BLACKLIST-BUILDING immediately.
+- **All blocks with number 62** excluded without exception.
+- **No recovery**: blacklisted building, any apartment in this building excluded.
+- Other bd. Dacia numbers evaluated normally (but note: bd. Dacia 59 also blacklisted; bd. Dacia 58, 62 also in Aeroport area blacklist).
+
+### Aeroport area blacklisted
+- **R-BLACKLIST-AREA**: Added **Aeroport area** (район Аэропорт, Chișinău, Botanica; near Chișinău International Airport) to area blacklist.
+- **Includes**: str. Aeroportului, the eastern stretch of bd. Dacia towards the airport (roughly from ~Dacia 44 / Valea Crucii onwards, verify on map; includes Dacia 58, 62), any listing labelled Aeroport, any address within ~1.5 km of the airport.
+- **Any apartment or house in this area** = FAIL R-BLACKLIST-AREA immediately.
+- **Unclear distance** to airport or uncertain whether address is within Aeroport area → **MAYBE** with map check required.
+- **No recovery**: blacklisted area, entire area excluded.
+
+### Blacklist structure updated
+- **R-BLACKLIST** now includes three categories:
+  - **Streets (12)**: Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii, Ceucari, Braniștii, Gagarin, Tudor Vladimirescu, Muncești, Sarmizegetusa, Nicolae Titulescu (unchanged)
+  - **Areas (3)**: Malaia Malina, Bolșaia Malina, **Aeroport** (new)
+  - **Buildings (2)**: bd. Dacia 59 (Edera Home), **bd. Dacia 62 (Grand Family)** (new)
+
+### Russian summary updated
+- Blacklist header date updated to **23.11.2026 17:34**
+- **"Районы (2)"** changed to **"Районы (3)"**: added **Аэропорт / Aeroport** (23.11.2026 17:34; Кишинёв Ботаника, район Аэропорт около международного аэропорта Кишинёва; ул. Аэропортулуй / Aeroportului, восточный участок бд. Дачия в сторону аэропорта примерно от ~Дачия 44 / Valea Crucii включая Dacia 58, 62, любое объявление с меткой Aeroport, любой адрес в ~1,5 км от аэропорта; неясное расстояние = MAYBE с картой)
+- **"Дома (1)"** changed to **"Дома (2)"**: added **бд. Дачия 62 (Grand Family)** (23.11.2026 17:34; Кишинёв Ботаника, все блоки 62, 62/1, 62/A…62/G включая комплекс Grand Family, любая квартира в этом доме; все блоки с номером 62; другие номера бд. Дачия оцениваются нормально, но Дачия 59 также в чёрном списке, Дачия 58, 62 также в районе Аэропорт)
+
+### Rejected listing added
+- **bd. Dacia 62/G Grand Family, Botanica** | — | R-BLACKLIST-BUILDING bd. Dacia 62 (Grand Family); building blacklisted; posted 23.11 msg 569-571 | 2026-11-23
+
+### Files updated
+- FILTERS.md: "Last updated" date (2026-11-23 17:34), R-BLACKLIST (updated header to include R-BLACKLIST-AREA, added Aeroport to Areas section, added bd. Dacia 62 to Buildings section), Russian summary (updated date to 23.11.2026 17:34, areas count to 3, buildings count to 2, added Aeroport and Dacia 62 descriptions), §5 rejected listings (added bd. Dacia 62/G Grand Family row)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST / R-BLACKLIST-BUILDING / R-BLACKLIST-AREA (updated header, areas count to 3, buildings count to 2, added Aeroport and Dacia 62)
+- listings/rejected.md: added bd. Dacia 62/G Grand Family row
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant R-WHITE (≤€100k, new stock, floors 1–10, ≥50 m², restricted location), ≥55 m² (non-white), price/m² ≤€2,200, year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (non-white), blacklisted streets (12 streets), location rules — all unchanged.
+
 ## 2026-11-23 17:04 — white variant rules replaced: R-WHITE
 
 **Major white variant rule change.** Owner rule change 2026-11-23 17:04 Europe/Chisinau.
