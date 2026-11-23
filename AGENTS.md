@@ -49,6 +49,7 @@ For each MAYBE: include all material unknowns/conflicts, required verification, 
 **For MAYBE:** add specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification, material unknowns.
 
 - **R-ALBA-IULIA**: any listing on str. Alba Iulia (Chișinău) is MAYBE at most, never PASS; always include the note «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». See FILTERS.md R-LOC.
+- **R-WHITE** (added 2026-11-23): white variant (variantă albă / белый вариант) listings have additional constraints beyond standard filters: asking ≤€100k, new stock only (commissioned or commissioning by ~31.01.2027), floors 1–10 inclusive (floor 1 allowed for white only), area ≥50 m² (instead of ≥55 m²), location restricted to Centru/near-centre, Komsomol lake/Valea Morilor, near Botanical Garden (~≤1.5 km), bd. Moscova, str. Kiev (elsewhere FAIL, unclear distance MAYBE with map check). Rank white variant closer to centre first. Non-white listings unchanged. See FILTERS.md R-WHITE.
 
 ## Empty results handling (added 2026-11-20)
 
