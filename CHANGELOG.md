@@ -1,5 +1,70 @@
 # Changelog — filter rules
 
+## 2026-11-23 17:04 — white variant rules replaced: R-WHITE
+
+**Major white variant rule change.** Owner rule change 2026-11-23 17:04 Europe/Chisinau.
+
+### Old white variant cap (≤€90k) REPLACED with comprehensive R-WHITE
+
+The old simple price cap for white variant (variantă albă) listings has been replaced with a comprehensive set of rules under **R-WHITE**. White variant now has multiple mandatory constraints beyond standard filters.
+
+### New R-WHITE rules (applies ONLY to listings explicitly stated as white variant / variantă albă / белый вариант)
+
+- **R-WHITE-PRICE** (2026-11-23): Asking price **≤€100,000 inclusive** (up from €90k). General €80k minimum unchanged. White variant asking >€100k is **FAIL**, even though the general budget cap is €159,000. Uses asking price (not hypothetical discounted offers).
+
+- **R-WHITE-NEW** (2026-11-23): **New stock only**. Building must be **commissioned OR have evidence of commissioning within approximately 2 months** (by ~31 January 2027). Known later commissioning date → **FAIL**. Uncommissioned with unknown date → **MAYBE** with commissioning verification required. Old housing stock (pre-2000) remains excluded for all listings including white variant.
+
+- **R-WHITE-FLOOR** (2026-11-23): Floors **1–10 inclusive**. **Floor 1 (ground floor) is ALLOWED for white variant only** (exception to general R-FLOOR ≥2 rule). Floor >10 → **FAIL**. Soclu/demisol/pe sol (semi-basement) → **FAIL** (R-EXCL-BASEMENT unchanged).
+
+- **R-WHITE-AREA** (2026-11-23): Total area **≥50 m²** (instead of general ≥55 m² rule for non-white listings). Known <50 m² → **FAIL**. Unknown area → **MAYBE** with area verification required.
+
+- **R-WHITE-LOC** (2026-11-23): **Location restrictions for white variant**. ONLY the following locations are acceptable for white variant:
+  - **Centru / near-centre**
+  - **Komsomol lake / Valea Morilor area** (R-LAKE ~0–20 min walk)
+  - **Near Botanical Garden** (Grădina Botanică, approximately ≤1.5 km)
+  - **bd. Moscova**
+  - **str. Kiev**
+  
+  White variant elsewhere → **FAIL**. Unclear distance to allowed zones → **MAYBE** with map check required. Rank white variant listings closer to centre first.
+
+### Other rules still apply to white variant
+
+- R-BLACKLIST (all streets/areas/buildings): white variant on blacklisted street/area/building = FAIL
+- R-PRICE-M2 (≤€2,200/m²): white variant must meet price per m² cap
+- No grey variant: grey variant remains excluded
+- R-YEAR (≥2000 AND commissioned): old housing stock excluded for white variant (R-WHITE-NEW requires new stock)
+- All other standard filters apply unless explicitly superseded by R-WHITE
+
+### Unknown finish rule updated
+
+- **Unknown finish rule** (added 2026-11-17, updated 2026-11-23): If finishing is not explicitly stated, finish type is UNKNOWN → verdict **MAYBE** with verification requirement «уточнить отделку: белый вариант >€100k или вне зоны = FAIL», not FAIL. Only an explicitly stated white variant violating R-WHITE is FAIL.
+
+### Non-white listings unchanged
+
+- **Non-white listings** (ready/finished apartments) are unchanged: €80k–159k, ≥55 m², floor ≥2 (no floor 1), all R-LOC locations allowed, no R-WHITE constraints.
+
+### For white variant: add renovation estimate
+
+- For white variant, add an estimated renovation budget (label it as an estimate).
+
+### Historical note
+
+- White variant cap was **€110,000** from 2026-11-07 to 2026-11-08 18:32
+- Superseded by **€90,000 cap** 2026-11-08 18:32
+- Superseded by **comprehensive R-WHITE rules** (€100k cap, new stock only, floors 1–10, area ≥50 m², location restrictions) 2026-11-23 17:04
+
+### Files updated
+
+- FILTERS.md: "Last updated" date (2026-11-23 17:04), R-BUDGET (mention R-WHITE), replaced R-EXCL-UNFINISHED with comprehensive R-WHITE section (R-WHITE-PRICE, R-WHITE-NEW, R-WHITE-FLOOR, R-WHITE-AREA, R-WHITE-LOC), Russian summary (updated white variant description with all R-WHITE constraints)
+- AGENTS.md: added R-WHITE bullet after R-ALBA-IULIA
+- .cursor/rules/real-estate-filters.mdc: R-BUDGET line (updated white variant to R-WHITE summary), R-EXCL-* line (updated white variant reference)
+- templates/listing-check.md: R-BUDGET line (updated to reference R-WHITE), added R-WHITE checklist item
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+
+Max price €159k (non-white), ≥55 m² (non-white), price/m² ≤€2,200, year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (non-white), blacklisted streets (12 streets), blacklisted areas (2 areas), blacklisted buildings (1 building), location rules — all unchanged.
+
 ## 2026-11-23 09:53 (str. Nicolae Titulescu blacklisted)
 
 **Street blacklist expanded.** Owner rule change 2026-11-23 09:53 Europe/Chisinau.
