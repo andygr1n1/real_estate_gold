@@ -4,6 +4,7 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 
 | Listing / address | Link | Reason (rule) | Date |
 |---|---|---|---|
+| bd. Dacia 62/G Grand Family, Botanica | | R-BLACKLIST-BUILDING bd. Dacia 62 (Grand Family); building blacklisted; posted 23.11 msg 569-571 | 2026-11-23 |
 | Nicolae Titulescu 36/A, Botanica (1 room + living, 65 m², €110,000, 15/17) | https://999.md/ro/105988976 | R-BLACKLIST Nicolae Titulescu (2026-11-23); was published as MAYBE in Telegram msg 568 on 23.11 before the rule | 2026-11-23 |
 | Sarmizegetusa 53, Botanica (2 rooms, 63 m², €89,900, white variant, 5/10) | https://999.md/ro/105995223 | R-BLACKLIST Sarmizegetusa (2026-11-23); was published as MAYBE in Telegram msg 568 on 23.11 before the rule | 2026-11-23 |
 | bd. Dacia 59 (Edera Home), Botanica | https://999.md/ro/105072311 | R-BLACKLIST-BUILDING bd. Dacia 59 (Edera Home); building blacklisted | 2026-11-22 |
