@@ -4,6 +4,7 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 
 | Listing / address | Link | Reason (rule) | Date |
 |---|---|---|---|
+| str. Prigoreni 5/1, Botanica (3 rooms, 73 m², 5/6, €116.5k) | https://999.md/ro/106008515 | R-BLACKLIST Prigoreni (2026-11-25 13:03); was published 25.11 in Telegram msg 579 (PASS) before the rule | 2026-11-25 |
 | bd. Dacia 62/G Grand Family, Botanica | | R-BLACKLIST-BUILDING bd. Dacia 62 (Grand Family); building blacklisted; posted 23.11 msg 569-571 | 2026-11-23 |
 | bd. Dacia 62/G (Exfactor Grand Family), Chișinău Botanica (1+living, 55 m², 8/10, €119.9k) | https://999.md/ro/105474701 | R-BLACKLIST-BUILDING bd. Dacia 62 + R-BLACKLIST-AREA Aeroport (2026-11-23 17:34); was published 23.11 in Telegram msg 569 (PASS) before the rule | 2026-11-23 |
 | bd. Dacia 62 (Grand Family), Chișinău Botanica (2 rooms, 76 m², 4/8, €125.25k) | https://999.md/ro/105464506 | R-BLACKLIST-BUILDING bd. Dacia 62 + R-BLACKLIST-AREA Aeroport (2026-11-23 17:34) | 2026-11-23 |

@@ -1,5 +1,43 @@
 # Changelog — filter rules
 
+## 2026-11-25 13:03 — str. Prigoreni blacklisted
+
+**Street blacklist expanded.** Owner rule change 2026-11-25 13:03 Europe/Chisinau (from Andrew).
+
+### str. Prigoreni (whole street) blacklisted
+- **R-BLACKLIST**: Added **str. Prigoreni** (Chișinău, Botanica; all house numbers including 5/1, apartments and houses; variants Пригорень/Пригорены) to street blacklist.
+- **Any apartment or house on this street** = FAIL R-BLACKLIST immediately (all statuses including buffer).
+- **All house numbers** (including 5/1) excluded without exception.
+- **No recovery**: blacklisted street, entire street excluded.
+
+### Blacklist structure updated
+- **R-BLACKLIST** street list now includes **13 streets** (was 12):
+  - Drumul Viilor, Valea Dicescu, Calea Ieșilor, Grădinilor, Pajurii, Ceucari, Braniștii, Gagarin, Tudor Vladimirescu, Muncești, Sarmizegetusa, Nicolae Titulescu, **Prigoreni** (new)
+- **Areas (3)**: Malaia Malina, Bolșaia Malina, Aeroport (unchanged)
+- **Buildings (2)**: bd. Dacia 59 (Edera Home), bd. Dacia 62 (Grand Family) (unchanged)
+
+### R-LOC Botanica description updated
+- **Botanica sector allowed-location text** now mentions Prigoreni exclusion:
+- "Whole Botanica sector EXCEPT Malaia Malina and Bolșaia Malina (micro-districts and streets), str. Sarmizegetusa (whole street, all house numbers), str. Nicolae Titulescu (whole street, all house numbers), **and str. Prigoreni (whole street, all house numbers)**"
+
+### Russian summary updated
+- Blacklist header date updated to **25.11.2026 13:03**
+- Streets count updated from **(12)** to **(13)**
+- Added **"ул. Пригорень / Prigoreni / Пригорены"** to street list (25.11.2026 13:03; Кишинёв Ботаника, все номера домов включая 5/1, квартиры и дома)
+
+### Rejected listing added
+- **str. Prigoreni 5/1, Botanica** (3 rooms, 73 m², 5/6, €116.5k) | https://999.md/ro/106008515 | R-BLACKLIST Prigoreni (2026-11-25 13:03); was published 25.11 in Telegram msg 579 (PASS) before the rule | 2026-11-25
+
+### Files updated
+- FILTERS.md: "Last updated" date (2026-11-25 13:03), R-BLACKLIST (updated header date to 2026-11-25, added Prigoreni to Streets section), R-LOC (updated Botanica description to mention Prigoreni exclusion), Russian summary (updated date to 25.11.2026 13:03, streets count to 13, added Prigoreni to list), §5 rejected listings (added Prigoreni 5/1 row)
+- .cursor/rules/real-estate-filters.mdc: R-BLACKLIST / R-BLACKLIST-BUILDING / R-BLACKLIST-AREA (updated date to 2026-11-25, streets count to 13, added Prigoreni)
+- templates/listing-check.md: R-BLACKLIST checklist (updated streets count to 13, added Prigoreni; also updated areas to 3 and buildings to 2)
+- listings/rejected.md: added Prigoreni 5/1 row
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, white variant R-WHITE (≤€100k, new stock, floors 1–10, ≥50 m², restricted location), ≥55 m² (non-white), price/m² ≤€2,200, year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (non-white), blacklisted areas (3 areas), blacklisted buildings (2 buildings), location rules — all unchanged.
+
 ## 2026-11-23 18:27 — Aeroport area boundary firmed
 
 **Aeroport blacklist boundary made firm.** Owner rule change 2026-11-23 18:27 Europe/Chisinau (confirmed by Andrew).
