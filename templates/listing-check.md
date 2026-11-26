@@ -3,11 +3,11 @@
 Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown · Building type/series/year: · Condition:
 
 ## Hard filters (see FILTERS.md)
-- [ ] R-BUDGET — €80k–159k (above €159k or below €80k = excluded); white variant has R-WHITE constraints (≤€100k, new stock, floors 1–10, ≥50 m², restricted location); unknown finish = MAYBE
+- [ ] R-BUDGET — €80k–159k (above €159k or below €80k = excluded); white variant has R-WHITE constraints (≤€138k, new stock, floors 1–10, ≥50 m², restricted location incl. Dendrarium / Ion Creangă near the Dendrarium); unknown finish = MAYBE
 - [ ] R-BANDS — single band: €80k–159k inclusive
 - [ ] R-TYPE — any number of rooms; rooms: ___
 - [ ] R-AREA — ≥55 m² total area (known <55 m² = FAIL; unknown = MAYBE with verification)
-- [ ] R-PRICE-M2 — ≤€2,100/m²
+- [ ] R-PRICE-M2 — ≤€2,286/m² (price ÷ total area, rounded to the nearest whole euro; all listings, white and non-white)
 - [ ] R-LAYOUT — own kitchen, bathroom, hallway, no walk-through rooms
 - [ ] R-YEAR / R-EXCL-OLD-STOCK — OLD HOUSING STOCK EXCLUDED: ONLY buildings ≥2000 AND commissioned eligible; any pre-2000 building = FAIL; any Soviet/typical series = FAIL; unverified year with no old-stock indication = MAYBE (must verify ≥2000); pre-2000 exception REVOKED 2026-11-22
 - [ ] R-FLOOR — apartments floor ≥2 (no upper limit); single-storey houses exception
@@ -16,9 +16,9 @@ Link: · Price: · m²: · €/m²: · Floor/total: · Lift: yes / no / unknown 
 - [ ] R-TOPFLOOR — top floor? (flag)
 - [ ] R-MANSARD / R-HOUSE — mansards allowed (flag roof/legal/cadastral); single-storey houses allowed (flag legal/cadastral/land)
 - [ ] R-EXCL-HOSTEL · R-EXCL-BASEMENT · R-EXCL-UNFINISHED · R-EXCL-NEWBUILD · R-EXCL-PROMO
-- [ ] R-WHITE (white variant only) — asking ≤€100k; new stock only (commissioned or commissioning by ~31.01.2027, known later = FAIL, uncommissioned unknown = MAYBE); floors 1–10 (floor 1 allowed for white only, >10 = FAIL); area ≥50 m² (instead of ≥55 m²); location: ONLY Centru/near-centre, Komsomol lake/Valea Morilor, near Botanical Garden (~≤1.5 km), bd. Moscova, str. Kiev (elsewhere = FAIL, unclear distance = MAYBE with map check); rank closer to centre first
+- [ ] R-WHITE (white variant only) — asking ≤€138k; new stock only (commissioned or commissioning by ~31.01.2027, known later = FAIL, uncommissioned unknown = MAYBE); floors 1–10 (floor 1 allowed for white only, >10 = FAIL); area ≥50 m² (instead of ≥55 m²); location: ONLY Centru/near-centre, Komsomol lake/Valea Morilor, Dendrarium area (str. Ion Creangă near the Dendrarium, incl. Ion Creangă 5, 5/2, 5/3), near Botanical Garden (~≤1.5 km), bd. Moscova, str. Kiev (elsewhere = FAIL, unclear distance = MAYBE with map check); rank closer to centre first
 - [ ] R-EXCL-SUBURB — no suburbs (Durlești, Codru, Stăuceni, etc.; no exceptions)
-- [ ] R-LOC — ONLY Centru (whole), whole Rîșcani sector except Poșta Veche, Buiucani near Komsomol lake/Valea Morilor (~0–20 min walk), and whole str. Alba Iulia in Chișinău (R-ALBA-IULIA, 2026-11-21: max verdict MAYBE with note «Алба Юлия — вне основной зоны»); everything else excluded
+- [ ] R-LOC — ONLY Centru (whole), whole Rîșcani sector except Poșta Veche, Buiucani near Komsomol lake/Valea Morilor (~0–20 min walk, explicitly including str. Ion Creangă near the Dendrarium and Ion Creangă 5, 5/2, 5/3), and whole str. Alba Iulia in Chișinău (R-ALBA-IULIA, 2026-11-21: max verdict MAYBE with note «Алба Юлия — вне основной зоны»); everything else excluded
 - [ ] R-MICRO — nearest main road / park / university: ___ (≤5–10 min; R-LAKE 20-min priority overrides)
 - [ ] R-BLACKLIST / R-BLACKLIST-BUILDING — not in blacklisted streets (13): Drumul Viilor; Valea Dicescu; Calea Ieșilor; Grădinilor; Pajurii (Chișinău Rîșcani; variants Pajurii/Păjurii/Пажурий); Ceucari (Chișinău Rîșcani; variants Ceucari/Чеукарь); Braniștii (Chișinău Rîșcani; variants Braniștii/Branistii/Брэништий/Браништий); Gagarin (Chișinău Centru; variants Iuri Gagarin/Gagarin/Гагарина); Tudor Vladimirescu (Chișinău Rîșcani; variants Тудор Владимиреску); Muncești (Chișinău; variants Мунчешть/Muncesti/Munceşti); Sarmizegetusa (Chișinău Botanica; variants Сармизеджетуса/Сармизегетуса/Sarmisegetusa); Nicolae Titulescu (Chișinău Botanica; variants Николае Титулеску/N. Titulescu); Prigoreni (Chișinău Botanica; variants Пригорень/Пригорены); areas (3): Malaia Malina, Bolșaia Malina, Aeroport; buildings (2): bd. Dacia 59 (Edera Home), bd. Dacia 62 (Grand Family)
 - [ ] R-BLACKLIST-CET1 — **verify locality**: str. Nicolae Dimo in Chișinău Rîșcani EXCLUDED (CET-1 zone); str. Tudor Vladimirescu in Chișinău Rîșcani EXCLUDED (R-BLACKLIST 2026-11-21); same streets in Durlești ALSO EXCLUDED (R-EXCL-SUBURB); unclear locality = MAYBE (do NOT assume Chișinău); not within ~800 m of CET-1 (≈47.0331, 28.8635)

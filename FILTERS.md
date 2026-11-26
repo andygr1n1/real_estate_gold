@@ -1,6 +1,6 @@
 # FILTERS.md — Chișinău apartment search rules (single source of truth)
 
-Owner: Andrew Grini · Last updated: 2026-11-25 13:03
+Owner: Andrew Grini · Last updated: 2026-11-26 20:47
 
 Every listing must be checked against **every** rule below. Verdicts cite rule IDs.
 Verdict scale:
@@ -12,7 +12,7 @@ Verdict scale:
 
 ## 1. Budget & type
 
-- **R-BUDGET** (updated 2026-11-23) — Asking price **€80,000–159,000 inclusive**. Anything above €159k or below €80k is excluded immediately. **White variant (variantă albă)** listings have additional constraints under R-WHITE (price cap €100k, new stock only, floors 1–10, area ≥50 m², location restrictions).
+- **R-BUDGET** (updated 2026-11-26) — Asking price **€80,000–159,000 inclusive**. Anything above €159k or below €80k is excluded immediately. **White variant (variantă albă)** listings have additional constraints under R-WHITE (price cap €138k, new stock only, floors 1–10, area ≥50 m², location restrictions).
 - **R-BANDS** (updated 2026-11-21) — Every report uses **ONE single price band**: **€80,000–159,000 inclusive**.
   
   **Quotas per batch** (updated 2026-11-18):
@@ -25,7 +25,7 @@ Verdict scale:
 - **R-TYPE** (updated 2026-11-01) — Any number of rooms in all price blocks (studio, 1, 2, 3+ rooms). Always state the room count.
 - **R-LAYOUT** — Logical layout: own kitchen, own bathroom, hallway, no walk-through rooms.
 - **R-AREA** (updated 2026-11-20) — Total area **≥ 55 m²** for every listing, any room count. Anything below 55 m² is **FAIL** immediately. Unknown area → verdict **MAYBE** with area verification required. (Note: was ≥40 m² until 2026-11-08 18:32, then ≥45 m² until 2026-11-20 00:46; superseded by ≥55 m².)
-- **R-PRICE-M2** (updated 2026-11-20) — Asking price per m² **≤ €2,200/m²** (price ÷ total area). Anything above €2,200/m² is excluded immediately. (Note: was ≤€1,900/m² until 2026-11-18, then ≤€2,100/m² until 2026-11-20; superseded by ≤€2,200/m².)
+- **R-PRICE-M2** (updated 2026-11-26) — Asking price per m² **≤ €2,286/m²** for **all listings** (white and non-white). Compute as asking price ÷ total area, **rounded to the nearest whole euro**. Anything above €2,286/m² after that rounding is excluded immediately. (Note: was ≤€1,900/m² until 2026-11-18, then ≤€2,100/m² until 2026-11-20, then ≤€2,200/m² until 2026-11-26 20:47; superseded by ≤€2,286/m².)
 
 ## 2. Floors & elevator
 
@@ -40,9 +40,9 @@ Verdict scale:
 
 - **R-EXCL-HOSTEL** — Hostel units (cămin / gostinka / shared kitchen or bath).
 - **R-EXCL-BASEMENT** — Soclu, demisol, semi-basement, "pe sol".
-- **R-EXCL-UNFINISHED / R-WHITE** (updated 2026-11-23) — **Grey variant** (no finishing at all) is excluded. **White variant (variantă albă / белый вариант)** is ALLOWED with the following mandatory constraints (R-WHITE):
+- **R-EXCL-UNFINISHED / R-WHITE** (updated 2026-11-26) — **Grey variant** (no finishing at all) is excluded. **White variant (variantă albă / белый вариант)** is ALLOWED with the following mandatory constraints (R-WHITE):
   
-  - **R-WHITE-PRICE** (2026-11-23): Asking price **≤€100,000 inclusive** (general €80k minimum unchanged). White variant asking >€100k is **FAIL**, even though the general budget cap is €159,000. Uses asking price (not hypothetical discounted offers).
+  - **R-WHITE-PRICE** (updated 2026-11-26): Asking price **≤€138,000 inclusive** (general €80k minimum unchanged). White variant asking >€138k is **FAIL**, even though the general budget cap is €159,000. Uses asking price (not hypothetical discounted offers).
   
   - **R-WHITE-NEW** (2026-11-23): **New stock only**. Building must be commissioned OR have evidence of commissioning within approximately 2 months (by ~31 January 2027). Known later commissioning date → **FAIL**. Uncommissioned with unknown date → **MAYBE** with commissioning verification required.
   
@@ -50,24 +50,27 @@ Verdict scale:
   
   - **R-WHITE-AREA** (2026-11-23): Total area **≥50 m²** (instead of general ≥55 m² rule). Known <50 m² → **FAIL**. Unknown area → **MAYBE** with area verification required.
   
-  - **R-WHITE-LOC** (2026-11-23): **Location restrictions for white variant**. ONLY the following locations are acceptable for white variant:
+  - **R-WHITE-LOC** (updated 2026-11-26): **Location restrictions for white variant**. ONLY the following locations are acceptable for white variant:
     - **Centru / near-centre**
     - **Komsomol lake / Valea Morilor area** (R-LAKE ~0–20 min walk)
+    - **Dendrarium area (str. Ion Creangă near the Dendrarium)** (added 2026-11-26 20:47), including **Ion Creangă 5, 5/2, and 5/3** (Dendrarium Park Residence; developers Astercon-Grup SRL and Dansicons SRL; handed over 2017; 13 floors) and the Ion Creangă stretch opposite/near the Dendrarium. This is also inside the R-LAKE / R-LOC allowed Buiucani lake area.
     - **Near Botanical Garden** (Grădina Botanică, approximately ≤1.5 km)
     - **bd. Moscova**
     - **str. Kiev**
     
     White variant elsewhere → **FAIL**. Unclear distance to allowed zones → **MAYBE** with map check required. Rank white variant listings closer to centre first.
+    
+    **Acceptance example (2026-11-26 20:47):** [https://999.md/ro/105823931](https://999.md/ro/105823931) — Ion Creangă 5/2, Buiucani (Dendrarium Park Residence), 2 rooms, 59 m², floor 10/13, white variant, €134,900, 2 bathrooms, built 2017 (commissioned). €/m² = 134,900 ÷ 59 = €2,286.44 → **€2,286/m²** after rounding to the nearest euro. This listing must pass R-LOC / R-LAKE, R-WHITE-LOC, R-WHITE-PRICE (≤€138k), R-WHITE-FLOOR (1–10), R-WHITE-AREA (≥50 m²), R-PRICE-M2 (≤€2,286/m²), and R-YEAR. Caveats (do not by themselves make it FAIL): 2017 court attachment on Dansicons property, outcome unknown; asking above earlier comps in the complex; duplicate Romanescu P22957.
   
-  - **Other rules still apply**: R-BLACKLIST (all streets/areas/buildings), R-PRICE-M2 (≤€2,200/m²), no grey variant, R-YEAR (≥2000 AND commissioned, old housing stock excluded), etc.
+  - **Other rules still apply**: R-BLACKLIST (all streets/areas/buildings), R-PRICE-M2 (≤€2,286/m²), no grey variant, R-YEAR (≥2000 AND commissioned, old housing stock excluded), etc.
   
-  - **Unknown finish rule** (added 2026-11-17, updated 2026-11-23): If finishing is not explicitly stated, finish type is UNKNOWN → verdict **MAYBE** with verification requirement «уточнить отделку: белый вариант >€100k или вне зоны = FAIL», not FAIL. Only an explicitly stated white variant violating R-WHITE is FAIL.
+  - **Unknown finish rule** (added 2026-11-17, updated 2026-11-26): If finishing is not explicitly stated, finish type is UNKNOWN → verdict **MAYBE** with verification requirement «уточнить отделку: белый вариант >€138k или вне зоны = FAIL», not FAIL. Only an explicitly stated white variant violating R-WHITE is FAIL.
   
   - **Non-white listings** (ready/finished apartments) are unchanged: €80k–159k, ≥55 m², floor ≥2 (no floor 1), all R-LOC locations allowed, etc.
   
   - For white variant, add an estimated renovation budget (label it as an estimate).
   
-  - **Historical note**: White variant cap was €110,000 from 2026-11-07 to 2026-11-08 18:32; superseded by €90,000 cap 2026-11-08 18:32; superseded by comprehensive R-WHITE rules (€100k cap, new stock only, floors 1–10, area ≥50 m², location restrictions) 2026-11-23 17:04.
+  - **Historical note**: White variant cap was €110,000 from 2026-11-07 to 2026-11-08 18:32; superseded by €90,000 cap 2026-11-08 18:32; superseded by comprehensive R-WHITE rules (€100k cap, new stock only, floors 1–10, area ≥50 m², location restrictions) 2026-11-23 17:04; superseded by €138,000 white cap 2026-11-26 20:47.
 - **R-EXCL-NEWBUILD** — New builds not yet commissioned.
 - **R-EXCL-SUBURB** (updated 2026-11-08) — Suburbs (Durlești, Codru, Stăuceni, Ialoveni, Sîngera, etc.) are excluded. **No exceptions.** (Note: Durlești was temporarily allowed 2026-11-07 to 2026-11-08; revoked 2026-11-08 18:28.)
 - **R-EXCL-PROMO** — Promoted/boosted ads on 999.md are ignored (not counted in results).
@@ -84,10 +87,10 @@ Verdict scale:
 
 ## 4. Location
 
-- **R-LOC** (updated 2026-11-21) — **ONLY** the following locations are acceptable:
+- **R-LOC** (updated 2026-11-26) — **ONLY** the following locations are acceptable:
   - **Centru** (whole sector)
   - **Rîșcani / Рышкановка (whole sector)** EXCEPT **Poșta Veche**, which remains excluded
-  - **Buiucani area around Komsomol lake / Valea Morilor** — approximately 0–20 minute actual walking route, including adjacent parts of Buiucani (R-LAKE)
+  - **Buiucani area around Komsomol lake / Valea Morilor** — approximately 0–20 minute actual walking route, including adjacent parts of Buiucani (R-LAKE). **Explicitly allowed (2026-11-26 20:47):** str. Ion Creangă in Buiucani near the Dendrarium / Komsomol lake (Valea Morilor), including the Ion Creangă stretch opposite/near the Dendrarium and the buildings **Ion Creangă 5, 5/2, and 5/3** (Dendrarium Park Residence; developers Astercon-Grup SRL and Dansicons SRL; handed over 2017; 13 floors). Other stretches of Ion Creangă that are outside the ~0–20 min lake / Dendrarium area are not automatically allowed.
   - **Whole Botanica sector** (added 2026-11-21 23:06) EXCEPT **Malaia Malina and Bolșaia Malina** (micro-districts and streets), **str. Sarmizegetusa** (whole street, all house numbers), **str. Nicolae Titulescu** (whole street, all house numbers), and **str. Prigoreni** (whole street, all house numbers), which are blacklisted (R-BLACKLIST). All other Botanica locations evaluated by standard filters; PASS possible.
   - **Whole str. Alba Iulia, Chișinău** (added 2026-11-21 20:21) — every building on str. Alba Iulia in Chișinău (Buiucani/Sculeanca included) is location-OK regardless of distance from the lake (R-ALBA-IULIA). **Alba Iulia listings are ALWAYS MAYBE at best, never PASS**, and are published with the literal note «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Other R-* rules still apply (a confirmed violation is still FAIL). Alba Iulia streets in suburbs/other localities remain excluded (R-EXCL-SUBURB).
   
@@ -101,7 +104,7 @@ Verdict scale:
   Unclear micro-district (e.g. only 'Rîșcani' without street/map) → verdict **MAYBE** with map check until resolved.
   
   **Historical note:** Telecentru, other Buiucani, and Ciocana near Port Mall were acceptable until 2026-11-18; whole Rîșcani sector was acceptable until 2026-11-19, then restricted to Rîșcanovca neighbourhood only (2026-11-19), then expanded to whole Rîșcani sector except Poșta Veche (2026-11-20).
-- **R-LAKE** (added 2026-11-07) — Buiucani within ≈0–20 minute walk of Komsomol lake / Valea Morilor has **priority** status. Walking time is measured by actual routes, not straight-line distance. This explicit 20-minute lake priority overrides the generic 5–10 minute R-MICRO rule for these areas.
+- **R-LAKE** (added 2026-11-07, updated 2026-11-26) — Buiucani within ≈0–20 minute walk of Komsomol lake / Valea Morilor has **priority** status. Walking time is measured by actual routes, not straight-line distance. This explicit 20-minute lake priority overrides the generic 5–10 minute R-MICRO rule for these areas. **Explicitly included (2026-11-26 20:47):** str. Ion Creangă in Buiucani near the Dendrarium / Komsomol lake, including Ion Creangă 5, 5/2, 5/3 (Dendrarium Park Residence) and the stretch opposite/near the Dendrarium.
 - **R-EXCL-BOTANICA** (superseded 2026-11-21 23:06) — **Botanica sector is now ALLOWED** (added to R-LOC 2026-11-21 23:06), except Malaia Malina and Bolșaia Malina micro-districts/streets (blacklisted R-BLACKLIST). All other Botanica locations evaluated by standard filters; PASS possible. Historical note: whole Botanica was excluded 2026-11-02 to 2026-11-21 23:06.
   - **Poșta Veche** excluded (part of Rîșcani sector but specifically excluded in R-LOC).
   - **Ciocana** excluded entirely as of 2026-11-18.
@@ -176,6 +179,7 @@ MAYBE candidates are now published with specific reasons. See FILTERS.md §11 fo
 
 | Listing | Link | Status & Required Verification |
 |---|---|---|
+| **Ion Creangă 5/2, Buiucani (Dendrarium Park Residence)** | https://999.md/ro/105823931 | **MAYBE** (added 2026-11-26 20:47, owner acceptance case). 2 rooms, 59 m², floor 10/13, white variant, €134,900, €2,286/m² (134,900 ÷ 59, rounded to the nearest euro), 2 bathrooms, built 2017 (commissioned). Hard filters now pass (R-WHITE-PRICE ≤€138k, R-WHITE-FLOOR 1–10, R-WHITE-AREA ≥50, R-PRICE-M2 ≤€2,286, R-LOC/R-LAKE/R-WHITE-LOC). **Caveats / required checks:** 2017 court attachment on Dansicons property, outcome unknown (verify cadastral encumbrance); asking above earlier comps in the complex; duplicate Romanescu P22957 (do not double-post). |
 | Cornului 9/3, Buiucani (Gonvaro-Con) | https://999.md/ro/105823314 | **NO LONGER ELIGIBLE** (2026-11-22 20:52): Old housing stock rule change. Was MAYBE (2026-11-07, updated 2026-11-08): 2+living, cadastral 93 m², 6/6, €135k (€1,452/m²) or €128k scenario (€1,376/m²). Construction year UNVERIFIED; with pre-2000 exception revoked 2026-11-22 20:52, any unverified year requires strict verification ≥2000 AND commissioned, no old-stock series allowed. Mansard status also UNVERIFIED. No longer considered without year verification. |
 
 ## 6. Benchmark
@@ -282,7 +286,7 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 **Message must include:**
 - Statement that no new results were found
-- One-line filter summary: €80–159k, ≥55 m², ≤€2200/m², этаж от 2-го, Центр, Рышкановка (без Старой Почты), Ботаника (без Малой/Большой Малины), озеро Комсомольское + вся ул. Алба Юлия (только MAYBE)
+- One-line filter summary: €80–159k, ≥55 m², ≤€2286/m², этаж от 2-го, Центр, Рышкановка (без Старой Почты), Ботаника (без Малой/Большой Малины), озеро Комсомольское / Дендрарий (ул. Ion Creangă у Дендрария) + вся ул. Алба Юлия (только MAYBE); белый вариант ≤€138k
 - One-line coverage summary: sources and pages scanned (honest if partial)
 
 **Important notes:**
@@ -296,18 +300,18 @@ When the daily morning (~09:00) search run completes and finds **NO fresh eligib
 
 ## Кратко по-русски (жёсткие правила)
 
-- **Цена €80–159k** (с 21.11.2026 20:21; было €80–120k); всё дороже €159k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă / белый вариант) — R-WHITE** (с 23.11.2026 17:04): не дороже €100k (дороже €100k — исключаем, даже если меньше €159k); ТОЛЬКО новый фонд, сдан или сдача в течение ~2 месяцев (к ~31.01.2027), известная поздняя дата = FAIL, несданный неизвестная дата = MAYBE; этажи 1–10 включительно (1-й этаж разрешён только для белого, >10 = FAIL); площадь от 50 м² (вместо 55 м²); ТОЛЬКО Центр/близко к центру, озеро Комсомольское/Валя Морилор, близко к Ботаническому саду (~≤1,5 км), бд. Москова, ул. Киев; вне этих зон = FAIL, неясное расстояние = MAYBE с картой; ранжировать ближе к центру первыми. Чёрный список, ≤€2200/м², не серый, не старый фонд и т.д. применяются. **Неизвестная отделка** (не указана явно) → MAYBE с проверкой «уточнить отделку: белый вариант >€100k или вне зоны = FAIL», не FAIL (с 17.11.2026, обновлено 23.11.2026). **Не-белые объявления** (готовые) без изменений: €80–159k, ≥55 м², этаж ≥2 (не 1-й), все R-LOC зоны. Было: белый вариант ≤€90k (отменено 23.11.2026 17:04).
+- **Цена €80–159k** (с 21.11.2026 20:21; было €80–120k); всё дороже €159k или дешевле €80k — сразу исключаем. **Белый вариант (variantă albă / белый вариант) — R-WHITE** (с 23.11.2026 17:04, потолок цены обновлён 26.11.2026 20:47): не дороже €138k (дороже €138k — исключаем, даже если меньше €159k; было ≤€100k до 26.11.2026); ТОЛЬКО новый фонд, сдан или сдача в течение ~2 месяцев (к ~31.01.2027), известная поздняя дата = FAIL, несданный неизвестная дата = MAYBE; этажи 1–10 включительно (1-й этаж разрешён только для белого, >10 = FAIL); площадь от 50 м² (вместо 55 м²); ТОЛЬКО Центр/близко к центру, озеро Комсомольское/Валя Морилор, **зона Дендрария (ул. Ion Creangă у Дендрария, включая дома 5, 5/2, 5/3 — Dendrarium Park Residence)** (добавлено 26.11.2026 20:47), близко к Ботаническому саду (~≤1,5 км), бд. Москова, ул. Киев; вне этих зон = FAIL, неясное расстояние = MAYBE с картой; ранжировать ближе к центру первыми. Чёрный список, ≤€2 286/м², не серый, не старый фонд и т.д. применяются. **Неизвестная отделка** (не указана явно) → MAYBE с проверкой «уточнить отделку: белый вариант >€138k или вне зоны = FAIL», не FAIL (с 17.11.2026, обновлено 26.11.2026). **Не-белые объявления** (готовые) без изменений: €80–159k, ≥55 м², этаж ≥2 (не 1-й), все R-LOC зоны, ≤€2 286/м². Было: белый вариант ≤€90k (отменено 23.11.2026 17:04); затем ≤€100k (отменено 26.11.2026 20:47). **Пример, который должен проходить фильтры (26.11.2026):** https://999.md/ro/105823931 — Ion Creangă 5/2, Буюканы, 2 комнаты, 59 м², 10/13, белый вариант, €134 900 (134 900 ÷ 59 ≈ €2 286,4 → €2 286/м² после округления), 2 санузла, сдан 2017. Оговорки: арест имущества Dansicons в 2017, исход неизвестен; запрос выше ранних аналогов в комплексе; дубль Romanescu P22957.
 - **Отчёт всегда из одного блока**: €80k–159k включительно (с 21.11.2026 20:21; было €80k–120k).
 - **Квоты на публикацию (с 18.11.2026):** PASS до 10 объявлений, **MAYBE отдельная группа до 10 ВСЕГО** (независимая квота, не потребляет квоту PASS). Остатки в буфер, публикуются порциями ≤10 в полдень/вечером.
 - Любое число комнат; площадь — от 55 м² (меньше 55 м² — исключаем; неизвестная площадь → MAYBE с проверкой).
-- **Цена за м² — не дороже €2 200/м²** (дороже — исключаем, с 20.11.2026; было ≤€2 100/м² до 20.11.2026).
+- **Цена за м² — не дороже €2 286/м²** для всех вариантов, белого и не белого (дороже — исключаем; считать как цена ÷ общая площадь, округление до ближайшего целого евро; с 26.11.2026 20:47; было ≤€2 200/м² до 26.11.2026, ≤€2 100/м² до 20.11.2026).
 - Логичная планировка: своя кухня, санузел, прихожая, без проходных комнат.
 - **Год постройки ≥2000, дом сдан; старый жилой фонд не рассматриваем** (с 22.11.2026 20:52) — ТОЛЬКО здания построенные в 2000 году или позже И сданные. Любое здание построенное до 2000 года = FAIL сразу. Любое здание советской/типовой серии = FAIL сразу. Ремонт в старом доме не считается. Непроверенный год без признаков старого фонда = MAYBE (требуется проверка ≥2000), никогда не PASS. **Исключение для Сталинки/102/143/чешского/индивидуального проектов ОТМЕНЕНО** (22.11.2026 20:52; было разрешено 15.11–22.11.2026) — теперь весь старый фонд исключён без исключений. Новостройки — только сданные.
 - Этажи от 2-го и выше для квартир (с 21.11.2026 23:04; было 2–8 до 21.11.2026); первый этаж — нет; верхний предел снят; последний этаж — флаг (крыша). **Частные одноэтажные дома — исключение** из правила этаж ≥2.
 - **Лифт — только информация**, не жёсткое исключение. Высокий этаж (≥4) без лифта — флаг, но не отказ. Лифт неизвестен в ≤5-этажке = считаем нет лифта (для флага).
 - **Мансарды разрешены** (флаг: крыша/регистрация/кадастр). **Частные одноэтажные дома разрешены** (флаг: статус/кадастр/земля).
 - Исключены: общежития/гостинки, цоколь/демисол/pe sol, серый вариант, несданные новостройки.
-- **Районы (с 21.11.2026 23:06): ТОЛЬКО Центр (весь сектор), весь сектор Рышкановка КРОМЕ Старой Почты (Старая Почта исключена; Петричаны, Картиерул Молдова, Соколены, Студенцилор и другие части сектора допустимы; Чеукарь в чёрном списке с 21.11.2026), весь сектор Ботаника КРОМЕ Малой Малины и Большой Малины (добавлена 21.11.2026 23:06; Малая/Большая Малина в чёрном списке; вся остальная Ботаника оценивается по стандартным фильтрам, PASS возможен; была полностью исключена 02.11–21.11.2026), зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан), и вся ул. Алба Юлия в Кишинёве (добавлена 21.11.2026 20:21) — любое здание на ул. Алба Юлия в Кишинёве (включая Скулянку/Буюканы) допустимо по местоположению независимо от расстояния до озера (R-ALBA-IULIA). Алба Юлия всегда максимум MAYBE, никогда не PASS, с пометкой «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Другие правила R-* применяются (подтверждённое нарушение = FAIL). Ул. Алба Юлия в пригородах/других населённых пунктах исключена (R-EXCL-SUBURB).** Всё остальное исключено: Старая Почта (часть сектора Рышкановка, но специально исключена), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
+- **Районы (с 21.11.2026 23:06): ТОЛЬКО Центр (весь сектор), весь сектор Рышкановка КРОМЕ Старой Почты (Старая Почта исключена; Петричаны, Картиерул Молдова, Соколены, Студенцилор и другие части сектора допустимы; Чеукарь в чёрном списке с 21.11.2026), весь сектор Ботаника КРОМЕ Малой Малины и Большой Малины (добавлена 21.11.2026 23:06; Малая/Большая Малина в чёрном списке; вся остальная Ботаника оценивается по стандартным фильтрам, PASS возможен; была полностью исключена 02.11–21.11.2026), зона вокруг озера Комсомольское / Валя Морилор (≈0–20 минут пешком реальным маршрутом, включая прилегающие части Буюкан; **явно разрешена с 26.11.2026 20:47 ул. Ion Creangă в Буюканах у Дендрария / Комсомольского озера**, включая участок напротив/у Дендрария и дома **Ion Creangă 5, 5/2, 5/3** — Dendrarium Park Residence, застройщики Astercon-Grup / Dansicons, сдан 2017, 13 этажей; другие участки Ion Creangă вне зоны озера/Дендрария ~0–20 мин сами по себе не разрешены), и вся ул. Алба Юлия в Кишинёве (добавлена 21.11.2026 20:21) — любое здание на ул. Алба Юлия в Кишинёве (включая Скулянку/Буюканы) допустимо по местоположению независимо от расстояния до озера (R-ALBA-IULIA). Алба Юлия всегда максимум MAYBE, никогда не PASS, с пометкой «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». Другие правила R-* применяются (подтверждённое нарушение = FAIL). Ул. Алба Юлия в пригородах/других населённых пунктах исключена (R-EXCL-SUBURB).** Всё остальное исключено: Старая Почта (часть сектора Рышкановка, но специально исключена), другие части Буюкан (вне зоны озера ~0–20 мин), **Телецентр** (ранее допустимо, теперь исключён с 18.11.2026), **все Чеканы** (включая бывшее исключение Port Mall/край Рышкановки, отменено 12.11.2026), **пригороды — нет** (Дурлешты, Кодру, Стэучены, Яловены, Сынжера и др.). Неоднозначный микрорайон (напр. только 'Рышкановка' без улицы/карты) = MAYBE с проверкой на карте.
 - 5–10 минут пешком до магистрали, парка или университета; приоритет озера (20 минут) не отменяется общим правилом 5–10 минут.
 - **Чёрный список (с 25.11.2026 13:03):** **Улицы (13):** Drumul Viilor (13.11.2026); Valea Dicescu (15.11.2026); Calea Ieșilor (15.11.2026); Grădinilor (15.11.2026); Pajurii / Păjurii / Пажурий (21.11.2026 21:00; Кишинёв Рышкановка, все номера домов, квартиры и дома; была в восточном кармане Рышкановки 01.11–20.11.2026, снова внесена в чёрный список 21.11.2026); Ceucari / Чеукарь (21.11.2026 21:09; Кишинёв Рышкановка, все номера домов, квартиры и дома); Braniștii / Branistii / Брэништий / Браништий (21.11.2026 21:09; Кишинёв Рышкановка, все номера домов, квартиры и дома); бул./ул. Gagarin / Гагарина (21.11.2026 21:21; Кишинёв Центр, все номера домов, квартиры и дома); ул. Тудор Владимиреску / Tudor Vladimirescu (21.11.2026 21:21; Кишинёв Рышкановка, все номера домов, квартиры и дома; была в чёрном списке зоны ТЭЦ-1 02.11–19.11.2026, разрешена 19.11.2026, снова внесена в чёрный список 21.11.2026); шос. Мунчешть / Muncești / Muncesti / Munceşti (22.11.2026 19:46; Кишинёв, все номера домов, квартиры и дома); ул. Сармизеджетуса / Sarmizegetusa / Сармизегетуса / Sarmisegetusa (23.11.2026 09:50; Кишинёв Ботаника, все номера домов, квартиры и дома); ул. Николае Титулеску / Nicolae Titulescu / N. Titulescu (23.11.2026 09:53; Кишинёв Ботаника, все номера домов, квартиры и дома); ул. Пригорень / Prigoreni / Пригорены (25.11.2026 13:03; Кишинёв Ботаника, все номера домов включая 5/1, квартиры и дома). **Районы (3):** Малая Малина / Большая Малина (Малая Малина/Большая Малина/Malina Mică/Malina Mare) (21.11.2026 23:06; Кишинёв Ботаника, целые микрорайоны и улицы с этими названиями, квартиры и дома; неоднозначный адрес = MAYBE с проверкой на карте); Аэропорт / Aeroport (23.11.2026 17:34, граница уточнена 18:27; Кишинёв Ботаника, район Аэропорт около международного аэропорта Кишинёва; **Аэропорт = все номера домов на бд. Дачия ≥44** включая 44–59, 60/x, 62, 69/x и т.д., **плюс Галата, Băcioii Noi, ул. Аэропортулуй / Aeroportului, любое объявление с меткой «zona Aeroport», и любой адрес в ~1,5 км от аэропорта**; **бд. Дачия без номера дома**: координата pin с долготой ≥28.868 (к востоку от Дачия 44, OSM 46.9775, 28.8684) = FAIL; к западу = MAYBE с картой; неясное расстояние = MAYBE с картой). **Дома (2):** бд. Дачия 59 (Edera Home) (22.11.2026 21:30; Кишинёв Ботаника, комплекс Edera Home, любая квартира в этом доме; только этот номер дома; Dacia 59/x с упоминанием Edera Home = FAIL; неясный адрес = MAYBE с проверкой); бд. Дачия 62 (Grand Family) (23.11.2026 17:34; Кишинёв Ботаника, все блоки 62, 62/1, 62/A…62/G включая комплекс Grand Family, любая квартира в этом доме; все блоки с номером 62; другие номера бд. Дачия оцениваются нормально, но Дачия 59 также в чёрном списке, Дачия 58, 62 также в районе Аэропорт). **Зона ТЭЦ-1 полностью снята с чёрного списка** (20.11.2026): ул. Николае Димо, ул. Florării, Forăriei, Zimbrului и все адреса около ТЭЦ-1 теперь оцениваются по стандартным фильтрам (кроме Pajurii, Ceucari, Braniștii, Тудор Владимиреску — в чёрном списке с 21.11.2026). Близость к ТЭЦ-1 — только информационный флаг "близко к ТЭЦ-1", не исключение. Обязательна проверка населённого пункта из объявления, не просто название улицы. Неоднозначная локация = MAYBE до уточнения; не предполагать Кишинёв.
 - Рекламные (поднятые) объявления 999.md игнорируются.

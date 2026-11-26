@@ -1,5 +1,39 @@
 # Changelog — filter rules
 
+## 2026-11-26 20:47 — white cap €138k, €/m² cap €2,286, Ion Creangă / Dendrarium allowed
+
+**Owner rule change 2026-11-26 20:47 Europe/Chisinau (from Andrew).** White-variant price cap raised, per-m² cap raised for all listings, and str. Ion Creangă near the Dendrarium / Komsomol lake explicitly allowed so that 999.md/105823931 can pass the filters.
+
+### R-WHITE-PRICE: cap raised to €138,000
+- **Old cap:** white variant asking **≤€100,000 inclusive** (2026-11-23 17:04).
+- **New cap:** white variant asking **≤€138,000 inclusive**. General €80k minimum unchanged. White variant asking >€138k is still **FAIL**, even though the general budget cap remains €159,000. Uses asking price (not hypothetical discounted offers).
+- R-BUDGET mention of the white cap updated to €138k.
+- Unknown-finish verification text updated: «уточнить отделку: белый вариант >€138k или вне зоны = FAIL».
+
+### R-PRICE-M2: cap raised to €2,286/m² for all listings
+- **Old cap:** ≤€2,200/m² (2026-11-20).
+- **New cap:** asking price per m² **≤ €2,286/m²** for **all listings** (white and non-white).
+- **Definition:** price ÷ total area, **rounded to the nearest whole euro**, must be ≤ €2,286. Anything above €2,286/m² after rounding is excluded immediately.
+- Example: €134,900 ÷ 59 m² = €2,286.44 → €2,286/m² after rounding, so it meets the cap.
+
+### Location: Ion Creangă near Dendrarium / Komsomol lake explicitly allowed
+- **R-LOC / R-LAKE:** str. Ion Creangă in Buiucani near the Dendrarium / Komsomol lake (Valea Morilor) is explicitly allowed, including the Ion Creangă stretch opposite/near the Dendrarium and the buildings **Ion Creangă 5, 5/2, and 5/3** (Dendrarium Park Residence; developers Astercon-Grup SRL and Dansicons SRL; handed over 2017; 13 floors). Other stretches of Ion Creangă outside the ~0–20 min lake / Dendrarium area are not automatically allowed.
+- **R-WHITE-LOC:** added **Dendrarium area (str. Ion Creangă near the Dendrarium)** to the allowed white-variant location list, including Ion Creangă 5, 5/2, 5/3.
+
+### Acceptance example
+- https://999.md/ro/105823931 — Ion Creangă 5/2, Buiucani, 2 rooms, 59 m², floor 10/13, white variant, €134,900, 2 bathrooms, built 2017 (commissioned). Must now pass location, white price, white floor (1–10), white area (≥50), and €/m². Added to `listings/shortlist.md` and FILTERS.md §5a as MAYBE with caveats: 2017 court attachment on Dansicons property (outcome unknown); asking above earlier comps in the complex; duplicate Romanescu P22957. Was not in `listings/rejected.md`.
+
+### Files updated
+- FILTERS.md: "Last updated" 2026-11-26 20:47; R-BUDGET; R-PRICE-M2; R-WHITE / R-WHITE-PRICE / R-WHITE-LOC (Dendrarium area + acceptance example); unknown-finish rule; historical notes; R-LOC; R-LAKE; §5a; one-line filter summary; Russian summary
+- AGENTS.md: R-WHITE summary and morning-run one-liner
+- templates/listing-check.md: R-BUDGET, R-PRICE-M2, R-WHITE, R-LOC
+- .cursor/rules/real-estate-filters.mdc: condensed R-BUDGET / R-WHITE / R-PRICE-M2 / R-LOC / Telegram one-liner
+- listings/shortlist.md: added Ion Creangă 5/2 (105823931)
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Max price €159k, min €80k, white new-stock / floors 1–10 / ≥50 m² rules (apart from the €138k cap and Dendrarium location), ≥55 m² (non-white), year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (non-white), blacklisted streets/areas/buildings, Alba Iulia MAYBE-only, quotas — all unchanged.
+
 ## 2026-11-25 13:03 — str. Prigoreni blacklisted
 
 **Street blacklist expanded.** Owner rule change 2026-11-25 13:03 Europe/Chisinau (from Andrew).
