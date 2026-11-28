@@ -29,11 +29,11 @@ Reply to Andrew in **Russian**. Repo files are in English.
 
 ## Reporting format
 
-Always organize into the single price band from R-BANDS (€80k–159k inclusive). Present in this order:
+Always organize into the single price band from R-BANDS (€80k–135k inclusive). Present in this order:
 1. **PASS** (up to 10) — ranked best first
 2. **MAYBE** (up to 10 TOTAL) — ranked best potential first
 
-MAYBE has its own independent ≤10 quota; does NOT consume PASS quota. Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €159k or below €80k.
+MAYBE has its own independent ≤10 quota; does NOT consume PASS quota. Each section starts with a one-line summary (scanned / PASS count / MAYBE count). Nothing above €135k or below €80k.
 
 ### MAYBE publication (added 2026-11-08)
 **MAYBE candidates are PUBLISHED** with literal tag **MAYBE** and specific reasons:
@@ -49,13 +49,13 @@ For each MAYBE: include all material unknowns/conflicts, required verification, 
 **For MAYBE:** add specific reasons why MAYBE (e.g. "year unverified — must confirm ≥2000"), required verification, material unknowns.
 
 - **R-ALBA-IULIA**: any listing on str. Alba Iulia (Chișinău) is MAYBE at most, never PASS; always include the note «Алба Юлия — вне основной зоны (Скулянка/Буюканы)». See FILTERS.md R-LOC.
-- **R-WHITE** (added 2026-11-23, updated 2026-11-26): white variant (variantă albă / белый вариант) listings have additional constraints beyond standard filters: asking ≤€138k, new stock only (commissioned or commissioning by ~31.01.2027), floors 1–10 inclusive (floor 1 allowed for white only), area ≥50 m² (instead of ≥55 m²), location restricted to Centru/near-centre, Komsomol lake/Valea Morilor, Dendrarium area (str. Ion Creangă near the Dendrarium, including Ion Creangă 5, 5/2, 5/3), near Botanical Garden (~≤1.5 km), bd. Moscova, str. Kiev (elsewhere FAIL, unclear distance MAYBE with map check). Rank white variant closer to centre first. Non-white listings unchanged. See FILTERS.md R-WHITE.
+- **R-WHITE** (added 2026-11-23, updated 2026-11-28 16:45): white variant (variantă albă / белый вариант) listings have additional constraints beyond standard filters: asking ≤€135k (same as the general R-BUDGET cap from 2026-11-28 16:45; was ≤€138k), new stock only (commissioned or commissioning by ~31.01.2027), floors 1–10 inclusive (floor 1 allowed for white only), area ≥50 m² (instead of ≥55 m²), location restricted to Centru/near-centre, Komsomol lake/Valea Morilor, Dendrarium area (str. Ion Creangă near the Dendrarium, including Ion Creangă 5, 5/2, 5/3), near Botanical Garden (~≤1.5 km), bd. Moscova, str. Kiev (elsewhere FAIL, unclear distance MAYBE with map check). Rank white variant closer to centre first. Non-white listings use the same €80k–135k cap. See FILTERS.md R-WHITE.
 
 ## Empty results handling (added 2026-11-20)
 
 **Morning run (~09:00):** When the daily morning search finds NO fresh eligible PASS or MAYBE listings, post ONE short plain-text Russian message to the Telegram channel stating:
 - No new results under current filters
-- One-line filter summary (€80–159k, ≥55 m², ≤€2286/m², этаж от 2-го, Центр, Рышкановка (без Старой Почты), Ботаника (без Малой/Большой Малины), озеро Комсомольское / Дендрарий (ул. Ion Creangă у Дендрария) + вся ул. Алба Юлия (только MAYBE); белый вариант ≤€138k)
+- One-line filter summary (€80–135k, ≥55 m², ≤€2286/m², этаж от 2-го, Центр, Рышкановка (без Старой Почты), Ботаника (без Малой/Большой Малины), озеро Комсомольское / Дендрарий (ул. Ion Creangă у Дендрария) + вся ул. Алба Юлия (только MAYBE); белый вариант ≤€135k)
 - One-line coverage summary (sources and pages scanned; honest if partial)
 
 Do NOT post this message if the run itself failed (report failure in Grok Bot chat instead). The message adds nothing to posted_ids.

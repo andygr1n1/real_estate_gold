@@ -4,6 +4,8 @@ Never re-propose these. Keep in sync with FILTERS.md §5.
 
 | Listing / address | Link | Reason (rule) | Date |
 |---|---|---|---|
+| str. Calea Moșilor 6, Chișinău Rîșcani (2 rooms, 79 m², 6/16, €115.6k) | https://999.md/ro/105390917 | R-BLACKLIST Calea Moșilor (2026-11-28 16:49); owner trigger listing; was published 28.11 in Telegram msg 612 (MAYBE) before the rule | 2026-11-28 |
+| str. Calea Moșilor (number not stated), Chișinău Rîșcani (2 rooms, 58 m², 5/16, white variant, €89.6k) | https://999.md/ro/105649302 | R-BLACKLIST Calea Moșilor (2026-11-28 16:49); was published 21.11 in Telegram msgs 532–533 (MAYBE) before the rule; had also been withheld 20.11 as probable Smart Home Lagmar | 2026-11-28 |
 | str. Prigoreni 5/1, Botanica (3 rooms, 73 m², 5/6, €116.5k) | https://999.md/ro/106008515 | R-BLACKLIST Prigoreni (2026-11-25 13:03); was published 25.11 in Telegram msg 579 (PASS) before the rule | 2026-11-25 |
 | bd. Dacia 62/G Grand Family, Botanica | | R-BLACKLIST-BUILDING bd. Dacia 62 (Grand Family); building blacklisted; posted 23.11 msg 569-571 | 2026-11-23 |
 | bd. Dacia 62/G (Exfactor Grand Family), Chișinău Botanica (1+living, 55 m², 8/10, €119.9k) | https://999.md/ro/105474701 | R-BLACKLIST-BUILDING bd. Dacia 62 + R-BLACKLIST-AREA Aeroport (2026-11-23 17:34); was published 23.11 in Telegram msg 569 (PASS) before the rule | 2026-11-23 |

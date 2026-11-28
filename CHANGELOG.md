@@ -1,5 +1,37 @@
 # Changelog — filter rules
 
+## 2026-11-28 16:49 — asking-price cap €135k for all listings; str. Calea Moșilor blacklisted
+
+**Owner rule changes 2026-11-28 Europe/Chisinau (from Andrew).** Two same-day changes: at 16:45 the asking-price ceiling was lowered to €135,000 for every listing; at 16:49 the whole of str. Calea Moșilor (Chișinău, Rîșcani) was blacklisted.
+
+### R-BUDGET / R-BANDS / R-WHITE-PRICE: cap lowered to €135,000 for all listings (16:45)
+- **Old caps:** general asking **€80,000–159,000 inclusive** (2026-11-21 20:21); white variant **≤€138,000 inclusive** (2026-11-26 20:47).
+- **New cap:** asking price **€80,000–135,000 inclusive** for **all listings**, white and non-white. Asking >€135k or <€80k → **FAIL R-BUDGET**. R-WHITE-PRICE is now also **≤€135,000 inclusive** (same ceiling).
+- €159,000 and €138,000 superseded 2026-11-28 16:45.
+- Unknown-finish verification text updated: «уточнить отделку: белый вариант >€135k или вне зоны = FAIL».
+- €/m² cap **≤€2,286/m²** unchanged. All other R-WHITE constraints (new stock, floors 1–10, ≥50 m², location) unchanged.
+
+### R-BLACKLIST: whole str. Calea Moșilor blacklisted (16:49)
+- **R-BLACKLIST**: Added **str. Calea Moșilor** (Chișinău, Rîșcani; all house numbers, apartments and houses; variants Calea Moșilor/Calea Mosilor/Калеа Мошилор/Кал. Мошилор) to the street blacklist.
+- **Any apartment or house on this street** = FAIL R-BLACKLIST immediately (all statuses including buffer).
+- **All house numbers** excluded without exception.
+- Street count is now **14** (was 13).
+- Owner trigger: https://999.md/ro/105390917 — Calea Moșilor 6, 2 rooms, 79 m², floor 6/16, €115.6k (price as last recorded in prior scans). Was published 28.11 as MAYBE in Telegram msg 612 before the rule. Added to `listings/rejected.md` and FILTERS.md §5.
+- Also recorded: https://999.md/ro/105649302 — Calea Moșilor (number not stated), 2 rooms, 58 m², 5/16, white variant, €89.6k. Was published 21.11 as MAYBE in Telegram msgs 532–533; had also been withheld 20.11 as probable Smart Home Lagmar.
+
+### Files updated
+- FILTERS.md: "Last updated" 2026-11-28 16:49; R-BUDGET; R-BANDS (historical note: €159k superseded 2026-11-28 16:45); R-WHITE / R-WHITE-PRICE; unknown-finish rule; non-white line; R-WHITE historical note (€138k superseded 2026-11-28 16:45); R-BLACKLIST (Calea Moșilor, 14 streets); §5 rejected rows; one-line filter summary; Russian summary
+- AGENTS.md: reporting format, R-WHITE summary, morning-run one-liner
+- templates/listing-check.md: R-BUDGET, R-BANDS, R-WHITE, R-BLACKLIST (14 streets)
+- .cursor/rules/real-estate-filters.mdc: condensed R-BUDGET / R-BANDS / R-WHITE / R-BLACKLIST / Telegram one-liner
+- listings/shortlist.md: acceptance-example citation now ≤€135k (listing itself is €134,900, still inside the cap)
+- listings/rejected.md: added 105390917 and 105649302
+- CHANGELOG.md: this entry
+
+### All other criteria unchanged
+Min €80k, ≤€2,286/m², white new-stock / floors 1–10 / ≥50 m² / location rules (apart from the price cap), ≥55 m² (non-white), year ≥2000 AND commissioned (old housing stock excluded), floor ≥2 (non-white), other blacklisted streets/areas/buildings, Alba Iulia MAYBE-only, quotas — all unchanged.
+
+
 ## 2026-11-26 20:47 — white cap €138k, €/m² cap €2,286, Ion Creangă / Dendrarium allowed
 
 **Owner rule change 2026-11-26 20:47 Europe/Chisinau (from Andrew).** White-variant price cap raised, per-m² cap raised for all listings, and str. Ion Creangă near the Dendrarium / Komsomol lake explicitly allowed so that 999.md/105823931 can pass the filters.
